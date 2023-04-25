@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<world>
+
+	<!--         -->
+	<!-- connect -->
+	<!--         -->
+	<connectTo id_src="ComponentsManager" type_dest="worldStateGraph"
+		id_dest="graphContainer" />
+	
+   <connectTo id_src="ComponentsManager" 
+	      type_dest="glayout" id_dest="glayout">
+	   <attribute name="docRef" 
+		      value="resources:inria/smarttools/componentsmanager/resources/lml/test.lml"/>
+	   <attribute name="xslTransform" 
+		      value="resources:lml/resources/xsl/lml2bml.xsl"/>
+	   <attribute name="behaviors" 
+		      value="resources:inria/smarttools/view/resources/behaviors/bootbehav.xml"/>
+	   <message name="initData">
+		   <attribute name="inits">
+			   <collection>
+				   <item name="behavior" value="resources:inria/smarttools/componentsmanager/resources/cmbehaviors.xml"/>
+			   </collection>
+		   </attribute>
+	   </message>
+   </connectTo>   
+   
+   <!-- addSpy ref="log"> 
+      <attribute name="output" value="OFF"/>
+      <attribute name="filename" value="St4.log"/>
+   </addSpy -->  
+
+</world>

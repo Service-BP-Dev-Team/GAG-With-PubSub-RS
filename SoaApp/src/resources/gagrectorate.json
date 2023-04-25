@@ -1,0 +1,36 @@
+{  
+   "rules":[  
+      {  
+         "name":"Rectorate Decision ",
+         "leftSide":{  
+            "name":"Rectorate service",
+            "in":[  
+               {  
+                  "name":"file"
+               },
+               {  
+                   "name":"DAAC processing"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"decision"
+                     }
+                  ]
+               }
+            ],
+            "location":"rectorate"
+         },
+         "rightSide":[  
+         ],
+         "parameters":[  
+            {  
+               "name":"decision"
+            }
+         ]
+      }
+   ]
+}

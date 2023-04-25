@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;lifa.miu.tinyP2PCE.Component&apos; to &apos;TinyP2PCE&apos;&#x0D;&#x0A;- Original project: &apos;lifa.miu.tinyP2PCE&apos;&#x0D;&#x0A;- Original element: &apos;lifa.miu.tinyP2PCE.Component&apos;&#x0D;&#x0A;- Renamed element: &apos;lifa.miu.tinyP2PCE.TinyP2PCE&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Component&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;lifa.miu.tinyP2PCE{Component.java[Component" matchStrategy="1" name="TinyP2PCE" qualified="false" references="true" similarDeclarations="false" stamp="1488430242994" textual="false" version="1.0"/>
+</session>

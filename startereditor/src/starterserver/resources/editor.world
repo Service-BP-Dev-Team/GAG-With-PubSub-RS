@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world>
+	<connectTo id_src="ComponentsManager" type_dest="components-graph" id_dest="components-graph"/>
+	<connectTo id_src="ComponentsManager" type_dest="soaApp" id_dest="student"/>
+	<connectTo id_src="student" type_dest="soaApp" id_dest="department"/>
+	<connectTo id_src="student" type_dest="soaApp" id_dest="DschangSchool"/>
+	<connectTo id_src="student" type_dest="soaApp" id_dest="DAAC"/>
+	<connectTo id_src="student" type_dest="soaApp" id_dest="rectorate"/>
+	
+	
+	<connectTo id_src="department" type_dest="soaApp" id_dest="DschangSchool"/>
+	<connectTo id_src="department" type_dest="soaApp" id_dest="DAAC"/>
+	<connectTo id_src="department" type_dest="soaApp" id_dest="rectorate"/>
+	
+	<connectTo id_src="DschangSchool" type_dest="soaApp" id_dest="DAAC"/>
+	<connectTo id_src="DschangSchool" type_dest="soaApp" id_dest="rectorate"/>
+	
+	<connectTo id_src="DAAC" type_dest="soaApp" id_dest="rectorate"/>
+
+
+	
+</world>

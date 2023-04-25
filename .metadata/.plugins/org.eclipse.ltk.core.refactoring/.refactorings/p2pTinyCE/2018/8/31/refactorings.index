@@ -1,0 +1,38 @@
+1533118618101	Delete element
+1533121156206	Rename method 'forwardMessageArrived'
+1533121177471	Rename method 'returnMessageArrived'
+1533121233734	Rename method 'forwardMessage'
+1533121255421	Rename method 'returnMessage'
+1533129292002	Rename type 'Grammar'
+1533129345094	Rename type 'GrammaticalModelOfWorkflow'
+1533136827467	Move type
+1533140217937	Rename field 'symbols'
+1533140571691	Rename local variable 'strangeSymb'
+1533151807198	Rename local variable 'prod'
+1533151826666	Rename local variable 'prodName'
+1533221819468	Rename method 'saveEditionAsTemplate'
+1533222272157	Rename method 'saveWorkflowAsTemplate'
+1533223013124	Rename method 'getDistributedEdition'
+1533223119402	Rename method 'saveGMWfAsTemplate'
+1533223433083	Delete elements
+1533223556141	Delete element
+1533223627045	Delete element
+1533223674778	Rename type 'Grammar'
+1533223793946	Rename type 'EditionWorkflow'
+1533225738196	Delete element
+1533225852536	Delete element
+1533225861630	Delete element
+1533225871567	Delete element
+1533225886067	Delete element
+1533225897848	Delete element
+1533225916425	Delete element
+1533225939518	Delete element
+1533225959236	Delete element
+1533225985517	Delete element
+1533226001563	Delete element
+1533226028859	Delete elements
+1533226510779	Delete element
+1533226516248	Delete element
+1533226525685	Delete element
+1533226895392	Delete element
+1533227355251	Delete element

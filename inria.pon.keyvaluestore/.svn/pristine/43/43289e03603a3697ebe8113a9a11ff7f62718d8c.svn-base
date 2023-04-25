@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Key-Value Store
+Bundle-SymbolicName: inria.pon.keyvaluestore
+Bundle-Version: 1.0.1
+Bundle-Activator: inria.pon.keyvaluestore.Activator
+Bundle-Vendor: INRIA PON
+Import-Package: org.osgi.framework;version="1.3.0"
+Export-Package: inria.pon.keyvaluestore.framework,
+ inria.pon.keyvaluestore.store

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SmartTools DS PON Openchord Plug-in
+Bundle-SymbolicName: inria.smarttools.ds.pon
+Bundle-Version: 1.0.19
+Bundle-Vendor: INRIA SmartTools
+Require-Bundle: inria.smarttools.lib;bundle-version="1.5.3",
+ inria.lognet.virtpipes;bundle-version="1.0.0",
+ openchord;bundle-version="1.0.0"
+Import-Package: inria.smarttools.componentsmanager,
+ inria.smarttools.core,
+ inria.smarttools.core.component,
+ inria.smarttools.core.util,
+ org.osgi.framework;version="1.4.0"
+Bundle-Activator: inria.smarttools.ds.pon.Activator
+Export-Package: inria.smarttools.ds.pon

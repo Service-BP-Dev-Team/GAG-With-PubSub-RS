@@ -1,0 +1,64 @@
+!SESSION 2017-06-29 09:26:27.853 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product startereditor.product3 --launcher.secondThread
+Command-line arguments:  -product startereditor.product3 -data F:\Workspace\Projets SON/../runtime-ExportHost.product -dev file:F:/Workspace/Projets SON/.metadata/.plugins/org.eclipse.pde.core/ExportHost.product/dev.properties -os win32 -ws win32 -arch x86 -consoleLog --launcher.secondThread -console -clean
+
+!ENTRY startereditor 4 0 2017-06-29 09:26:29.635
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "startereditor_1.0.0.qualifier [12]" could not be resolved. Reason: Missing Constraint: Require-Bundle: p2pEditor; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1332)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1316)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1176)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2017-06-29 09:26:29.652
+!MESSAGE Bundle initial@reference:file:F:/Workspace/Projets SON/startereditor/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2017-06-29 09:26:29.652
+!MESSAGE Could not find bundle: org.eclipse.equinox.console
+!STACK 0
+org.osgi.framework.BundleException: Could not find bundle: org.eclipse.equinox.console
+	at org.eclipse.osgi.framework.internal.core.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:211)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:298)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.osgi 2 0 2017-06-29 09:26:29.683
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2017-06-29 09:26:29.683
+!MESSAGE Bundle initial@reference:file:F:/Workspace/Projets SON/p2pEditor/ was not resolved.
+!SUBENTRY 2 p2pEditor 2 0 2017-06-29 09:26:29.683
+!MESSAGE Missing required bundle p2pEditor-libs_1.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2017-06-29 09:26:29.699
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2017-06-29 09:26:29.699
+!MESSAGE Bundle startereditor_1.0.0.qualifier [12] was not resolved.
+!SUBENTRY 2 startereditor 2 0 2017-06-29 09:26:29.699
+!MESSAGE Missing required bundle p2pEditor_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2017-06-29 09:26:29.699
+!MESSAGE Bundle p2pEditor_1.0.0 [15] was not resolved.
+!SUBENTRY 2 p2pEditor 2 0 2017-06-29 09:26:29.699
+!MESSAGE Missing required bundle p2pEditor-libs_1.0.0.
+!SUBENTRY 2 p2pEditor 2 0 2017-06-29 09:26:29.699
+!MESSAGE Missing imported package p2pEditor_0.0.0.

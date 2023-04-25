@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--                              -->
+<!-- Abstract Component Declaration -->
+<!--                              -->
+<!-- -->
+<component>
+   <!--       -->
+   <!-- INPUT -->
+   <!--       -->
+   <input doc="shutdown" method="shutdown" name="shutdown"/>
+   <input doc="quit" method="quit" name="quit"/>
+   <input doc="disconnect" method="disconnectInput" name="disconnect"/>
+
+   <!--        -->
+   <!-- OUTPUT -->
+   <!--        -->
+   <output name="connectTo" 
+           doc=""
+           method="connectTo">
+      <attribute name="id_src" doc="" javatype="java.lang.String"/>
+      <attribute name="type_dest" doc="" javatype="java.lang.String"/>
+      <attribute name="id_dest" doc="" javatype="java.lang.String"/>
+      <attribute name="dc" doc="Dual Connection" javatype="java.lang.String"/>
+      <attribute name="tc" doc="Type Connection" javatype="java.lang.String"/>
+      <attribute name="sc" doc="autoStart Component" javatype="java.lang.String"/>
+      <attribute name="actions" doc="" javatype="inria.smarttools.core.component.PropertyMap"/>
+   </output> 
+
+   <output name="log" 
+           doc=""
+           method="log">
+      <attribute name="info" doc="" javatype="java.lang.String"/>
+   </output> 
+
+   <output name="send" 
+           doc=""
+           method="send">
+      <attribute name="messageName"      doc="" javatype="java.lang.String"/>
+      <attribute name="messageExpeditor" doc="" javatype="java.lang.String"/>
+   </output> 
+
+   <output name="initData" 
+           doc=""
+           method="initData">
+      <attribute name="inits"      doc="" javatype="inria.smarttools.core.component.PropertyMap"/>
+   </output> 
+
+   <output name="exit" 
+           doc=""
+           method="exit">
+   </output>
+   
+   <output name="disconnect" 
+           doc=""
+           method="disconnectOut">
+   </output>
+
+   <output name="logUndo" 
+           doc=""
+           method="logUndo">
+      <attribute name="message"   doc="" javatype="java.lang.String"/>
+      <attribute name="receiver"  doc="" javatype="java.lang.String"/>
+   </output> 
+
+   <output name="undo" 
+           doc=""
+           method="undo">
+      <attribute name="message"   doc="" javatype="java.lang.String"/>
+      <attribute name="receiver"  doc="" javatype="java.lang.String"/>
+   </output> 
+
+   <!--        -->
+   <!-- INOUTS -->
+   <!--        -->
+
+   <inout name="requestInitData" 
+          doc=""
+          method="requestTree"
+          output="initData"
+          outputArg="inits"/>
+
+</component>

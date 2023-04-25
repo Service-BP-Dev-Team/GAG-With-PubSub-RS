@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: inria.smarttools.core
+Bundle-SymbolicName: inria.smarttools.core;singleton:=true
+Bundle-Version: 1.6.11
+Export-Package: 
+ inria.smarttools.core;uses:="org.osgi.framework",
+ inria.smarttools.core.component;
+  uses:="inria.smarttools.core.util,
+   org.osgi.framework,
+   javax.swing",
+ inria.smarttools.core.component.resources,
+ inria.smarttools.core.error,
+ inria.smarttools.core.util
+Bundle-Vendor: INRIA SmartTools
+Import-Package: inria.smarttools.dynamic,
+ org.osgi.framework
+Require-Bundle: inria.smarttools.lib

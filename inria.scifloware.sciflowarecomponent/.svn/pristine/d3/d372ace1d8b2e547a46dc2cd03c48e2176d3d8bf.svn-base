@@ -1,0 +1,5 @@
+#Properties file for inria.scifloware.sciflowarecomponent
+Bundle-Vendor = INRIA SmartTools
+Bundle-Name = inria.scifloware.sciflowarecomponent
+Bundle-Vendor.0 = INRIA SmartTools
+Bundle-Name.0 = inria.scifloware.sciflowarecomponent

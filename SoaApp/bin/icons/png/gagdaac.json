@@ -1,0 +1,89 @@
+{  
+   "rules":[  
+      {  
+         "name":"Approbation dossier",
+         "leftSide":{  
+            "name":"Service de la DAAC",
+            "in":[  
+               {  
+                  "name":"dossier"
+               },
+               {  
+                   "name":"traitement dschangSchool"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"traitement DAAC"
+                     },
+                     {  
+                        "name":"suite"
+                     }
+                  ]
+               }
+            ],
+            "location":"DAAC"
+         },
+         "rightSide":[  
+            {  
+               "name":"Service du rectorat",
+               "in":[  
+                  {  
+                     "name":"dossier"
+                  },
+                  {  
+                     "name":"traitement DAAC"
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"suite"
+                  }
+               ],
+               "location":"rectorat"
+            }
+         ],
+         "parameters":[  
+            {  
+               "name":"traitement DAAC"
+            }
+         ]
+      },
+      {  
+         "name":"Rejet Dossier",
+         "leftSide":{  
+            "name":"Service de la DAAC",
+            "in":[  
+               {  
+                  "name":"dossier"
+               },
+               {  
+                   "name":"traitement dschangSchool"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"raison rejet"
+                     }
+                  ]
+               }
+            ],
+            "location":"DAAC"
+         },
+         "rightSide":[  
+            
+         ],
+         "parameters":[  
+            {  
+               "name":"raison rejet"
+            }
+         ]
+      }
+   ]
+}

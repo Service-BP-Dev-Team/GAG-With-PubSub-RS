@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: soaApp
+Bundle-SymbolicName: soaApp;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: soaApp.Activator
+Bundle-ActivationPolicy: lazy
+Export-Package: soaApp,
+ soaApp.resources
+Bundle-Vendor: INRIA SmartTools
+Import-Package: org.osgi.framework,
+ soaApp
+Require-Bundle: inria.smarttools.lib,
+ inria.smarttools.core,
+ inria.communicationprotocol;bundle-version="0.3.0",
+ pluginLibrary;bundle-version="1.0.0"

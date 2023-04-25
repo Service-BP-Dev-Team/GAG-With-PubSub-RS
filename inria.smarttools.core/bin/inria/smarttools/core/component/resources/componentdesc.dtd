@@ -1,0 +1,99 @@
+<!ENTITY % FORMALISM 'formalism'>
+<!ENTITY % PARSER 'parser'>
+<!ENTITY % CONTAINER 'containerclass'>
+<!ENTITY % FACADE 'facadeclass'>
+<!ENTITY % DOCUMENTATION 'documentation'>
+<!ENTITY % ATTRIBUTE 'attribute'>
+<!ENTITY % INPUT 'input'>
+<!ENTITY % OUTPUT 'output'>
+<!ENTITY % INOUT 'inout'>
+<!ENTITY % ARG 'arg'>
+<!ENTITY % BINDING 'binding'>
+<!ENTITY % DEPENDANCE 'dependance'>
+<!ENTITY % LML 'lml'>
+<!ENTITY % BEHAVIOR 'behavior'>
+<!ELEMENT component ((%FORMALISM;)?, (%PARSER;)*, (%DEPENDANCE;)*, (%LML;)*, (%BEHAVIOR;)?, (%CONTAINER;), (%FACADE;), (%DOCUMENTATION;)?, (%ATTRIBUTE;)*, (%INPUT;)*, (%OUTPUT;)*, (%INOUT;)*)>
+<!ATTLIST component
+	name CDATA #REQUIRED
+	type CDATA #REQUIRED
+	extends CDATA #REQUIRED
+	ns CDATA #REQUIRED
+>
+<!ELEMENT formalism EMPTY>
+<!ATTLIST formalism
+	name CDATA #REQUIRED
+	dtd CDATA #IMPLIED
+>
+<!ELEMENT parser EMPTY>
+<!ATTLIST parser
+	type CDATA #REQUIRED
+	extention CDATA #REQUIRED
+	classname CDATA #REQUIRED
+>
+<!ELEMENT containerclass EMPTY>
+<!ATTLIST containerclass
+	name CDATA #REQUIRED
+>
+<!ELEMENT facadeclass EMPTY>
+<!ATTLIST facadeclass
+	name CDATA #REQUIRED
+>
+<!ELEMENT documentation (#PCDATA)>
+<!ELEMENT attribute EMPTY>
+<!ATTLIST attribute
+	doc CDATA #IMPLIED
+	javatype CDATA #IMPLIED
+	name CDATA #IMPLIED
+	ref CDATA #IMPLIED
+	ns CDATA #IMPLIED
+>
+<!ELEMENT input ((%ATTRIBUTE;)*, (%BINDING;)*)>
+<!ATTLIST input
+	doc CDATA #IMPLIED
+	method CDATA #REQUIRED
+	name CDATA #REQUIRED
+	ns CDATA #IMPLIED
+>
+<!ELEMENT output ((%ARG;)*)>
+<!ATTLIST output
+	doc CDATA #IMPLIED
+	method CDATA #IMPLIED
+	name CDATA #REQUIRED
+	ns CDATA #IMPLIED
+>
+<!ELEMENT inout ((%ARG;)*)>
+<!ATTLIST inout
+	doc CDATA #IMPLIED
+	method CDATA #REQUIRED
+	name CDATA #REQUIRED
+	output CDATA #REQUIRED
+	ns CDATA #IMPLIED
+>
+<!ELEMENT arg EMPTY>
+<!ATTLIST arg
+	doc CDATA #IMPLIED
+	name CDATA #IMPLIED
+	type CDATA #IMPLIED
+	javatype CDATA #IMPLIED
+	ref CDATA #IMPLIED
+        value CDARA #IMPLIED
+>
+<!ELEMENT binding ((%ARG;)*)>
+<!ATTLIST binding
+	toMethod CDATA #REQUIRED
+>
+<!ELEMENT dependance EMPTY>
+<!ATTLIST dependance
+	name CDATA #REQUIRED
+	jar CDATA #REQUIRED
+>
+<!ELEMENT lml EMPTY>
+<!ATTLIST lml
+	name CDATA #REQUIRED
+	file CDATA #REQUIRED
+>
+<!ELEMENT behavior EMPTY>
+<!ATTLIST behavior
+	name CDATA #REQUIRED
+>
+

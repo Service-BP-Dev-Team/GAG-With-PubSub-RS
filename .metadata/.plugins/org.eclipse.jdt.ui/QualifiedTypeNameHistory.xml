@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="inria.communicationprotocol.CommunicationProtocolFacade"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="lifa.miu.tinyP2PCE.view.TinyP2PCEView"/>
+<fullyQualifiedTypeName name="p2pEditor.util.observer.Observable"/>
+<fullyQualifiedTypeName name="p2pEditor.util.editor.Grammar"/>
+<fullyQualifiedTypeName name="com.mxgraph.util.mxConstants"/>
+<fullyQualifiedTypeName name="com.mxgraph.view.mxPerimeter"/>
+<fullyQualifiedTypeName name="com.mxgraph.util.mxDomUtils"/>
+<fullyQualifiedTypeName name="com.mxgraph.util.mxEvent"/>
+<fullyQualifiedTypeName name="com.mxgraph.swing.mxGraphComponent"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="p2pEditor.P2pEditor"/>
+<fullyQualifiedTypeName name="p2pEditor.models.ModelModel"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="p2pEditor.models.util.ModelModel"/>
+<fullyQualifiedTypeName name="p2pEditor.util.Utilities"/>
+<fullyQualifiedTypeName name="p2pEditor.util.ConfigurationManager"/>
+<fullyQualifiedTypeName name="p2pEditor.util.observer.Observer"/>
+<fullyQualifiedTypeName name="p2pEditor.util.APPLConstants"/>
+<fullyQualifiedTypeName name="p2pEditor.util.exceptions.ApplException"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="p2pEditor.view.util.PanelModel"/>
+<fullyQualifiedTypeName name="lifa.miu.smartworkflow.util.observer.Observable"/>
+<fullyQualifiedTypeName name="lifa.miu.smartworkflow.util.editor.Grammar"/>
+<fullyQualifiedTypeName name="lifa.miu.smartworkflow.util.Utilities"/>
+<fullyQualifiedTypeName name="lifa.miu.smartworkflow.util.observer.Observer"/>
+<fullyQualifiedTypeName name="smartWorkflowDWfMS.SmartWorkflowDWfMS"/>
+<fullyQualifiedTypeName name="p2pTinyCE.SmartWfRequest"/>
+<fullyQualifiedTypeName name="smartworkflow.dwfms.lifa.miu.util.editor.Grammar.Production.ProductionRhs"/>
+<fullyQualifiedTypeName name="smartworkflow.dwfms.lifa.miu.util.editor.Grammar.TaskModel"/>
+<fullyQualifiedTypeName name="smartworkflow.dwfms.lifa.miu.util.editor.Grammar.ClassicTask"/>
+<fullyQualifiedTypeName name="smartworkflow.dwfms.lifa.miu.util.editor.Grammar.Production"/>
+<fullyQualifiedTypeName name="smartworkflow.dwfms.lifa.miu.util.editor.PeerToPeerWorkflow.GrammaticalModelOfWorkflow.TaskModel"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1565440575628" transient="true" version="3.0">
+<site enabled="true" list="plugins/inria.communicationprotocol_0.3.0.jar,plugins/org.eclipse.osgi_3.9.1.v20130814-1242.jar,plugins/inria.smarttools.lib_1.6.2,plugins/components-graph_1.0.0.jar" policy="USER-INCLUDE" updateable="true" url="file:/C:/Users/TAGUEU/Documents/eclipse/eclipse/">
+<feature id="org.eclipse.cdt" url="features/org.eclipse.cdt_8.2.1.201309180223/" version="8.2.1.201309180223">
+</feature>
+<feature id="org.eclipse.gef4.zest.source" plugin-identifier="org.eclipse.gef4.zest.core" url="features/org.eclipse.gef4.zest.source_0.1.0.201406280202/" version="0.1.0.201406280202">
+</feature>
+<feature id="org.eclipse.help" plugin-identifier="org.eclipse.help.base" url="features/org.eclipse.help_2.0.2.v20140221-1700/" version="2.0.2.v20140221-1700">
+</feature>
+<feature id="org.springframework.ide.eclipse.data.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.data.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.springframework.ide.eclipse.security.feature.source" url="features/org.springframework.ide.eclipse.security.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.wb.core.feature" plugin-identifier="org.eclipse.wb.core" url="features/org.eclipse.wb.core.feature_1.8.0.r45x201412082350/" version="1.8.0.r45x201412082350">
+</feature>
+<feature id="org.eclipse.help.source" url="features/org.eclipse.help.source_2.0.2.v20140221-1700/" version="2.0.2.v20140221-1700">
+</feature>
+<feature id="org.springframework.ide.eclipse.ajdt.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.ajdt.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.cdt.gnu.build" url="features/org.eclipse.cdt.gnu.build_8.2.1.201309180223/" version="8.2.1.201309180223">
+</feature>
+<feature id="org.eclipse.xtext.xbase.lib" url="features/org.eclipse.xtext.xbase.lib_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.springsource.ide.eclipse.commons.quicksearch.feature" url="features/org.springsource.ide.eclipse.commons.quicksearch.feature_3.6.3.201411271002-RELEASE/" version="3.6.3.201411271002-RELEASE">
+</feature>
+<feature id="org.eclipse.wb.rcp.doc.user.feature" plugin-identifier="org.eclipse.wb.rcp.doc.user" url="features/org.eclipse.wb.rcp.doc.user.feature_1.6.1.r43x201309100019/" version="1.6.1.r43x201309100019">
+</feature>
+<feature id="org.eclipse.cvs.source" url="features/org.eclipse.cvs.source_1.4.0.v20140221-1700/" version="1.4.0.v20140221-1700">
+</feature>
+<feature id="org.eclipse.egit" url="features/org.eclipse.egit_3.2.0.201312181205-r/" version="3.2.0.201312181205-r">
+</feature>
+<feature id="org.eclipse.mylyn_feature" plugin-identifier="org.eclipse.mylyn.tasks.core" url="features/org.eclipse.mylyn_feature_3.9.2.v20140211-0100/" version="3.9.2.v20140211-0100">
+</feature>
+<feature id="com.yattasolutions.xtend.typesystem.emf.patch" url="features/com.yattasolutions.xtend.typesystem.emf.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.springframework.ide.eclipse.mylyn.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.mylyn.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.gef" url="features/org.eclipse.gef_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.eclipse.m2m.qvt.oml.doc" url="features/org.eclipse.m2m.qvt.oml.doc_3.3.0.v20130611-0213/" version="3.3.0.v20130611-0213">
+</feature>
+<feature id="org.eclipse.cdt.platform" url="features/org.eclipse.cdt.platform_8.2.1.201309180223/" version="8.2.1.201309180223">
+</feature>
+<feature id="org.eclipse.xpand" url="features/org.eclipse.xpand_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="com.yattasolutions.coobra" url="features/com.yattasolutions.coobra_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.mylyn.commons.identity" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.identity_1.1.2.v20140211-0100/" version="1.1.2.v20140211-0100">
+</feature>
+<feature id="com.google.gdt.eclipse.designer.feature" plugin-identifier="com.google.gdt.eclipse.designer" url="features/com.google.gdt.eclipse.designer.feature_3.1.2.r43x201307151456/" version="3.1.2.r43x201307151456">
+</feature>
+<feature id="org.eclipse.epp.package.standard.feature" plugin-identifier="org.eclipse.epp.package.standard" url="features/org.eclipse.epp.package.standard.feature_2.0.2.20140224-0000/" version="2.0.2.20140224-0000">
+</feature>
+<feature id="org.codehaus.groovy21.feature" plugin-identifier="org.codehaus.groovy.eclipse" url="features/org.codehaus.groovy21.feature_2.9.0.xx-201406301607-e37/" version="2.9.0.xx-201406301607-e37">
+</feature>
+<feature id="org.springframework.ide.eclipse.uaa.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.uaa.feature.source_3.6.3.201411271002-RELEASE/" version="3.6.3.201411271002-RELEASE">
+</feature>
+<feature id="org.eclipse.equinox.p2.user.ui.source" url="features/org.eclipse.equinox.p2.user.ui.source_2.2.0.v20140221-1852/" version="2.2.0.v20140221-1852">
+</feature>
+<feature id="org.eclipse.xtext.xbase" url="features/org.eclipse.xtext.xbase_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.jdt.java8patch" url="features/org.eclipse.jdt.java8patch_1.0.0.v20140317-1956/" version="1.0.0.v20140317-1956">
+</feature>
+<feature id="com.android.ide.eclipse.adt" url="features/com.android.ide.eclipse.adt_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.zest.sdk" plugin-identifier="org.eclipse.zest.source" url="features/org.eclipse.zest.sdk_1.5.1.201308190730/" version="1.5.1.201308190730">
+</feature>
+<feature id="com.yattasolutions.xtend.patch" url="features/com.yattasolutions.xtend.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.xpand.ui" url="features/org.eclipse.xpand.ui_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.mylyn.commons.notifications" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.notifications_1.1.2.v20140211-0100/" version="1.1.2.v20140211-0100">
+</feature>
+<feature id="org.eclipse.xtext.xtext.ui.source" url="features/org.eclipse.xtext.xtext.ui.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.xtend.typesystem.emf" url="features/org.eclipse.xtend.typesystem.emf_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.rcp" url="features/org.eclipse.rcp_4.3.2.v20140221-1700/" version="4.3.2.v20140221-1700">
+</feature>
+<feature id="org.eclipse.xtext.ui.source" url="features/org.eclipse.xtext.ui.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.cvs" url="features/org.eclipse.cvs_1.4.0.v20140221-1700/" version="1.4.0.v20140221-1700">
+</feature>
+<feature id="org.springframework.ide.eclipse.batch.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.batch.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.xtend.dependencies" url="features/org.eclipse.xtend.dependencies_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.gef.source" url="features/org.eclipse.gef.source_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.springframework.ide.eclipse.autowire.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.autowire.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.gef.examples.source" url="features/org.eclipse.gef.examples.source_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.eclipse.xtend.ui" url="features/org.eclipse.xtend.ui_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.xtext.runtime.source" url="features/org.eclipse.xtext.runtime.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.examples.feature" url="features/org.eclipse.bpmn2.modeler.examples.feature_1.0.5.Final/" version="1.0.5.Final">
+</feature>
+<feature id="org.eclipse.php" url="features/org.eclipse.php_3.2.0.201306051924/" version="3.2.0.201306051924">
+</feature>
+<feature id="org.eclipse.equinox.p2.core.feature.source" url="features/org.eclipse.equinox.p2.core.feature.source_1.2.1.v20140221-1852/" version="1.2.1.v20140221-1852">
+</feature>
+<feature id="org.eclipse.draw2d.sdk" plugin-identifier="org.eclipse.draw2d" url="features/org.eclipse.draw2d.sdk_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.eclipse.jdt" url="features/org.eclipse.jdt_3.9.2.v20140221-1700/" version="3.9.2.v20140221-1700">
+</feature>
+<feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.11.0.v20150318-0449/" version="2.11.0.v20150318-0449">
+</feature>
+<feature id="org.eclipse.platform.source" url="features/org.eclipse.platform.source_4.3.2.v20140221-1852/" version="4.3.2.v20140221-1852">
+</feature>
+<feature id="org.eclipse.xtend.sdk" plugin-identifier="org.eclipse.xtend.ide" url="features/org.eclipse.xtend.sdk_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.wb.core.xml.feature" plugin-identifier="org.eclipse.wb.core.xml" url="features/org.eclipse.wb.core.xml.feature_1.7.0.r43x201405021458/" version="1.7.0.r43x201405021458">
+</feature>
+<feature id="org.eclipse.fx.ide.l10n.feature" url="features/org.eclipse.fx.ide.l10n.feature_1.1.0.201411050807/" version="1.1.0.201411050807">
+</feature>
+<feature id="org.eclipse.pde.source" url="features/org.eclipse.pde.source_3.9.1.v20140221-1700/" version="3.9.1.v20140221-1700">
+</feature>
+<feature id="com.yattasolutions.org.eclipse.emf.compare" url="features/com.yattasolutions.org.eclipse.emf.compare_1.3.3.v20140618-1712/" version="1.3.3.v20140618-1712">
+</feature>
+<feature id="org.eclipse.wb.swt.feature" plugin-identifier="org.eclipse.wb.swt" url="features/org.eclipse.wb.swt.feature_1.6.1.r43x201309092350/" version="1.6.1.r43x201309092350">
+</feature>
+<feature id="org.codehaus.groovy22.feature" plugin-identifier="org.codehaus.groovy.eclipse" url="features/org.codehaus.groovy22.feature_2.9.0.xx-201406301607-e37/" version="2.9.0.xx-201406301607-e37">
+</feature>
+<feature id="com.yattasolutions.xtend.typesystem.uml2.patch" url="features/com.yattasolutions.xtend.typesystem.uml2.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="com.yattasolutions.xpandpp" url="features/com.yattasolutions.xpandpp_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="com.yattasolutions.xtend.ui.patch" url="features/com.yattasolutions.xtend.ui.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.gef4.zest" plugin-identifier="org.eclipse.gef4.zest.core" url="features/org.eclipse.gef4.zest_0.1.0.201406280202/" version="0.1.0.201406280202">
+</feature>
+<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.11.0.v20150318-0449/" version="2.11.0.v20150318-0449">
+</feature>
+<feature id="org.eclipse.equinox.p2.user.ui" url="features/org.eclipse.equinox.p2.user.ui_2.2.0.v20140221-1852/" version="2.2.0.v20140221-1852">
+</feature>
+<feature id="com.android.ide.eclipse.ndk" url="features/com.android.ide.eclipse.ndk_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.jem" url="features/org.eclipse.jem_1.2.3.v20070130_R----6zXJK-L2U8VZ/" version="1.2.3.v20070130_R----6zXJK-L2U8VZ">
+</feature>
+<feature id="org.eclipse.m2m.qvt.oml.examples" plugin-identifier="org.eclipse.m2m.qvt.oml.samples" url="features/org.eclipse.m2m.qvt.oml.examples_3.3.0.v20130611-0213/" version="3.3.0.v20130611-0213">
+</feature>
+<feature id="org.eclipse.wb.doc.user.feature" plugin-identifier="org.eclipse.wb.doc.user" url="features/org.eclipse.wb.doc.user.feature_1.6.1.r43x201309092334/" version="1.6.1.r43x201309092334">
+</feature>
+<feature id="inria.smarttools.feature" url="features/inria.smarttools.feature_1.6.3.a2/" version="1.6.3.a2">
+</feature>
+<feature id="org.eclipse.xtext.examples" url="features/org.eclipse.xtext.examples_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="com.yattasolutions.umllab" plugin-identifier="com.yattasolutions.umllab.branding" url="features/com.yattasolutions.umllab_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.jgit" url="features/org.eclipse.jgit_3.2.0.201312181205-r/" version="3.2.0.201312181205-r">
+</feature>
+<feature id="com.google.gwt.eclipse.sdkbundle.feature" url="features/com.google.gwt.eclipse.sdkbundle.feature_2.6.0/" version="2.6.0">
+</feature>
+<feature id="org.eclipse.gef4.zest.sdk" url="features/org.eclipse.gef4.zest.sdk_0.1.0.201406280202/" version="0.1.0.201406280202">
+</feature>
+<feature id="org.eclipse.gef.examples" plugin-identifier="org.eclipse.gef.examples.logic" url="features/org.eclipse.gef.examples_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="com.android.ide.eclipse.traceview" url="features/com.android.ide.eclipse.traceview_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.jst.ws.axis2tools.feature" plugin-identifier="org.eclipse.jst.ws.axis2.ui" url="features/org.eclipse.jst.ws.axis2tools.feature_1.1.200.v201103022333-78-FF0DZRDKDDePSKwHj/" version="1.1.200.v201103022333-78-FF0DZRDKDDePSKwHj">
+</feature>
+<feature id="org.springframework.ide.eclipse.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.platform" url="features/org.eclipse.platform_4.3.2.v20140221-1852/" version="4.3.2.v20140221-1852">
+</feature>
+<feature id="com.google.gdt.eclipse.designer.hosted.feature" url="features/com.google.gdt.eclipse.designer.hosted.feature_3.1.3.r43x201405021502/" version="3.1.3.r43x201405021502">
+</feature>
+<feature id="com.yattasolutions.codegen.reverse" url="features/com.yattasolutions.codegen.reverse_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.xtext.xbase.source" url="features/org.eclipse.xtext.xbase.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.mylyn.discovery" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.discovery_3.9.2.v20140211-0100/" version="3.9.2.v20140211-0100">
+</feature>
+<feature id="org.eclipse.wb.rcp.feature" plugin-identifier="org.eclipse.wb.rcp" url="features/org.eclipse.wb.rcp.feature_1.6.1.r43x201309100008/" version="1.6.1.r43x201309100008">
+</feature>
+<feature id="com.android.ide.eclipse.gldebugger" url="features/com.android.ide.eclipse.gldebugger_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.e4.rcp.source" url="features/org.eclipse.e4.rcp.source_1.2.2.v20140206-1358/" version="1.2.2.v20140206-1358">
+</feature>
+<feature id="org.eclipse.e4.rcp" url="features/org.eclipse.e4.rcp_1.2.2.v20140206-1358/" version="1.2.2.v20140206-1358">
+</feature>
+<feature id="com.yattasolutions.features" url="features/com.yattasolutions.features_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.springframework.ide.eclipse.webflow.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.webflow.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.xtext.license" url="features/org.eclipse.xtext.license_2.6.0.v201411190455/" version="2.6.0.v201411190455">
+</feature>
+<feature id="org.codehaus.groovy23.feature" plugin-identifier="org.codehaus.groovy.eclipse" url="features/org.codehaus.groovy23.feature_2.9.0.xx-201406301607-e37/" version="2.9.0.xx-201406301607-e37">
+</feature>
+<feature id="org.eclipse.zest" plugin-identifier="org.eclipse.zest.core" url="features/org.eclipse.zest_1.5.1.201308190730/" version="1.5.1.201308190730">
+</feature>
+<feature id="com.yattasolutions.patches" url="features/com.yattasolutions.patches_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.m2m.qvt.oml" url="features/org.eclipse.m2m.qvt.oml_3.3.0.v20130611-0213/" version="3.3.0.v20130611-0213">
+</feature>
+<feature id="org.eclipse.equinox.p2.core.feature" url="features/org.eclipse.equinox.p2.core.feature_1.2.1.v20140221-1852/" version="1.2.1.v20140221-1852">
+</feature>
+<feature id="org.eclipse.xtend.typesystem.uml2" url="features/org.eclipse.xtend.typesystem.uml2_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.emf" url="features/org.eclipse.emf_2.2.0.v200606271057/" version="2.2.0.v200606271057">
+</feature>
+<feature id="org.eclipse.rcp.source" url="features/org.eclipse.rcp.source_4.3.2.v20140221-1700/" version="4.3.2.v20140221-1700">
+</feature>
+<feature id="com.yattasolutions.umllab.core" url="features/com.yattasolutions.umllab.core_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.jboss.runtime.feature" url="features/org.eclipse.bpmn2.modeler.jboss.runtime.feature_1.0.5.Final/" version="1.0.5.Final">
+</feature>
+<feature id="org.eclipse.m2m.qvt.oml.editor" plugin-identifier="org.eclipse.m2m.qvt.oml.editor.ui" url="features/org.eclipse.m2m.qvt.oml.editor_3.3.0.v20130611-0213/" version="3.3.0.v20130611-0213">
+</feature>
+<feature id="com.yattasolutions.codegen" url="features/com.yattasolutions.codegen_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.wb.layout.group.feature" plugin-identifier="org.eclipse.wb.layout.group" url="features/org.eclipse.wb.layout.group.feature_1.6.1.r43x201309092345/" version="1.6.1.r43x201309092345">
+</feature>
+<feature id="org.springframework.ide.eclipse.roo.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.roo.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.ve" url="features/org.eclipse.ve_1.2.1.v20060817_M-zXJUB0fx_-eyDdh/" version="1.2.1.v20060817_M-zXJUB0fx_-eyDdh">
+</feature>
+<feature id="org.eclipse.xtend" url="features/org.eclipse.xtend_1.4.0.v201306110406/" version="1.4.0.v201306110406">
+</feature>
+<feature id="org.eclipse.wb.swing.doc.user.feature" plugin-identifier="org.eclipse.wb.swing.doc.user" url="features/org.eclipse.wb.swing.doc.user.feature_1.6.1.r43x201309100012/" version="1.6.1.r43x201309100012">
+</feature>
+<feature id="com.google.gdt.eclipse.designer.gpe.feature" url="features/com.google.gdt.eclipse.designer.gpe.feature_3.1.3.r43x201405021554/" version="3.1.3.r43x201405021554">
+</feature>
+<feature id="org.eclipse.wb.xwt.feature" plugin-identifier="org.eclipse.wb.xwt" url="features/org.eclipse.wb.xwt.feature_1.6.1.r43x201309100031/" version="1.6.1.r43x201309100031">
+</feature>
+<feature id="com.google.gdt.eclipse.designer.editor.feature" url="features/com.google.gdt.eclipse.designer.editor.feature_3.1.3.r43x201405021509/" version="3.1.3.r43x201405021509">
+</feature>
+<feature id="org.eclipse.draw2d" url="features/org.eclipse.draw2d_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.eclipse.xtext.runtime" url="features/org.eclipse.xtext.runtime_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.mylyn.commons" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons_3.9.2.v20140211-0100/" version="3.9.2.v20140211-0100">
+</feature>
+<feature id="org.eclipse.fx.ide.rrobot.feature" url="features/org.eclipse.fx.ide.rrobot.feature_1.1.0.201411050807/" version="1.1.0.201411050807">
+</feature>
+<feature id="org.eclipse.epp.package.common.feature" url="features/org.eclipse.epp.package.common.feature_2.0.2.20140224-0000/" version="2.0.2.20140224-0000">
+</feature>
+<feature id="org.springframework.ide.eclipse.aop.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.aop.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="com.yattasolutions.diagrams.classdiagram" url="features/com.yattasolutions.diagrams.classdiagram_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.wb.core.java.feature" url="features/org.eclipse.wb.core.java.feature_1.7.0.r43x201405021448/" version="1.7.0.r43x201405021448">
+</feature>
+<feature id="org.eclipse.mylyn.trac_feature" plugin-identifier="org.eclipse.mylyn.tasks.core" url="features/org.eclipse.mylyn.trac_feature_3.9.2.v20140211-0100/" version="3.9.2.v20140211-0100">
+</feature>
+<feature id="org.springframework.ide.eclipse.maven.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.maven.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.dltk.core.index" url="features/org.eclipse.dltk.core.index_5.2.0.201503192110/" version="5.2.0.201503192110">
+</feature>
+<feature id="org.eclipse.jdt.source" url="features/org.eclipse.jdt.source_3.9.2.v20140221-1700/" version="3.9.2.v20140221-1700">
+</feature>
+<feature id="org.eclipse.jst.webpageeditor.feature" url="features/org.eclipse.jst.webpageeditor.feature_2.5.0.v201305011549-47C-9oB58E5K588KHW/" version="2.5.0.v201305011549-47C-9oB58E5K588KHW">
+</feature>
+<feature id="org.eclipse.xtext.xbase.lib.source" url="features/org.eclipse.xtext.xbase.lib.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.springsource.ide.eclipse.gradle.feature" url="features/org.springsource.ide.eclipse.gradle.feature_3.6.3.201411271013-RELEASE/" version="3.6.3.201411271013-RELEASE">
+</feature>
+<feature id="org.eclipse.equinox.p2.discovery.feature" url="features/org.eclipse.equinox.p2.discovery.feature_1.0.100.v20130502-0334/" version="1.0.100.v20130502-0334">
+</feature>
+<feature id="org.eclipse.equinox.p2.rcp.feature" url="features/org.eclipse.equinox.p2.rcp.feature_1.2.0.v20140221-1852/" version="1.2.0.v20140221-1852">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.wsil.feature" url="features/org.eclipse.bpmn2.modeler.wsil.feature_1.0.5.Final/" version="1.0.5.Final">
+</feature>
+<feature id="org.eclipse.m2m.qvt.oml.runtime" url="features/org.eclipse.m2m.qvt.oml.runtime_3.3.0.v20130611-0213/" version="3.3.0.v20130611-0213">
+</feature>
+<feature id="org.eclipse.xtext.examples.source" url="features/org.eclipse.xtext.examples.source_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.xtext.ui" url="features/org.eclipse.xtext.ui_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="com.android.ide.eclipse.ddms" url="features/com.android.ide.eclipse.ddms_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.epp.mpc" plugin-identifier="org.eclipse.epp.mpc.ui" url="features/org.eclipse.epp.mpc_1.2.1.v20140219-1000/" version="1.2.1.v20140219-1000">
+</feature>
+<feature id="org.eclipse.uml2" url="features/org.eclipse.uml2_4.1.2.v20140202-2055/" version="4.1.2.v20140202-2055">
+</feature>
+<feature id="org.eclipse.dltk.core" plugin-identifier="org.eclipse.dltk" url="features/org.eclipse.dltk.core_5.2.0.201503192110/" version="5.2.0.201503192110">
+</feature>
+<feature id="org.eclipse.e4.core.tools.feature" url="features/org.eclipse.e4.core.tools.feature_0.14.0.v20140116-1126/" version="0.14.0.v20140116-1126">
+</feature>
+<feature id="org.eclipse.xtext.docs" plugin-identifier="org.eclipse.xtext.doc" url="features/org.eclipse.xtext.docs_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.draw2d.source" url="features/org.eclipse.draw2d.source_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="org.eclipse.equinox.p2.rcp.feature.source" url="features/org.eclipse.equinox.p2.rcp.feature.source_1.2.0.v20140221-1852/" version="1.2.0.v20140221-1852">
+</feature>
+<feature id="org.eclipse.cdt.gdb" url="features/org.eclipse.cdt.gdb_7.2.1.201309180223/" version="7.2.1.201309180223">
+</feature>
+<feature id="com.google.gdt.eclipse.suite.e43.feature" plugin-identifier="com.google.gdt.eclipse.suite" url="features/com.google.gdt.eclipse.suite.e43.feature_3.8.0.v201410302155-rel-r43/" version="3.8.0.v201410302155-rel-r43">
+</feature>
+<feature id="org.eclipse.pde" url="features/org.eclipse.pde_3.9.1.v20140221-1700/" version="3.9.1.v20140221-1700">
+</feature>
+<feature id="org.eclipse.xtext.redist" url="features/org.eclipse.xtext.redist_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.team.svn" url="features/org.eclipse.team.svn_1.1.3.I20140206-1700/" version="1.1.3.I20140206-1700">
+</feature>
+<feature id="org.eclipse.xtext.xtext.ui" url="features/org.eclipse.xtext.xtext.ui_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.jdt.a2.java8patch" url="features/org.eclipse.jdt.a2.java8patch_1.0.0.v20140317-1956/" version="1.0.0.v20140317-1956">
+</feature>
+<feature id="org.eclipse.cdt.gnu.dsf" url="features/org.eclipse.cdt.gnu.dsf_4.2.0.201309180223/" version="4.2.0.201309180223">
+</feature>
+<feature id="org.polarion.eclipse.team.svn.connector.svnkit16" url="features/org.polarion.eclipse.team.svn.connector.svnkit16_3.0.5.I20140122-1700/" version="3.0.5.I20140122-1700">
+</feature>
+<feature id="org.eclipse.mylyn.commons.repositories" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.commons.repositories_1.1.2.v20140211-0100/" version="1.1.2.v20140211-0100">
+</feature>
+<feature id="com.yattasolutions.diagrams.core" url="features/com.yattasolutions.diagrams.core_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.rcp.configuration" url="features/org.eclipse.rcp.configuration_1.0.0.v20140117-0610/" version="1.0.0.v20140117-0610">
+</feature>
+<feature id="com.google.appengine.eclipse.sdkbundle.feature" url="features/com.google.appengine.eclipse.sdkbundle.feature_1.9.17/" version="1.9.17">
+</feature>
+<feature id="com.yattasolutions.qvto" url="features/com.yattasolutions.qvto_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.codehaus.groovy20.feature" plugin-identifier="org.codehaus.groovy.eclipse" url="features/org.codehaus.groovy20.feature_2.9.0.xx-201406301607-e37/" version="2.9.0.xx-201406301607-e37">
+</feature>
+<feature id="org.eclipse.bpmn2.modeler.feature" url="features/org.eclipse.bpmn2.modeler.feature_1.0.5.Final/" version="1.0.5.Final">
+</feature>
+<feature id="com.android.ide.eclipse.hierarchyviewer" url="features/com.android.ide.eclipse.hierarchyviewer_22.3.0.v201310242005-887826/" version="22.3.0.v201310242005-887826">
+</feature>
+<feature id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature" url="features/org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature_2.4.0.v201305011549-22-7w31241612265A/" version="2.4.0.v201305011549-22-7w31241612265A">
+</feature>
+<feature id="org.eclipse.mylyn.monitor" plugin-identifier="org.eclipse.mylyn.commons.core" url="features/org.eclipse.mylyn.monitor_3.9.2.v20140211-0100/" version="3.9.2.v20140211-0100">
+</feature>
+<feature id="org.eclipse.xtext.sdk" plugin-identifier="org.eclipse.xtext" url="features/org.eclipse.xtext.sdk_2.7.3.v201411190455/" version="2.7.3.v201411190455">
+</feature>
+<feature id="org.eclipse.wb.css.feature" plugin-identifier="org.eclipse.wb.css" url="features/org.eclipse.wb.css.feature_1.7.0.r43x201405021453/" version="1.7.0.r43x201405021453">
+</feature>
+<feature id="com.yattasolutions.openlibs" url="features/com.yattasolutions.openlibs_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="com.yattasolutions.xpand.patch" url="features/com.yattasolutions.xpand.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.springframework.ide.eclipse.osgi.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.osgi.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.wb.rcp.SWT_AWT_support" plugin-identifier="org.eclipse.wb.rcp.SWT_AWT" url="features/org.eclipse.wb.rcp.SWT_AWT_support_1.6.1.r43x201309100026/" version="1.6.1.r43x201309100026">
+</feature>
+<feature id="org.springframework.ide.eclipse.uaa.feature" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.uaa.feature_3.6.3.201411271002-RELEASE/" version="3.6.3.201411271002-RELEASE">
+</feature>
+<feature id="org.springframework.ide.eclipse.integration.feature.source" plugin-identifier="org.springframework.ide.eclipse" url="features/org.springframework.ide.eclipse.integration.feature.source_3.6.3.201411271034-RELEASE/" version="3.6.3.201411271034-RELEASE">
+</feature>
+<feature id="org.eclipse.equinox.p2.extras.feature" url="features/org.eclipse.equinox.p2.extras.feature_1.2.0.v20140221-1852/" version="1.2.0.v20140221-1852">
+</feature>
+<feature id="org.eclipse.equinox.p2.extras.feature.source" url="features/org.eclipse.equinox.p2.extras.feature.source_1.2.0.v20140221-1852/" version="1.2.0.v20140221-1852">
+</feature>
+<feature id="org.polarion.eclipse.team.svn.connector" url="features/org.polarion.eclipse.team.svn.connector_3.0.5.I20140122-1700/" version="3.0.5.I20140122-1700">
+</feature>
+<feature id="org.eclipse.e4.core.tools.feature.source" url="features/org.eclipse.e4.core.tools.feature.source_0.14.0.v20140116-1126/" version="0.14.0.v20140116-1126">
+</feature>
+<feature id="org.eclipse.gef.sdk" plugin-identifier="org.eclipse.gef" url="features/org.eclipse.gef.sdk_3.9.1.201308190730/" version="3.9.1.201308190730">
+</feature>
+<feature id="com.yattasolutions.xpand.ui.patch" url="features/com.yattasolutions.xpand.ui.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="com.yattasolutions.patches.roundtrip" url="features/com.yattasolutions.patches.roundtrip_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.wb.core.ui.feature" plugin-identifier="org.eclipse.wb.core.ui" url="features/org.eclipse.wb.core.ui.feature_1.7.0.r43x201405021455/" version="1.7.0.r43x201405021455">
+</feature>
+<feature id="com.yattasolutions.ecore" plugin-identifier="com.yattasolutions.umllab.branding" url="features/com.yattasolutions.ecore_1.7.1.201409231406/" version="1.7.1.201409231406">
+</feature>
+<feature id="org.eclipse.emf.ecore.sdo" url="features/org.eclipse.emf.ecore.sdo_2.2.0.v200606271057/" version="2.2.0.v200606271057">
+</feature>
+<feature id="org.eclipse.wb.swing.feature" plugin-identifier="org.eclipse.wb.swing" url="features/org.eclipse.wb.swing.feature_1.6.1.r43x201309100023/" version="1.6.1.r43x201309100023">
+</feature>
+<feature id="com.yattasolutions.uml2.patch" url="features/com.yattasolutions.uml2.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.cdt.gnu.debug" url="features/org.eclipse.cdt.gnu.debug_7.2.0.201309180223/" version="7.2.0.201309180223">
+</feature>
+<feature id="org.eclipse.zest.source" url="features/org.eclipse.zest.source_1.5.1.201308190730/" version="1.5.1.201308190730">
+</feature>
+<feature id="com.yattasolutions.xpand.sdk.patch" url="features/com.yattasolutions.xpand.sdk.patch_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="com.yattasolutions.patches.core" url="features/com.yattasolutions.patches.core_1.7.113.201409230111/" version="1.7.113.201409230111">
+</feature>
+<feature id="org.eclipse.fx.ide.converter.feature" url="features/org.eclipse.fx.ide.converter.feature_1.1.0.201411050807/" version="1.1.0.201411050807">
+</feature>
+</site>
+<site enabled="true" list="Workspace Eclipse SON/pluginLibrary/,Workspace Eclipse SON/inria.smarttools.ds.local/,Workspace Eclipse SON/inria.smarttools.core/,Workspace Eclipse SON/inria.lognet.virtpipes/,Workspace Eclipse SON/inria.smarttools.componentsmanager/,Workspace Eclipse SON/inria.smarttools.dynamic/,Workspace Eclipse SON/open-chord/,Workspace Eclipse SON/inria.lognet.virtpipes.keyvaluestore/,Workspace Eclipse SON/inria.smarttools.ds.pon/,Workspace Eclipse SON/inria.lognet.virtpipes.openchord/,Workspace Eclipse SON/SoaApp/,Workspace Eclipse SON/inria.pon.keyvaluestore/,Workspace Eclipse SON/inria.pon.keyvaluestore.openchord/,Workspace Eclipse SON/startereditor/" policy="USER-INCLUDE" updateable="true" url="file:/C:/Users/TAGUEU/Documents/">
+</site>
+</config>

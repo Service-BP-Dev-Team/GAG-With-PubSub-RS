@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-Activator: inria.smarttools.componentsmanager.Activator
+Export-Package: inria.smarttools.componentsmanager,
+ inria.smarttools.componentsmanager.resources,
+ inria.smarttools.componentsmanager.resources.lml,
+ inria.smarttools.componentsmanager.resources.world
+Bundle-Name: componentsManager
+Bundle-Description: A bundle for testing
+Bundle-Vendor: INRIA SmartTools
+Bundle-Version: 1.6.3
+Bundle-SymbolicName: componentsManager;singleton=true
+Import-Package: inria.smarttools.core.component,
+ inria.smarttools.core.util,
+ inria.smarttools.dynamic,
+ org.osgi.framework
+Require-Bundle: inria.smarttools.lib
+Provide-Package: inria.smarttools.componentsmanager,
+ inria.smarttools.componentsmanager.resources,
+ inria.smarttools.componentsmanager.resources.lml,
+ inria.smarttools.componentsmanager.resources.world,
+ inria.smarttools.componentsmanager.ui.client

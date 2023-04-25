@@ -1,0 +1,15 @@
+1526188919666	Rename package 'lifa.miu.smartworkflow'
+1526189002889	Rename type 'SmartWorkflow'
+1526220620597	Rename package 'smartWorkflowDWfMS'
+1526220639911	Rename type 'SmartWorkflowDWfMS'
+1526220752291	Rename package 'smartworkflow.dwfms.lifa.miu.view'
+1526220773980	Rename package 'smartworkflow.dwfms.lifa.miu.util'
+1526220799293	Rename package 'smartworkflow.dwfms.lifa.miu.remote'
+1526220816200	Rename package 'smartworkflow.dwfms.lifa.miu.models'
+1526220827732	Rename package 'smartworkflow.dwfms.lifa.miu.controllers'
+1526220839827	Rename package 'smartworkflow.dwfms.lifa.miu.resources.configurations'
+1526220864547	Delete element
+1526220875719	Rename package 'smartworkflow.dwfms.lifa.miu.resources.engine'
+1526220889798	Rename package 'smartworkflow.dwfms.lifa.miu.resources.images'
+1526220898767	Rename package 'smartworkflow.dwfms.lifa.miu.resources.languages'
+1526220956973	Delete elements

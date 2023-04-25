@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;editorGlobal.world&apos; to &apos;startereditor/src/starterserver.resources&apos;&#x0D;&#x0A;- Original project: &apos;startereditor&apos;&#x0D;&#x0A;- Destination element: &apos;startereditor/src/starterserver.resources&apos;&#x0D;&#x0A;- Original element: &apos;editorGlobal.world&apos;" description="Copy file" destination="/src&lt;starterserver.resources" element1="src/starterserver/resources/editorGlobal.world" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1533052796063" units="0" version="1.0"/>
+</session>

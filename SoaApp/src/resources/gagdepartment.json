@@ -1,0 +1,130 @@
+{  
+   "rules":[  
+      {  
+         "name":"File approval",
+         "leftSide":{  
+            "name":"Department service",
+            "in":[  
+               {  
+                  "name":"file"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"department processing"
+                     },
+                     {  
+                        "name":"next"
+                     }
+                  ]
+               }
+            ],
+            "location":"department"
+         },
+         "rightSide":[  
+            {  
+               "name":"DschangSchool service",
+               "in":[  
+                  {  
+                     "name":"file"
+                  },
+                  {  
+                     "name":"department processing"
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"next"
+                  }
+               ],
+               "location":"DschangSchool"
+            }
+         ],
+         "parameters":[  
+            {  
+               "name":"department processing"
+            }
+         ]
+      },
+      {  
+         "name":"File rejection",
+         "leftSide":{  
+            "name":"Department service",
+            "in":[  
+               {  
+                  "name":"file"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"reason for rejection"
+                     }
+                  ]
+               }
+            ],
+            "location":"department"
+         },
+         "rightSide":[  
+
+         ],
+         "parameters":[  
+            {  
+               "name":"reason for rejection"
+            }
+         ]
+      },
+      {  
+         "name":"Student request",
+         "leftSide":{  
+            "name":"Department request",
+            "in":[  
+               {  
+                  "name":"file number"
+               },
+               {  
+                  "name":"supporting documents"
+               }
+            ],
+            "out":[  
+               {  
+                  "name":"processing"
+               }
+            ],
+            "location":"department"
+         },
+         "rightSide":[  
+            {  
+               "name":"Department service",
+               "in":[  
+                  {  
+                     "label":"New",
+                     "terms":[  
+                        {  
+                           "name":"file"
+                        },
+                        {  
+                           "name":"supporting documents"
+                        }
+                     ]
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"processing"
+                  }
+               ],
+               "location":"department"
+            }
+         ],
+         "parameters":[  
+
+         ]
+      }
+   ]
+}

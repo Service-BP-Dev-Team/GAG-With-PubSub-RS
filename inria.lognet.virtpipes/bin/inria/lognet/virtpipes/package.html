@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1.60 98/01/27
+
+  Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road, 
+  Palo Alto, California, 94303, U.S.A.  All Rights Reserved.
+
+  This software is the confidential and proprietary information of Sun
+  Microsystems, Inc. ("Confidential Information").  You shall not
+  disclose such Confidential Information and shall use it only in
+  accordance with the terms of the license agreement you entered into
+  with Sun.
+
+  CopyrightVersion 1.2
+
+-->
+</head>
+<body bgcolor="white">
+
+<h2>Architecture</h2>
+<table border="1" align="center">
+<tr><td colspan="2" width="50%" align="center"><a href="../../../inria/lognet/ds/pon/package-summary.html">inria.lognet.ds.pon</a></td><td align="center"><a href="../../../inria/smarttools/ds/local/package-summary.html">inria.smarttools.ds.local</a></td><td></td></tr>
+<tr><td width="25%" align="center" rowspan="2"><b>inria.lognet.virtpipes</b></td><td colspan="2" align="center"><a href="../../../inria/smarttools/componentsmanager/package-summary.html">inria.smarttools.componentsmanager</a></td><td align="center">Other components</td></tr>
+<tr><td colspan="3" align="center"><a href="../../../inria/smarttools/core/package-summary.html">inria.smarttools.core</a></td></tr>
+<tr><td rowspan="2" align="center"><a href="../../../inria/pon/keyvaluestore/package-summary.html">inria.pon.keyvaluestore</a></td><td colspan="3" align="center"><a href="../../../inria/smarttools/dynamic/package-summary.html">inria.smarttools.dynamic</a></td></tr>
+<tr><td colspan="3" align="center">inria.smarttools.lib</td></tr>
+<tr><td colspan="4" align="center">org.osgi.framework</td></tr>
+</table>
+
+<h2>VirtPipes</h2>
+This package and sub-packages represent the VirtPipes framework.
+
+<h2>What is VirtPipes?</h2>
+VirtPipes is an abstraction of communication channels, identified by an Universal Unique Identifier (UUID).
+The pipes are only unicast, and are dynamically and lazily connected.
+
+<h2>How does it work?</h2>
+You create a VirtPipeInput (Pipe Source) and a VirtPipeOutput (Pipe Sink) with the same ID, and they are virtually connected.
+<p>
+When you send an information with the Output, the VirtPipes framework resolves the way to send the information to the Inputs identified by the Output's UUID.
+<p>
+The way to send the information is quite simply: for every VirtPipeInputs, there is an entry to point to the VirtPipesService framework.
+These entries can be managed by multiple ways with the VirtPipes Modules.
+<p>
+<ul>
+	<li>Create a <a href="VirtPipeInput.html">{@see VirtPipeInput}</a> with an ID generated randomly with {@see UUID#randomUUID} or with <a href="VirtPipesService.html#generateUniqueId()">{@see VirtPipesService#generateUniqueID}</a>.</li>
+	<li>Register the new VirtPipeInput object into the VirtPipesService with VirtPipesService.registerVirtPipeInput(VirtPipeInput)</li>
+	<li>Create a <a href="VirtPipeOutputDefault.html">VirtPipeOutputDefault</a> (more generally <a href="VirtPipeOutput.html">VirtPipeOutput</a>) with the VirtPipesService and the VirtPipeInput's ID as arguments.</li>
+</ul>
+
+<h2>Extensible with the VirtPipes Modules</h2>
+As each VirtPipeInput register an entry and a VirtPipeOutput search the VirtPipeInput's entries, you can use multiple information sources, bundled in VirtPipes Modules.
+<p>
+You can get DHT in a VirtPipes Module, or a centralized registry, or a Zeroconf (Bonjour) to search information.
+
+
+<h2>Related Documentation</h2>
+
+For overviews, tutorials, examples, guides, and tool documentation, please see:
+<ul>
+  <!--<li><a href="">##### REFER TO NON-SPEC DOCUMENTATION HERE #####</a>-->
+</ul>
+
+<!-- Put @see and @since tags down here. -->
+
+</body>
+</html>

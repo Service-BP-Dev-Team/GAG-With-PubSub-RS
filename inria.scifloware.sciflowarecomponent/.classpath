@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="**/.svn/*|.svn/**" kind="src" path="src"/>
+	<classpathentry kind="src" path="generate/src"/>
+	<classpathentry kind="lib" path="/user/ddupuis/home/PluginsBaseSon/org.eclipse.jetty.util_8.1.14.v20131031.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

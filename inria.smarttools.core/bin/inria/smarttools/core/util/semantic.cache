@@ -1,0 +1,13 @@
+;; Object semantic.cache
+;; SEMANTICDB Tags save file
+(semanticdb-project-database "semantic.cache"
+  :file "semantic.cache"
+  :tables (list 
+   (semanticdb-table "DualHashMap.java"
+    :file "DualHashMap.java"
+    :pointmax 774
+    :major-mode 'jde-mode
+    :tokens '(("inria.smarttools.core.util" package nil nil nil [10 37]) ("java.util.*" include nil nil nil [39 58]) ("DualHashMap" type "class" (("originalToMapped" variable "HashMap" nil ((typemodifiers "protected")) nil ((reparse-symbol . class_body_declarations)) [112 163]) ("mappedToOriginal" variable "HashMap" nil ((typemodifiers "protected")) nil ((reparse-symbol . class_body_declarations)) [168 219]) ("DualHashMap" function nil nil ((typemodifiers "public")) nil ((reparse-symbol . class_body_declarations)) [273 309]) ("put" function "void" (("original" variable "Object" nil nil nil ((reparse-symbol . formal_parameter_list)) [377 393]) ("mapped" variable "Object" nil nil nil ((reparse-symbol . formal_parameter_list)) [394 407])) ((typemodifiers "public")) nil ((reparse-symbol . class_body_declarations)) [361 506]) ("getFromMapped" function "Object" (("keyForOriginal" variable "Object" nil nil nil ((reparse-symbol . formal_parameter_list)) [540 561])) ((typemodifiers "public")) nil ((reparse-symbol . class_body_declarations)) [512 616]) ("getFromOriginal" function "Object" (("keyForMapped" variable "Object" nil nil nil ((reparse-symbol . formal_parameter_list)) [652 671])) ((typemodifiers "public")) nil ((reparse-symbol . class_body_declarations)) [622 724])) nil ((typemodifiers "public")) nil nil [60 773]))
+    )
+   )
+  )

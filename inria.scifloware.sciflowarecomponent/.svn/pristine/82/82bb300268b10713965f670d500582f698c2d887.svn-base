@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name.0
+Bundle-SymbolicName: inria.scifloware.sciflowarecomponent;singleton:=true
+Bundle-Version: 0.2.9
+Bundle-Activator: inria.scifloware.sciflowarecomponent.Activator
+Export-Package: inria.scifloware.sciflowarecomponent;uses:="inria.smarttools.core.util,inria.smarttools.core.component",
+ inria.scifloware.sciflowarecomponent.resources
+Bundle-Vendor: %Bundle-Vendor.0
+Import-Package: org.osgi.framework
+Require-Bundle: inria.smarttools.lib,
+ inria.smarttools.core
+Bundle-ClassPath: .

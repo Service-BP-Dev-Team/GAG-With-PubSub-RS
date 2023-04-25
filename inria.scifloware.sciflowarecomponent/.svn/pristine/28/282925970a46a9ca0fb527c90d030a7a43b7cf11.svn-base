@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<component name="inria.scifloware.sciflowarecomponent" type="component" extends="abstractContainer" ns="inria.scifloware.sciflowarecomponent">
+
+	<containerclass name="SciflowareComponentContainer"/>
+	<facadeclass name="SciflowareComponentFacade" userclassname="SciflowareComponent"/>
+
+</component>

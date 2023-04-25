@@ -1,0 +1,141 @@
+/*******************************************************************************
+ * Copyright (c) 2000, 2008 INRIA.
+ * 
+ *    This file is part of SmartTools project
+ *    <a href="http://www-sop.inria.fr/smartool/">SmartTools</a>
+ * 
+ *     SmartTools is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU Lesser General Public License as published
+ *     by the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ * 
+ *     SmartTools is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU Lesser General Public License for more details.
+ * 
+ *     You should have received a copy of the GNU Lesser General Public License
+ *     along with SmartTools; if not, write to the Free Software
+ *     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ *     INRIA
+ * 
+ *******************************************************************************/
+// $Id: STGenericActivator.java 2819 2009-04-14 12:27:41Z bboussema $
+package inria.smarttools.core.component;
+
+import inria.smarttools.core.util.StreamUtilities;
+import inria.smarttools.dynamic.STBundleRegistry;
+import inria.smarttools.dynamic.STUtilities;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Hashtable;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Properties;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+
+/**
+ * Generic Activator for SmartTools plugins
+ * 
+ * @author <a href="mailto:Didier.Parigot@sophia.inria.fr">Didier Parigot</a>
+ * @version $Revisions$
+ */
+public class STGenericActivator implements ContainerService, BundleActivator {
+
+	protected BundleContext context = null;
+	protected ComponentDescription cmpDescription = null;
+	protected String resourceFileName = null;
+	protected String bundleName = null;
+	private final List<ServiceRegistration> registrations = new LinkedList<ServiceRegistration>();
+
+	public Container createComponent(final Container cont,
+			final String componentID, final String fileName) {
+		return null;
+	}
+
+	public Container createComponent(final String componentID) {
+		return null;
+	}
+
+	public ComponentDescription getComponentDescription() {
+		return cmpDescription;
+	}
+	
+	public BundleContext getContext() {
+		return context;
+	}
+
+	public String getComponentName() {
+		return bundleName;
+	}
+
+	public String getResource() throws IOException {
+		String resource = "";
+
+		final InputStream input = STUtilities.class
+				.getResourceAsStream(resourceFileName);
+		final Reader reader = new InputStreamReader(input);
+		resource = StreamUtilities.loadString(reader);
+
+		return resource;
+	}
+
+	public void registerContainer(final AbstractContainer container) {
+		final Hashtable<String, Object> props = new Hashtable<String, Object>();
+		props.put("FILTER", ","
+				+ container.getContainerDescription().getComponentName() + ","
+				+ container.getIdName());
+		final ServiceRegistration registration = context.registerService(
+				ContainerProxy.class.getName(), container, props);
+		registrations.add(registration);
+		container.setServiceRegistration(registration);
+	}
+
+	private void registerContainerService() {
+		final Hashtable<String, Object> props = new Hashtable<String, Object>();
+		props.put("FILTER", "," + bundleName);
+		registrations.add(context.registerService(ContainerService.class
+				.getName(), this, props));
+	}
+
+	public void start(final BundleContext context) throws Exception {
+		cmpDescription = new ComponentDescriptionImpl();
+		cmpDescription.setResourceFilename(resourceFileName);
+		cmpDescription.setClassLoader(STUtilities.class.getClassLoader());
+		cmpDescription.process();
+		this.context = context;
+		registerContainerService();
+		STBundleRegistry.registerBundle(context.getBundle());
+	}
+
+	public void stop(final BundleContext arg0) throws Exception {
+		if (cmpDescription != null) {
+			cmpDescription.dispose();
+		}
+		cmpDescription = null;
+		STBundleRegistry.removeBundle(context.getBundle());
+		for (final ServiceRegistration registration : registrations) {
+			try {
+				final Object o = context
+						.getService(registration.getReference());
+				if (o instanceof Container) {
+					((Container) o).quit();
+				}
+				registration.unregister();
+			} catch (final IllegalStateException e) {
+				// ok
+			}
+		}
+		context = null;
+		registrations.clear();
+		resourceFileName = null;
+		bundleName = null;
+	}
+}

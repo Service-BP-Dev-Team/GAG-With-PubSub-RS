@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<behaviors>
+
+	<actions>
+		<action name="Quit">
+			<msg name="exit" />
+		</action>
+		<action name="Connect To CM">
+			<msg name="connectTo" chooser="cm.ConnectToDialogBox">
+				<msgattr name="id_src" value="ComponentsManager" />
+				<msgattr name="type_dest" value="" />
+			</msg>
+		</action>
+		<action name="Debug">
+			<msg name="connectTo">
+				<msgattr name="id_src" value="ComponentsManager" />
+				<msgattr name="type_dest" value="worldStateGraph" />
+			</msg>
+		</action>
+		<action name="Add Component">
+			<msg name="addComponent">
+				<msgattr name="urlToJar"
+					chooser="inria.smarttools.core.util.chooser.OpenJarChooser" value="" />
+				<msgattr name="jarName" value="" />
+				<msgattr name="componentName" value="" />
+			</msg>
+		</action>
+		<action name="Reload Component">
+			<msg name="reloadComponent"
+				chooser="cm.ReloadComponentDialogBox">
+				<msgattr name="componentName" value="" />
+			</msg>
+		</action>
+		<action name="Available Components">
+			<msg name="availableComponent"></msg>
+		</action>
+		<action name="Open File">
+			<msg name="requestFile">
+				<msgattr name="requestedFilename"
+					chooser="inria.smarttools.core.util.chooser.OpenFileChooser" value="" />
+			</msg>
+		</action>
+		<action name="Serialize World">
+			<msg name="serialize"
+				chooser="cm.SerializeWorldDialogBox">
+				<msgattr name="path" value="" />
+				<msgattr name="basename" value="toto" />
+			</msg>
+		</action>
+		<action name="Start Data Base">
+			<msg name="startComponent">
+				<msgattr name="componentId" value="db" />
+				<msgattr name="componentType" value="db" />
+			</msg>
+		</action>
+		<action name="Start User">
+			<msg name="startComponent">
+				<msgattr name="componentId" value="stUsersDb" />
+				<msgattr name="componentType" value="stUsersDb" />
+			</msg>
+		</action>
+		<action name="About SmartTools">
+			<msg name="requestFile">
+				<msgattr name="requestedFilename"
+					value="doc/Contribution.html" />
+			</msg>
+		</action>
+		<action name="Open Dir">
+			<msg name="OpenDir">
+				<msgattr name="directoryName"
+					chooser="inria.smarttools.core.util.chooser.OpenDirChooser" value="" />
+			</msg>
+		</action>
+		<action name="Available Documents">
+			<msg name="availableDocument"></msg>
+		</action>
+		<action name="HTML view of Component Manager">
+			<msg name="requestFile">
+				<msgattr name="requestedFilename"
+					value="file:generate/dochtml/cm.html" />
+			</msg>
+		</action>
+	</actions>
+
+	<menus>
+		<menu name="File">
+			<item action="Open File" />
+			<item action="separator" />
+			<item action="Quit" />
+		</menu>
+		<menu name="Other">
+			<item action="Start Data Base" />
+			<item action="Start User" />
+			<item action="separator" />
+
+		</menu>
+		<menu name="Component">
+			<item action="Add Component" />
+			<item action="Available Components" />
+			<item action="Available Documents" />
+			<item action="Connect To CM" />
+			<item action="Reload Component" />
+			<item action="separator" />
+			<item action="Debug" />
+			<item action="separator" />
+			<item action="Serialize World" />
+			<item action="separator" />
+			<item action="Open Dir" />
+		</menu>
+		<menu name="help">
+			<item action="About SmartTools" />
+			<item action="separator" />
+			<item action="HTML view of Component Manager" />
+		</menu>
+	</menus>
+
+	<toolbar></toolbar>
+
+	<keyb></keyb>
+
+	<mouse></mouse>
+
+</behaviors>

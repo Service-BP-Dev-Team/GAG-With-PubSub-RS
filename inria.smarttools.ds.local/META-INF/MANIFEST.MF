@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: inria.smarttools.ds.local
+Bundle-SymbolicName: inria.smarttools.ds.local;singleton:=true
+Bundle-Version: 1.6.6
+Bundle-Activator: inria.smarttools.ds.local.Activator
+Export-Package: inria.smarttools.ds.local
+Import-Package: inria.smarttools.componentsmanager,
+ inria.smarttools.core.component,
+ inria.smarttools.core.util,
+ inria.smarttools.dynamic,
+ org.osgi.framework
+Bundle-Vendor: INRIA SmartTools

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<component name="graph" type="graph" extends="abstractContainer" ns="inria.ocelet">
+
+	<!--       -->
+	<!-- Graph -->
+	<!--       -->
+
+	<input name="connect"  method="connect">
+		<attribute name="srcNodeType" javatype="java.lang.String" />
+		<attribute name="srcNodeInstance" javatype="java.lang.String" />
+		<attribute name="dstNodeType" javatype="java.lang.String" />
+		<attribute name="dstNodeInstance" javatype="java.lang.String" />
+	</input>
+
+	<input name="disconnect" method="disconnect">
+		<attribute name="srcNodeInstance" javatype="java.lang.String" />
+		<attribute name="dstNodeInstance" javatype="java.lang.String" />
+	</input>
+
+</component>

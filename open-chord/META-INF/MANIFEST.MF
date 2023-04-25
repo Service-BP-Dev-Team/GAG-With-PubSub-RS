@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: open-chord
+Bundle-SymbolicName: openchord
+Bundle-Version: 1.0.1
+Export-Package: de.uniba.wiai.lspi.chord,
+ de.uniba.wiai.lspi.chord.com,
+ de.uniba.wiai.lspi.chord.com.local,
+ de.uniba.wiai.lspi.chord.com.socket,
+ de.uniba.wiai.lspi.chord.data,
+ de.uniba.wiai.lspi.chord.service,
+ de.uniba.wiai.lspi.chord.service.impl
+Import-Package: org.osgi.framework;version="1.4.0"
+Bundle-Activator: de.uniba.wiai.lspi.chord.Activator

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin>
+<extension point="smarttools.component">
+<cdml cdmlName="smartWorkflowDWfMS" componentName="smartWorkflowDWfMS" containerName="smartWorkflowDWfMS.SmartWorkflowDWfMSContainer" facadeName="smartWorkflowDWfMS.SmartWorkflowDWfMSFacade"/>
+</extension>
+</plugin>

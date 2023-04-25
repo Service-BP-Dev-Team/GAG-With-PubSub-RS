@@ -1,0 +1,2739 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/F:/Workspace/Projets%20SON/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1520867701703'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <references size='4'>
+    <repository uri='file:/D:/Soft/Java/Eclipse/eclipse-standard-kepler-SR1-win32/eclipse/configuration/org.eclipse.osgi/bundles/127/data/listener_1925729951/' url='file:/D:/Soft/Java/Eclipse/eclipse-standard-kepler-SR1-win32/eclipse/configuration/org.eclipse.osgi/bundles/127/data/listener_1925729951/' type='1' options='1'/>
+    <repository uri='file:/D:/SetUps/Compilateurs%20et%20IDEs/Eclipse/eclipse/' url='file:/D:/SetUps/Compilateurs%20et%20IDEs/Eclipse/eclipse/' type='1' options='1'/>
+    <repository uri='file:/D:/SetUps/Compilateurs%20et%20IDEs/Eclipse/eclipse/p2/org.eclipse.equinox.p2.core/cache/' url='file:/D:/SetUps/Compilateurs%20et%20IDEs/Eclipse/eclipse/p2/org.eclipse.equinox.p2.core/cache/' type='1' options='1'/>
+    <repository uri='file:/D:/Soft/Java/Eclipse/eclipse-standard-kepler-SR1-win32/eclipse/.eclipseextension' url='file:/D:/Soft/Java/Eclipse/eclipse-standard-kepler-SR1-win32/eclipse/.eclipseextension' type='1' options='1'/>
+  </references>
+  <units size='62'>
+    <unit id='tooling.org.eclipse.update.feature.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </requires>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='uninstall'>
+            uninstallFeature(feature:${artifact},featureId:default,featureVersion:default)
+          </instruction>
+          <instruction key='install'>
+            installFeature(feature:${artifact},featureId:default,featureVersion:default)
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='startereditor' version='1.0.0.201803121614'>
+      <update id='startereditor' range='[0.0.0,1.0.0.201803121614)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='startereditor'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='startereditor' version='1.0.0.201803121614'/>
+        <provided namespace='osgi.bundle' name='startereditor' version='1.0.0.201803121614'/>
+        <provided namespace='java.package' name='starterserver' version='0.0.0'/>
+        <provided namespace='java.package' name='starterserver.resources' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='componentsManager' range='1.6.2'/>
+        <required namespace='osgi.bundle' name='p2pEditor' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='startereditor' version='1.0.0.201803121614'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: startereditor;singleton:=true&#xA;Bundle-Version: 1.0.0.201803121614
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.pde.container.feature.feature.group' version='1.0.0' singleton='false'>
+      <update id='org.eclipse.pde.container.feature.feature.group' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.container.feature.feature.group' version='1.0.0'/>
+      </provides>
+      <requires size='21'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher' range='[1.3.0.v20130327-1440,1.3.0.v20130327-1440]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.200.v20130807-1835,1.1.200.v20130807-1835]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='SmartWorkflow-libs' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='components-graph' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='componentsManager' range='[1.6.3,1.6.3]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.communicationprotocol' range='[0.3.0,0.3.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.keyvaluestore' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.openchord' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore.openchord' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.core' range='[1.6.16,1.6.16]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.local' range='[1.6.6,1.6.6]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.pon' range='[1.0.19,1.0.19]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.dynamic' range='[1.6.2,1.6.2]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.lib' range='[1.6.2,1.6.2]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='openchord' range='[1.0.1,1.0.1]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' range='[3.9.1.v20130814-1242,3.9.1.v20130814-1242]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='p2pEditor' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='startereditor' range='[1.0.0.201803121614,1.0.0.201803121614]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.container.feature_root.win32.win32.x86' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.lognet.virtpipes.openchord' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes.openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes.openchord' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes.openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:2);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.apache.felix.gogo.command' version='0.10.0.v201209301215' singleton='false'>
+      <update id='org.apache.felix.gogo.command' range='[0.0.0,0.10.0.v201209301215)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.pluginName' value='Apache Felix Gogo Command'/>
+        <property name='df_LT.providerName' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.description' value='Provides basic shell commands for Gogo.'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.apache.org/'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.apache.felix.gogo.command' version='0.10.0.v201209301215'/>
+        <provided namespace='osgi.bundle' name='org.apache.felix.gogo.command' version='0.10.0.v201209301215'/>
+        <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='java.package' name='org.apache.felix.service.command' range='0.10.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.5.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='1.2.0'/>
+        <required namespace='java.package' name='org.osgi.service.startlevel' range='1.1.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.command' version='0.10.0.v201209301215'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.apache.felix.gogo.command&#xA;Bundle-Version: 0.10.0.v201209301215
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='config.a.jre.javase' version='1.6.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.6.0'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='1.6.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.6.0'/>
+      </requires>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='install'>
+
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86startereditor' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='startereditor' range='1.0.0.201803121614'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86startereditor' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='startereditor' range='1.0.0.201803121614'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:4);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86org.eclipse.osgi' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='3.9.1.v20130814-1242'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.osgi' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='3.9.1.v20130814-1242'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingExportClient.configuration' version='1.0.0'>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.configuration' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86org.eclipse.osgi' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.config.win32.win32.x86' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.pon.keyvaluestore' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes.openchord' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.smarttools.ds.pon' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.pon.keyvaluestore.openchord' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.smarttools.ds.local' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.ini.win32.win32.x86' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes.keyvaluestore' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86startereditor' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86openchord' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='inria.pon.keyvaluestore.openchord' version='1.0.1' singleton='false'>
+      <update id='inria.pon.keyvaluestore.openchord' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Open Chord KVS Module Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA PON'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore.openchord' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='inria.pon.keyvaluestore.openchord' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='openchord' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore.openchord' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.pon.keyvaluestore.openchord&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='p2pEditor' version='1.0.0'>
+      <update id='p2pEditor' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='p2pEditor'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='p2pEditor' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='p2pEditor' version='1.0.0'/>
+        <provided namespace='java.package' name='p2pEditor' version='0.0.0'/>
+        <provided namespace='java.package' name='p2pEditor.resources' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='inria.smarttools.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='inria.communicationprotocol' range='0.3.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='p2pEditor' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='p2pEditor' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: p2pEditor;singleton:=true&#xA;Bundle-Version: 1.0.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='a.jre.javase' version='1.6.0' singleton='false'>
+      <provides size='171'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='1.6.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation.adapters' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.attachment' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.ORBPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.TypeCodePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextExtPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Dynamic' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Messaging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.CurrentPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAManagerPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.ServantLocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.SendingContext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.stub.java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='inria.communicationprotocol' version='0.3.0'>
+      <update id='inria.communicationprotocol' range='[0.0.0,0.3.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='inria.communicationprotocol'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.communicationprotocol' version='0.3.0'/>
+        <provided namespace='osgi.bundle' name='inria.communicationprotocol' version='0.3.0'/>
+        <provided namespace='java.package' name='inria.communicationprotocol' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.communicationprotocol.command' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.communicationprotocol.resources' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='inria.smarttools.core' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.communicationprotocol' version='0.3.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Vendor: INRIA SmartTools&#xA;Bundle-ManifestVersion: 2&#xA;Bundle-Activator: inria.communicationprotocol.Activator&#xA;Require-Bundle: inria.smarttools.lib,inria.smarttools.core&#xA;Import-Package: org.osgi.framework&#xA;Bundle-Name: inria.communicationprotocol&#xA;Bundle-ActivationPolicy: lazy&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: inria.communicationprotocol;singleton:=true&#xA;Bundle-Version: 0.3.0&#xA;Export-Package: inria.communicationprotocol,inria.communicationprotocol.command,inria.communicationprotocol.resources
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.lognet.virtpipes' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:2);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036' singleton='false'>
+      <update id='org.apache.felix.gogo.runtime' range='[0.0.0,0.10.0.v201209301036)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.pluginName' value='Apache Felix Gogo Runtime'/>
+        <property name='df_LT.providerName' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.description' value='Apache Felix Gogo Subproject'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.apache.org/'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'/>
+        <provided namespace='osgi.bundle' name='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'/>
+        <provided namespace='java.package' name='org.apache.felix.service.command' version='0.10.0'/>
+        <provided namespace='java.package' name='org.apache.felix.gogo.api' version='0.10.0'/>
+        <provided namespace='java.package' name='org.apache.felix.service.threadio' version='0.10.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='java.package' name='org.apache.felix.gogo.api' range='0.10.0'/>
+        <required namespace='java.package' name='org.apache.felix.service.command' range='0.10.0'/>
+        <required namespace='java.package' name='org.apache.felix.service.threadio' range='0.10.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.event' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.apache.felix.gogo.runtime&#xA;Bundle-Version: 0.10.0.v201209301036
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingExportClient.config.win32.win32.x86' version='1.0.0' singleton='false'>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.config.win32.win32.x86' version='1.0.0'/>
+        <provided namespace='toolingExportClient' name='ExportClient.config' version='1.0.0'/>
+      </provides>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='configure'>
+            setProgramProperty(propName:eclipse.product,propValue:startereditor.product4);setProgramProperty(propName:eclipse.application,propValue:com.google.gwt.eclipse.core.GWTCodeFormatterApplication);
+          </instruction>
+          <instruction key='unconfigure'>
+            setProgramProperty(propName:eclipse.product,propValue:);setProgramProperty(propName:eclipse.application,propValue:);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='ExportClient_root.win32.win32.x86' version='1.0.0'>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='ExportClient_root.win32.win32.x86' version='1.0.0'/>
+      </provides>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='binary' id='ExportClient_root.win32.win32.x86' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='uninstall'>
+            cleanupzip(source:@artifact, target:${installFolder});
+          </instruction>
+          <instruction key='install'>
+            unzip(source:@artifact, target:${installFolder});
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'>
+      <update id='org.eclipse.equinox.registry' range='[0.0.0,3.5.301.v20130717-1549)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Extension Registry Support'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.registry'/>
+        <property name='maven-version' value='3.5.301-SNAPSHOT'/>
+      </properties>
+      <provides size='11'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.registry' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.registry.osgi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.registry.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime' version='3.4.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.dynamichelpers' version='3.4.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.spi' version='3.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.2.0,4.0.0)'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.core.runtime.jobs' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.console' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.datalocation' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.environment' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.localization' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.resolver' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.storagemanager' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax.helpers' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.registry;singleton:=true&#xA;Bundle-Version: 3.5.301.v20130717-1549
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'>
+      <update id='org.eclipse.equinox.launcher' range='[0.0.0,1.3.0.v20130327-1440)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Equinox Launcher'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='launcher'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.launcher'/>
+        <property name='maven-version' value='1.3.0-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'/>
+        <provided namespace='java.package' name='org.eclipse.core.launcher' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.internal.launcher' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.launcher' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.launcher;singleton:=true&#xA;Bundle-Version: 1.3.0.v20130327-1440
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.pon.keyvaluestore' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.pon.keyvaluestore' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:3);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.launcher.win32.win32.x86.translated_host_properties' version='1.1.200.v20130807-1835'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher' range='[1.0.0,1.4.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+        <property name='df_LT.pluginName' value='Equinox Launcher Win32 X86 Fragment'/>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86.translated_host_properties' version='1.1.200.v20130807-1835'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher' range='[1.0.0,1.4.0)' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'>
+      <update id='org.eclipse.equinox.launcher.win32.win32.x86' range='[0.0.0,1.1.200.v20130807-1835)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Equinox Launcher Win32 X86 Fragment'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='launcher.win32.win32.x86'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.launcher.win32.win32.x86'/>
+        <property name='maven-version' value='1.1.200-SNAPSHOT'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='osgi.fragment' name='org.eclipse.equinox.launcher' version='1.1.200.v20130807-1835'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher' range='[1.0.0,1.4.0)'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.launcher.win32.win32.x86; singleton:=true&#xA;Bundle-Version: 1.1.200.v20130807-1835&#xA;Fragment-Host: org.eclipse.equinox.launcher;bundle-version=&quot;[1.0.0,1.4.0)&quot;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.smarttools.ds.pon' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.smarttools.ds.pon' range='1.0.19'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.smarttools.ds.pon' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.smarttools.ds.pon' range='1.0.19'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:4);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.pon.keyvaluestore.openchord' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore.openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.pon.keyvaluestore.openchord' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore.openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:3);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.lognet.virtpipes.keyvaluestore' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes.keyvaluestore' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.lognet.virtpipes.keyvaluestore' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes.keyvaluestore' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:2);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingorg.eclipse.equinox.launcher' version='1.3.0.v20130327-1440' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher' range='[1.3.0.v20130327-1440,1.3.0.v20130327-1440]' greedy='false'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+        <property name='org.eclipse.pde.build.default' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher' range='[1.3.0.v20130327-1440,1.3.0.v20130327-1440]' greedy='false'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact});
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact});
+          </instruction>
+          <instruction key='configure'>
+            addProgramArg(programArg:-startup);addProgramArg(programArg:@artifact);
+          </instruction>
+          <instruction key='unconfigure'>
+            removeProgramArg(programArg:-startup);removeProgramArg(programArg:@artifact);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.core' version='1.6.16'>
+      <update id='inria.smarttools.core' range='[0.0.0,1.6.16)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='inria.smarttools.core'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.core' version='1.6.16'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.core' version='1.6.16'/>
+        <provided namespace='java.package' name='inria.smarttools.core' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.component' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.component.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.error' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.util' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.dynamic' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.core' version='1.6.16'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.smarttools.core;singleton:=true&#xA;Bundle-Version: 1.6.16
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingExportClient_root.win32.win32.x86' version='1.0.0' singleton='false'>
+      <properties size='1'>
+        <property name='org.eclipse.pde.build.default' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient_root.win32.win32.x86' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='configure'>
+            setLauncherName(name:eclipse)
+          </instruction>
+          <instruction key='unconfigure'>
+            setLauncherName()
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.osgi.services' version='3.3.100.v20130513-1956' singleton='false'>
+      <update id='org.eclipse.osgi.services' range='[0.0.0,3.3.100.v20130513-1956)' severity='0'/>
+      <properties size='12'>
+        <property name='df_LT.osgiServicesDes' value='OSGi Service Platform Release 4.2.0 Service Interfaces and Classes'/>
+        <property name='df_LT.osgiServices' value='OSGi Release 4.2.0 Services'/>
+        <property name='df_LT.eclipse.org' value='Eclipse.org - Equinox'/>
+        <property name='org.eclipse.equinox.p2.name' value='%osgiServices'/>
+        <property name='org.eclipse.equinox.p2.description' value='%osgiServicesDes'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.contact' value='www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.osgi'/>
+        <property name='maven-artifactId' value='org.eclipse.osgi.services'/>
+        <property name='maven-version' value='3.3.100-SNAPSHOT'/>
+      </properties>
+      <provides size='17'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi.services' version='3.3.100.v20130513-1956'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.osgi.services' version='3.3.100.v20130513-1956'/>
+        <provided namespace='java.package' name='org.osgi.service.cm' version='1.4.0'/>
+        <provided namespace='java.package' name='org.osgi.service.component' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.component.annotations' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.device' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.event' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.http' version='1.2.1'/>
+        <provided namespace='java.package' name='org.osgi.service.io' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.metatype' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.provisioning' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.upnp' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.useradmin' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.wireadmin' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='java.package' name='org.osgi.service.http' range='[1.2.1,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.io' range='[1.0.0,1.1.0)'/>
+        <required namespace='java.package' name='javax.microedition.io' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.useradmin' range='[1.1.0,1.2.0)'/>
+        <required namespace='java.package' name='org.osgi.service.cm' range='[1.4.0,1.5.0)'/>
+        <required namespace='java.package' name='org.osgi.service.upnp' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.component' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.6.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='[1.3.0,1.4.0)'/>
+        <required namespace='java.package' name='org.osgi.service.device' range='[1.1.0,1.2.0)'/>
+        <required namespace='java.package' name='javax.servlet.http' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='javax.servlet' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.metatype' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.event' range='[1.3.0,1.4.0)'/>
+        <required namespace='java.package' name='org.osgi.service.provisioning' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.wireadmin' range='[1.0.1,1.1.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.3.100.v20130513-1956'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.osgi.services&#xA;Bundle-Version: 3.3.100.v20130513-1956
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='javax.xml' version='1.3.4.v201005080400' singleton='false'>
+      <update id='javax.xml' range='[0.0.0,1.3.4.v201005080400)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.Bundle-Name.0' value='JAXP XML'/>
+        <property name='df_LT.Bundle-Vendor.0' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name.0'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor.0'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='29'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.xml' version='1.3.4.v201005080400'/>
+        <provided namespace='osgi.bundle' name='javax.xml' version='1.3.4.v201005080400'/>
+        <provided namespace='java.package' name='javax.xml' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='1.3.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='1.3.0'/>
+        <provided namespace='java.package' name='org.apache.xmlcommons' version='1.3.4'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='3.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='3.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='2.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='3.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='2.0.2'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='2.0.2'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='2.0.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.xml' version='1.3.4.v201005080400'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: javax.xml&#xA;Bundle-Version: 1.3.4.v201005080400
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='tooling.osgi.bundle.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='0.0.0' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.osgi.bundle.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='0.0.0' multiple='true' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:4);
+          </instruction>
+          <instruction key='unconfigure'>
+
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.ds.local' version='1.6.6'>
+      <update id='inria.smarttools.ds.local' range='[0.0.0,1.6.6)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='inria.smarttools.ds.local'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.local' version='1.6.6'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.ds.local' version='1.6.6'/>
+        <provided namespace='java.package' name='inria.smarttools.ds.local' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='java.package' name='inria.smarttools.componentsmanager' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.component' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.util' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.dynamic' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.ds.local' version='1.6.6'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.smarttools.ds.local;singleton:=true&#xA;Bundle-Version: 1.6.6
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.lognet.virtpipes.openchord' version='1.0.1' singleton='false'>
+      <update id='inria.lognet.virtpipes.openchord' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Openchord Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA LogNet'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.openchord' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='inria.lognet.virtpipes.openchord' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='openchord' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.3'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes.openchord' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.lognet.virtpipes.openchord&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='openchord' version='1.0.1' singleton='false'>
+      <update id='openchord' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='open-chord'/>
+      </properties>
+      <provides size='10'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='openchord' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='openchord' version='1.0.1'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com.local' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com.socket' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.data' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.service' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.service.impl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='openchord' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: openchord&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='openchord' version='1.0.0' singleton='false'>
+      <update id='openchord' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='open-chord'/>
+      </properties>
+      <provides size='10'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='openchord' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='openchord' version='1.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com.local' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.com.socket' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.data' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.service' version='0.0.0'/>
+        <provided namespace='java.package' name='de.uniba.wiai.lspi.chord.service.impl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='openchord' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Import-Package: org.osgi.framework;version=&quot;1.4.0&quot;&#xA;Bundle-Version: 1.0.0&#xA;Export-Package: de.uniba.wiai.lspi.chord,de.uniba.wiai.lspi.chord.com,de.uniba.wiai.lspi.chord.com.local,de.uniba.wiai.lspi.chord.com.socket,de.uniba.wiai.lspi.chord.data,de.uniba.wiai.lspi.chord.service,de.uniba.wiai.lspi.chord.service.impl&#xA;Bundle-Activator: de.uniba.wiai.lspi.chord.Activator&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: openchord&#xA;Bundle-Name: open-chord
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingExportClient.ini.win32.win32.x86' version='1.0.0' singleton='false'>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.ini.win32.win32.x86' version='1.0.0'/>
+        <provided namespace='toolingExportClient' name='ExportClient.ini' version='1.0.0'/>
+      </provides>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='configure'>
+            addJvmArg(jvmArg:-Declipse.ignoreApp=true);addJvmArg(jvmArg:-Dosgi.noShutdown=true);addJvmArg(jvmArg:-Dorg.eclipse.equinox.http.jetty.http.port=8080);addJvmArg(jvmArg:-Dinria.smarttools.dht.boot=1501);addJvmArg(jvmArg:-Dinria.smarttools.dht.host=127.0.0.1);addProgramArg(programArg:--launcher.secondThread);addProgramArg(programArg:-console);addProgramArg(programArg:-clean);
+          </instruction>
+          <instruction key='unconfigure'>
+            removeJvmArg(jvmArg:-Declipse.ignoreApp=true);removeJvmArg(jvmArg:-Dosgi.noShutdown=true);removeJvmArg(jvmArg:-Dorg.eclipse.equinox.http.jetty.http.port=8080);removeJvmArg(jvmArg:-Dinria.smarttools.dht.boot=1501);removeJvmArg(jvmArg:-Dinria.smarttools.dht.host=127.0.0.1);removeProgramArg(programArg:--launcher.secondThread);removeProgramArg(programArg:-console);removeProgramArg(programArg:-clean);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86inria.smarttools.ds.local' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='inria.smarttools.ds.local' range='1.6.6'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86inria.smarttools.ds.local' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='inria.smarttools.ds.local' range='1.6.6'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:4);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.core.runtime' version='3.9.0.v20130326-1255'>
+      <update id='org.eclipse.core.runtime' range='[0.0.0,3.9.0.v20130326-1255)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org'/>
+        <property name='df_LT.pluginName' value='Core Runtime'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.core'/>
+        <property name='maven-artifactId' value='org.eclipse.core.runtime'/>
+        <property name='maven-version' value='3.9.0-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' version='3.9.0.v20130326-1255'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.core.runtime' version='3.9.0.v20130326-1255'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.preferences.legacy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime' version='3.4.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='[3.7.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.6.100,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.jobs' range='[3.2.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='[3.4.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.preferences' range='[3.4.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.contenttype' range='[3.3.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime.compatibility.auth' range='[3.2.0,4.0.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.app' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime' version='3.9.0.v20130326-1255'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.core.runtime; singleton:=true&#xA;Bundle-Version: 3.9.0.v20130326-1255
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.lib' version='1.6.2'>
+      <update id='inria.smarttools.lib' range='[0.0.0,1.6.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='SmartTool Libraries'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='133'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.lib' version='1.6.2'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.lib' version='1.6.2'/>
+        <provided namespace='java.package' name='antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.actions.java' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.actions.sather' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.collections' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.collections.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.debug.misc' version='0.0.0'/>
+        <provided namespace='java.package' name='antlr.preprocessor' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream.filters' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream.reader' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream.samples' version='0.0.0'/>
+        <provided namespace='java.package' name='com.bea.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.annotations' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.bml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.bml.player' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.bsf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.bsf.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.cf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.cs.event' version='0.0.0'/>
+        <provided namespace='java.package' name='com.ibm.cs.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.code' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.comp' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.jvm' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.main' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='com.sun.tools.javac.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.wutka.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.beans' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.beans.images' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.customization' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.extensions' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.graphics' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.graphics.event' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.graphics.images' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.graphics.serialization' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.lyptus' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.lyptus.commands' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.lyptus.editors' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.lyptus.icons' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.lyptus.widgets' version='0.0.0'/>
+        <provided namespace='java.package' name='fr.dyade.koala.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.batik.css.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.batik.css.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.batik.css.parser.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.batik.i18n' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.collections' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.commons.collections.comparators' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.html.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.wml' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.wml.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.client' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.extensions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.lib' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.lib.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.processor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.res' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.serialize' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.templates' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.trace' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.transformer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xslt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.cmdline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.cmdline.getopt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.compiler' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.compiler.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.trax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xalan.xsltc.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.dom3.as' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dtd.models' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dv' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dv.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dv.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.dv.xs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.msg' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xpath.regex' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs.identity' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs.models' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs.opti' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs.traversers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.impl.xs.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.jaxp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.jaxp.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.jaxp.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xinclude' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xni' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xni.grammars' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xni.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xpointer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xerces.xs.datatypes' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.dtm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.dtm.ref' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.dtm.ref.dom2dtm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.dtm.ref.sax2dtm' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.serialize' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.utils' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xml.utils.res' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.axes' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.compiler' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.functions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.objects' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.operations' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.patterns' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.xpath.res' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.css.sac' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.lib' version='1.6.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;DynamicImport-Package: *&#xA;Bundle-Name: SmartTool Libraries&#xA;Bundle-Version: 1.6.2&#xA;Export-Package: antlr;uses:=&quot;antlr.debug,antlr.collections,antlr.collections.impl&quot;,antlr.actions.java;uses:=&quot;antlr.collections.impl,antlr&quot;,antlr.actions.sather;uses:=&quot;antlr.collections.impl,antlr&quot;,antlr.collections;uses:=&quot;antlr&quot;,antlr.collections.impl;uses:=&quot;antlr.collections,antlr&quot;,antlr.debug;uses:=&quot;antlr.collections.impl,antlr&quot;,antlr.debug.misc; uses:=&quot;javax.swing.event,  javax.swing.tree,  antlr.collections,  javax.swing&quot;,antlr.preprocessor;uses:=&quot;antlr.collections.impl,antlr&quot;,com.bea.xml.stream,com.bea.xml.stream.events,com.bea.xml.stream.filters,com.bea.xml.stream.reader,com.bea.xml.stream.samples,com.bea.xml.stream.util,com.google.gson,com.google.gson.annotations,com.google.gson.reflect,com.ibm.bml;uses:=&quot;com.ibm.cs.util,org.w3c.dom,com.ibm.bsf&quot;,com.ibm.bml.player; uses:=&quot;com.ibm.cs.util,  com.ibm.cs.event,  com.ibm.bml,  org.w3c.dom&quot;,com.ibm.bsf;uses:=&quot;com.ibm.cs.util&quot;,com.ibm.bsf.util;uses:=&quot;com.ibm.cs.util,com.ibm.cs.event,com.ibm.bsf&quot;,com.ibm.cf,com.ibm.cs.event,com.ibm.cs.util;uses:=&quot;com.ibm.cs.event,org.w3c.dom&quot;,com.sun.tools.javac,com.sun.tools.javac.code;uses:=&quot;com.sun.tools.javac.jvm,com.sun.tools.javac.util,com.sun.tools.javac.comp&quot;,com.sun.tools.javac.comp; uses:=&quot;com.sun.tools.javac.jvm,  com.sun.tools.javac.util,  new com.sun.tools.javac.comp,  com.sun.tools.javac.code,  com.sun.tools.javac.tree&quot;,com.sun.tools.javac.jvm; uses:=&quot;com.sun.tools.javac.util,  com.sun.tools.javac.comp,  com.sun.tools.javac.tree,  com.sun.tools.javac.code&quot;,com.sun.tools.javac.main; uses:=&quot;com.sun.tools.javac.jvm,  com.sun.tools.javac.util,  com.sun.tools.javac.parser,  com.sun.tools.javac.comp,  com.sun.tools.javac.code,  com.sun.tools.javac.tree&quot;,com.sun.tools.javac.parser;uses:=&quot;com.sun.tools.javac.util,com.sun.tools.javac.tree,com.sun.tools.javac.code&quot;,com.sun.tools.javac.resources,com.sun.tools.javac.tree;uses:=&quot;com.sun.tools.javac.util,com.sun.tools.javac.code&quot;,com.sun.tools.javac.util,com.wutka.dtd,fr.dyade.koala.beans,fr.dyade.koala.beans.images,fr.dyade.koala.customization,fr.dyade.koala.extensions;uses:=&quot;fr.dyade.koala.customization,fr.dyade.koala.graphics,fr.dyade.koala.graphics.event&quot;,fr.dyade.koala.graphics;uses:=&quot;fr.dyade.koala.graphics.event,fr.dyade.koala.customization,fr.dyade.koala.beans&quot;,fr.dyade.koala.graphics.event;uses:=&quot;fr.dyade.koala.graphics&quot;,fr.dyade.koala.graphics.images,fr.dyade.koala.graphics.serialization;uses:=&quot;fr.dyade.koala.serialization&quot;,fr.dyade.koala.lyptus; uses:=&quot;fr.dyade.koala.lyptus.widgets,  fr.dyade.koala.lyptus.commands,  fr.dyade.koala.util,  fr.dyade.koala.graphics,  fr.dyade.koala.beans&quot;,fr.dyade.koala.lyptus.commands; uses:=&quot;Acme.JPM.Encoders,  fr.dyade.koala.graphics,  fr.dyade.koala.lyptus.editors,  fr.dyade.koala.customization,  fr.dyade.koala.beans,  fr.dyade.koala.extensions&quot;,fr.dyade.koala.lyptus.editors; uses:=&quot;fr.dyade.koala.lyptus.widgets,  fr.dyade.koala.lyptus.commands,  fr.dyade.koala.customization,  fr.dyade.koala.graphics,  fr.dyade.koala.graphics.event&quot;,fr.dyade.koala.lyptus.icons,fr.dyade.koala.lyptus.widgets;uses:=&quot;fr.dyade.koala.beans&quot;,fr.dyade.koala.util,javax.xml.stream,javax.xml.stream.events,javax.xml.stream.util,org.apache.batik.css.dom; uses:=&quot;org.w3c.dom.css,  org.w3c.dom.views,  org.apache.batik.css.engine,  org.apache.batik.css.engine.value,  org.w3c.dom,  org.w3c.dom.svg&quot;,org.apache.batik.css.parser;uses:=&quot;org.apache.batik.util.io,org.apache.batik.i18n,org.w3c.css.sac&quot;,org.apache.batik.css.parser.resources,org.apache.batik.i18n,org.apache.commons.collections;uses:=&quot;new org.apache.commons.collections&quot;,org.apache.commons.collections.comparators,org.apache.html.dom; uses:=&quot;org.apache.xerces.dom,  org.xml.sax,  org.w3c.dom.html,  org.w3c.dom&quot;,org.apache.wml;uses:=&quot;org.w3c.dom&quot;,org.apache.wml.dom;uses:=&quot;org.apache.xerces.dom,org.w3c.dom,org.apache.wml&quot;,org.apache.xalan,org.apache.xalan.client;uses:=&quot;javax.xml.transform&quot;,org.apache.xalan.extensions; uses:=&quot;org.apache.xml.utils,  org.w3c.dom.traversal,  org.apache.xalan.transformer,  org.apache.xpath.objects,  org.w3c.dom,  org.apache.xalan.templates&quot;,org.apache.xalan.lib; uses:=&quot;org.apache.xalan.extensions,  org.w3c.dom.traversal,  org.apache.xpath.objects,  org.w3c.dom,  org.apache.xpath,  org.apache.xalan.templates&quot;,org.apache.xalan.lib.sql; uses:=&quot;org.apache.xalan.extensions,  org.xml.sax,  org.apache.xml.dtm.ref,  org.w3c.dom,  javax.xml.transform,  org.apache.xml.utils,  org.xml.sax.ext,  org.apache.xpath.objects,  org.apache.xml.dtm&quot;,org.apache.xalan.processor; uses:=&quot;org.apache.xml.utils,  javax.xml.transform.sax,  org.xml.sax,  org.apache.xalan.res,  org.xml.sax.helpers,  org.apache.xpath,  org.w3c.dom,  javax.xml.transform,  org.apache.xalan.templates&quot;,org.apache.xalan.res;uses:=&quot;org.apache.xml.utils.res&quot;,org.apache.xalan.serialize; uses:=&quot;org.apache.xml.utils,  org.xml.sax,  org.xml.sax.ext,  org.w3c.dom&quot;,org.apache.xalan.templates; uses:=&quot;org.apache.xpath.functions,  new org.apache.xalan.templates,  org.apache.xml.utils.res,  org.apache.xalan.transformer,  org.w3c.dom,  org.apache.xpath.compiler,  org.apache.xpath.patterns,  javax.xml.transform,  org.apache.xml.utils,  org.apache.xpath.objects,  org.xml.sax.helpers,  org.apache.xalan.processor,  org.apache.xpath,  org.apache.xml.dtm&quot;,org.apache.xalan.trace; uses:=&quot;org.apache.xml.utils,  org.xml.sax,  org.apache.xalan.transformer,  org.apache.xpath.objects,  org.apache.xpath,  org.w3c.dom,  org.apache.xalan.templates&quot;,org.apache.xalan.transformer; uses:=&quot;org.apache.xml.dtm.ref,  org.xml.sax,  org.apache.xpath.axes,  org.w3c.dom,  javax.xml.transform,  org.w3c.dom.traversal,  org.apache.xml.utils,  javax.xml.transform.sax,  org.apache.xml.dtm.ref.dom2dtm,  org.apache.xalan.serialize,  org.xml.sax.ext,  javax.xml.parsers,  org.xml.sax.helpers,  org.apache.xpath.objects,  org.apache.xpath,  org.apache.xml.dtm,  org.apache.xalan.trace,  org.apache.xalan.templates&quot;,org.apache.xalan.xslt;uses:=&quot;org.apache.xalan.res,org.w3c.dom&quot;,org.apache.xalan.xsltc; uses:=&quot;org.apache.xalan.xsltc.runtime,  org.xml.sax,  org.w3c.dom,  org.apache.xalan.xsltc.dom&quot;,org.apache.xalan.xsltc.cmdline,org.apache.xalan.xsltc.cmdline.getopt,org.apache.xalan.xsltc.compiler; uses:=&quot;org.apache.xalan.xsltc.runtime,  org.xml.sax,  java_cup.runtime,  org.apache.bcel.generic,  org.apache.bcel.classfile,  org.apache.xalan.xsltc.compiler.util&quot;,org.apache.xalan.xsltc.compiler.util;uses:=&quot;org.apache.xalan.xsltc.compiler,org.apache.bcel.generic&quot;,org.apache.xalan.xsltc.dom; uses:=&quot;org.apache.xalan.xsltc,  org.apache.xalan.xsltc.runtime,  org.xml.sax,  org.xml.sax.ext,  org.w3c.dom&quot;,org.apache.xalan.xsltc.runtime; uses:=&quot;org.apache.xalan.xsltc,  org.xml.sax,  org.xml.sax.ext,  org.apache.xalan.xsltc.dom&quot;,org.apache.xalan.xsltc.trax; uses:=&quot;org.apache.xalan.xsltc,  org.apache.xalan.xsltc.runtime,  org.apache.xalan.xsltc.compiler,  org.xml.sax,  org.w3c.dom,  org.apache.xalan.xsltc.dom,  javax.xml.transform,  javax.xml.transform.sax,  org.xml.sax.helpers&quot;,org.apache.xalan.xsltc.util,org.apache.xerces.dom; uses:=&quot;org.w3c.dom.ls,  org.apache.xerces.impl,  org.apache.xerces.xs,  org.apache.xerces.xni.parser,  org.w3c.dom,  org.w3c.dom.events,  org.apache.xerces.util,  org.apache.xerces.impl.dtd,  org.w3c.dom.traversal,  org.apache.xerces.impl.dv,  org.apache.xerces.dom3.as,  org.w3c.dom.ranges,  org.apache.xerces.impl.xs,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.dom.events;uses:=&quot;org.w3c.dom,org.w3c.dom.events&quot;,org.apache.xerces.dom3.as;uses:=&quot;org.w3c.dom.ls,org.w3c.dom&quot;,org.apache.xerces.impl; uses:=&quot;org.apache.xerces.impl.dtd,  org.xml.sax,  org.apache.xerces.xni.parser,  org.apache.xerces.xni.grammars,  org.apache.xerces.xni,  org.apache.xerces.impl.validation,  org.apache.xerces.util&quot;,org.apache.xerces.impl.dtd; uses:=&quot;org.apache.xerces.impl.dv,  org.apache.xerces.impl.dtd.models,  org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.apache.xerces.xni.grammars,  org.apache.xerces.xni,  org.apache.xerces.impl.validation,  org.apache.xerces.util&quot;,org.apache.xerces.impl.dtd.models;uses:=&quot;org.apache.xerces.xni&quot;,org.apache.xerces.impl.dv;uses:=&quot;org.apache.xerces.impl.xs.util,org.apache.xerces.xs,org.apache.xerces.util&quot;,org.apache.xerces.impl.dv.dtd;uses:=&quot;org.apache.xerces.impl.dv&quot;,org.apache.xerces.impl.dv.util;uses:=&quot;org.apache.xerces.xs.datatypes&quot;,org.apache.xerces.impl.dv.xs; uses:=&quot;org.apache.xerces.impl.xs.util,  org.apache.xerces.xs,  org.w3c.dom,  org.apache.xerces.xs.datatypes,  javax.xml.datatype,  org.apache.xerces.util,  org.apache.xerces.impl.dv,  org.apache.xerces.impl.xs,  org.apache.xerces.xni&quot;,org.apache.xerces.impl.io;uses:=&quot;org.apache.xerces.util&quot;,org.apache.xerces.impl.msg;uses:=&quot;org.apache.xerces.util&quot;,org.apache.xerces.impl.validation;uses:=&quot;org.apache.xerces.impl.dv,org.apache.xerces.xni,org.apache.xerces.util&quot;,org.apache.xerces.impl.xpath;uses:=&quot;org.apache.xerces.xni,org.apache.xerces.util&quot;,org.apache.xerces.impl.xpath.regex,org.apache.xerces.impl.xs; uses:=&quot;org.w3c.dom.ls,  org.apache.xerces.dom,  org.apache.xerces.impl.xs.util,  org.apache.xerces.parsers,  org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.apache.xerces.xs,  org.w3c.dom,  org.apache.xerces.impl.dv.xs,  org.apache.xerces.util,  org.apache.xerces.impl.xs.identity,  org.apache.xerces.impl.dv,  org.apache.xerces.impl.xs.models,  org.apache.xerces.xni.grammars,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.impl.xs.identity; uses:=&quot;org.apache.xerces.xs,  org.apache.xerces.impl.xs,  org.apache.xerces.impl.xpath,  org.apache.xerces.xni,  org.apache.xerces.util&quot;,org.apache.xerces.impl.xs.models; uses:=&quot;org.apache.xerces.impl.dtd.models,  org.apache.xerces.xni.parser,  org.apache.xerces.impl.xs,  org.apache.xerces.xni&quot;,org.apache.xerces.impl.xs.opti; uses:=&quot;org.apache.xerces.parsers,  org.apache.xerces.impl.dv,  org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.w3c.dom,  org.apache.xerces.xni.grammars,  org.apache.xerces.xni,  org.apache.xerces.impl.validation,  org.apache.xerces.util&quot;,org.apache.xerces.impl.xs.traversers; uses:=&quot;org.apache.xerces.parsers,  org.apache.xerces.impl.xs.util,  org.xml.sax,  org.apache.xerces.impl.xs.opti,  org.apache.xerces.xni.parser,  org.apache.xerces.xs,  org.w3c.dom,  org.apache.xerces.util,  org.apache.xerces.impl.xs.identity,  org.apache.xerces.impl.dv,  org.apache.xerces.impl.xs,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.impl.xs.util;uses:=&quot;org.apache.xerces.xs,org.apache.xerces.xni,org.apache.xerces.util&quot;,org.apache.xerces.jaxp; uses:=&quot;org.w3c.dom.ls,  org.xml.sax,  org.apache.xerces.parsers,  org.apache.xerces.impl,  org.apache.xerces.xs,  org.apache.xerces.xni.parser,  org.w3c.dom,  org.apache.xerces.util,  org.apache.xerces.jaxp.validation,  javax.xml.validation,  org.xml.sax.helpers,  javax.xml.parsers,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.jaxp.datatype;uses:=&quot;javax.xml.namespace,javax.xml.datatype&quot;,org.apache.xerces.jaxp.validation; uses:=&quot;org.w3c.dom.ls,  org.xml.sax,  org.apache.xerces.xs,  org.apache.xerces.xni.parser,  org.w3c.dom,  javax.xml.transform,  org.apache.xerces.util,  javax.xml.transform.dom,  org.xml.sax.ext,  javax.xml.validation,  org.apache.xerces.xni.grammars,  javax.xml.transform.stream,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.parsers; uses:=&quot;org.w3c.dom.ls,  org.apache.xerces.dom,  org.xml.sax,  org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.apache.xerces.xs,  org.w3c.dom,  org.apache.xerces.xinclude,  org.apache.xerces.util,  org.apache.xerces.impl.dtd,  org.apache.xerces.impl.dv,  org.apache.xerces.dom3.as,  org.xml.sax.ext,  org.xml.sax.helpers,  org.apache.xerces.xni.grammars,  org.apache.xerces.impl.xs,  org.apache.xerces.xni,  org.apache.xerces.impl.validation&quot;,org.apache.xerces.util; uses:=&quot;org.w3c.dom.ls,  org.xml.sax,  org.apache.xerces.dom,  org.apache.xerces.impl,  javax.xml.namespace,  org.apache.xerces.xni.parser,  org.w3c.dom,  org.xml.sax.ext,  org.apache.xerces.xni.grammars,  org.apache.xerces.xni&quot;,org.apache.xerces.xinclude; uses:=&quot;org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.apache.xerces.xpointer,  org.apache.xerces.xni,  org.apache.xerces.util&quot;,org.apache.xerces.xni;uses:=&quot;org.apache.xerces.xni.parser&quot;,org.apache.xerces.xni.grammars;uses:=&quot;org.apache.xerces.xs,org.apache.xerces.xni.parser,org.apache.xerces.xni&quot;,org.apache.xerces.xni.parser;uses:=&quot;org.apache.xerces.xni&quot;,org.apache.xerces.xpointer; uses:=&quot;org.apache.xerces.impl,  org.apache.xerces.xni.parser,  org.apache.xerces.xinclude,  org.apache.xerces.xni,  org.apache.xerces.util&quot;,org.apache.xerces.xs;uses:=&quot;org.w3c.dom.ls,org.w3c.dom&quot;,org.apache.xerces.xs.datatypes;uses:=&quot;javax.xml.namespace,org.apache.xerces.xni,javax.xml.datatype&quot;,org.apache.xml.dtm; uses:=&quot;org.apache.xml.utils,  org.xml.sax,  org.xml.sax.ext,  org.w3c.dom,  javax.xml.transform&quot;,org.apache.xml.dtm.ref; uses:=&quot;org.w3c.dom.traversal,  org.apache.xml.utils,  org.apache.xerces.parsers,  org.xml.sax,  org.xml.sax.ext,  org.w3c.dom,  org.apache.xml.dtm,  javax.xml.transform&quot;,org.apache.xml.dtm.ref.dom2dtm; uses:=&quot;javax.xml.transform.dom,  org.apache.xml.utils,  org.xml.sax,  org.apache.xml.dtm.ref,  org.xml.sax.ext,  org.w3c.dom,  org.apache.xml.dtm,  javax.xml.transform&quot;,org.apache.xml.dtm.ref.sax2dtm; uses:=&quot;org.apache.xml.utils,  org.xml.sax,  org.apache.xml.dtm.ref,  org.xml.sax.ext,  org.apache.xml.dtm,  javax.xml.transform&quot;,org.apache.xml.serialize; uses:=&quot;org.w3c.dom.ls,  org.apache.xerces.dom,  org.xml.sax,  org.xml.sax.ext,  org.w3c.dom,  org.apache.xerces.util&quot;,org.apache.xml.utils; uses:=&quot;org.xml.sax,  org.xml.sax.ext,  org.xml.sax.helpers,  org.apache.xpath,  org.w3c.dom,  javax.xml.transform&quot;,org.apache.xml.utils.res,org.apache.xpath; uses:=&quot;org.apache.xalan.extensions,  org.xml.sax,  org.apache.xpath.functions,  org.apache.xpath.axes,  org.w3c.dom,  javax.xml.transform,  org.apache.xml.utils,  org.w3c.dom.traversal,  org.apache.xpath.objects,  org.apache.xml.dtm&quot;,org.apache.xpath.axes; uses:=&quot;org.apache.xml.utils,  org.w3c.dom.traversal,  org.apache.xpath.objects,  org.w3c.dom,  org.apache.xpath,  org.apache.xml.dtm,  org.apache.xpath.compiler,  org.apache.xpath.patterns&quot;,org.apache.xpath.compiler; uses:=&quot;org.apache.xml.utils,  org.apache.xpath.functions,  org.apache.xpath,  org.apache.xpath.patterns,  javax.xml.transform&quot;,org.apache.xpath.functions; uses:=&quot;org.apache.xml.utils,  org.xml.sax,  org.apache.xpath.objects,  org.apache.xpath&quot;,org.apache.xpath.objects; uses:=&quot;org.w3c.dom.traversal,  org.apache.xml.utils,  org.xml.sax,  org.xml.sax.ext,  org.apache.xpath,  org.w3c.dom,  org.apache.xml.dtm&quot;,org.apache.xpath.operations;uses:=&quot;org.apache.xml.utils,org.apache.xpath.objects,org.apache.xpath&quot;,org.apache.xpath.patterns; uses:=&quot;org.apache.xpath.axes,  org.apache.xpath.objects,  org.apache.xpath,  org.apache.xml.dtm&quot;,org.apache.xpath.res;uses:=&quot;org.apache.xml.utils.res&quot;,org.w3c.css.sac&#xA;Bundle-ClassPath: antlr.jar,koala-graphics.jar,commons-collections.jar,xalan.jar,xercesImpl.jar,bmlplayer.jar,xsltc.jar,batik-css.jar,sac.jar,batik-util.jar,tools.jar,stax-1.2.0.jar,stax-api-1.0.1.jar,gson-1.3.jar&#xA;Bundle-SymbolicName: inria.smarttools.lib;singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: INRIA SmartTools
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingorg.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.200.v20130807-1835,1.1.200.v20130807-1835]' greedy='false'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+        <property name='org.eclipse.pde.build.default' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.200.v20130807-1835,1.1.200.v20130807-1835]' greedy='false'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact});
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact});
+          </instruction>
+          <instruction key='configure'>
+            addProgramArg(programArg:--launcher.library);addProgramArg(programArg:@artifact);
+          </instruction>
+          <instruction key='unconfigure'>
+            removeProgramArg(programArg:--launcher.library);removeProgramArg(programArg:@artifact);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'>
+      <update id='org.eclipse.equinox.preferences' range='[0.0.0,3.5.100.v20130422-1538)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Eclipse Preferences Mechanism'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.preferences'/>
+        <property name='maven-version' value='3.5.100-SNAPSHOT'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.preferences.exchange' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.preferences' version='3.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.prefs' version='1.1.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='11'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.2.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='[3.2.0,4.0.0)' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.log' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.datalocation' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.environment' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.prefs' range='[1.1.1,1.2.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.preferences; singleton:=true&#xA;Bundle-Version: 3.5.100.v20130422-1538
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='componentsManager' version='1.6.3'>
+      <update id='componentsManager' range='[0.0.0,1.6.3)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='componentsManager'/>
+        <property name='org.eclipse.equinox.p2.description' value='A bundle for testing'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='componentsManager' version='1.6.3'/>
+        <provided namespace='osgi.bundle' name='componentsManager' version='1.6.3'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources.lml' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources.world' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.ui.client' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.component' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.util' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.dynamic' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='componentsManager' version='1.6.3'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: componentsManager;singleton=true&#xA;Bundle-Version: 1.6.3
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='componentsManager' version='1.6.2'>
+      <update id='componentsManager' range='[0.0.0,1.6.2)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='componentsManager'/>
+        <property name='org.eclipse.equinox.p2.description' value='A bundle for testing'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='componentsManager' version='1.6.2'/>
+        <provided namespace='osgi.bundle' name='componentsManager' version='1.6.2'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources.lml' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.resources.world' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.componentsmanager.ui.client' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.component' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.util' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.dynamic' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='componentsManager' version='1.6.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-Vendor: INRIA SmartTools&#xA;Bundle-Activator: inria.smarttools.componentsmanager.Activator&#xA;Require-Bundle: inria.smarttools.lib&#xA;Import-Package: inria.smarttools.core.component,inria.smarttools.core.util,inria.smarttools.dynamic,org.osgi.framework&#xA;Bundle-Name: componentsManager&#xA;Manifest-Version: 1.0&#xA;Bundle-SymbolicName: componentsManager;singleton=true&#xA;Bundle-Version: 1.6.2&#xA;Bundle-Description: A bundle for testing&#xA;Provide-Package: inria.smarttools.componentsmanager,inria.smarttools.componentsmanager.resources,inria.smarttools.componentsmanager.resources.lml,inria.smarttools.componentsmanager.resources.world,inria.smarttools.componentsmanager.ui.client&#xA;Export-Package: inria.smarttools.componentsmanager,inria.smarttools.componentsmanager.resources,inria.smarttools.componentsmanager.resources.lml,inria.smarttools.componentsmanager.resources.world
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='SmartWorkflow-libs' version='1.0.0' singleton='false'>
+      <update id='SmartWorkflow-libs' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='P2pEditor-libs'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MIU-LIFA'/>
+      </properties>
+      <provides size='126'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='SmartWorkflow-libs' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='SmartWorkflow-libs' version='1.0.0'/>
+        <provided namespace='java.package' name='com.google.gson' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.annotations' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.internal.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.reflect' version='0.0.0'/>
+        <provided namespace='java.package' name='com.google.gson.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.bc.asn1' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.html.simpleparser' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.markup' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf.codec' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf.codec.postscript' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf.codec.wmf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf.fonts' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.pdf.hyphenation' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.document' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.document.output' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.field' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.graphic' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.headerfooter' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.list' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.style' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.table' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.rtf.text' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.text.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.tools.arguments' version='0.0.0'/>
+        <provided namespace='java.package' name='com.lowagie.tools.plugins' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.analysis' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.canvas' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.costfunction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.generatorfunction' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.io' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout.hierarchical' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout.hierarchical.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout.hierarchical.stage' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout.orthogonal' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.layout.orthogonal.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.model' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.reader' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.shape' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.swing.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.swing.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.swing.view' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.util' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.util.png' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.util.svg' version='0.0.0'/>
+        <provided namespace='java.package' name='com.mxgraph.view' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.common.usermodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ddf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.dev' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hpsf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hpsf.extractor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hpsf.wellknown' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.dev' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.eventmodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.eventusermodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.eventusermodel.dummyrecord' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.extractor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.model' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.aggregates' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.cf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.chart' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.common' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.cont' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.record.pivottable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.usermodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.hssf.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.common' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.crypt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.dev' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.eventfilesystem' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.filesystem' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.nio' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.property' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.poifs.storage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.extractor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.format' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.atp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.constant' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.eval' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.eval.forked' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.function' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.functions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.ptg' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.formula.udf' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.usermodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.usermodel.charts' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.ss.util.cellwalk' version='0.0.0'/>
+        <provided namespace='java.package' name='org.apache.poi.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.bean' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.dtd' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.io' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.jaxb' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.rule' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.rule.pattern' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.dom4j.xpp' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.base' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.chrono' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.convert' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.field' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.format' version='0.0.0'/>
+        <provided namespace='java.package' name='org.joda.time.tz' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='SmartWorkflow-libs' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: SmartWorkflow-libs&#xA;Bundle-Version: 1.0.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='ExportClient' version='1.0.0'>
+      <update id='ExportClient' range='0.0.0' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='ExportClient'/>
+        <property name='org.eclipse.equinox.p2.type.product' value='true'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='ExportClient' version='1.0.0'/>
+      </provides>
+      <requires size='30'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.dynamic' range='[1.6.2,1.6.2]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='[1.6.0,1.6.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher' range='[1.3.0.v20130327-1440,1.3.0.v20130327-1440]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.local' range='[1.6.6,1.6.6]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.lib' range='[1.6.2,1.6.2]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='tooling.osgi.bundle.default' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.keyvaluestore' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='p2pEditor' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.200.v20130807-1835,1.1.200.v20130807-1835]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.core' range='[1.6.16,1.6.16]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='tooling.source.default' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.communicationprotocol' range='[0.3.0,0.3.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' range='[1.6.0,1.6.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher' range='[1.3.0.v20130327-1440,1.3.0.v20130327-1440]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='ExportClient_root.win32.win32.x86' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingorg.eclipse.equinox.launcher.win32.win32.x86' range='[1.1.200.v20130807-1835,1.1.200.v20130807-1835]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='startereditor' range='[1.0.0.201803121614,1.0.0.201803121614]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.pon' range='[1.0.19,1.0.19]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='components-graph' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='openchord' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='tooling.org.eclipse.update.feature.default' range='[1.0.0,1.0.0]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient.configuration' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.openchord' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='SmartWorkflow-libs' range='[1.0.0,1.0.0]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore.openchord' range='[1.0.1,1.0.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' range='[3.9.1.v20130814-1242,3.9.1.v20130814-1242]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='componentsManager' range='[1.6.3,1.6.3]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='toolingExportClient_root.win32.win32.x86' range='[1.0.0,1.0.0]'>
+          <filter>
+            (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    </unit>
+    <unit id='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'>
+      <update id='org.eclipse.core.contenttype' range='[0.0.0,3.4.200.v20130326-1255)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org'/>
+        <property name='df_LT.pluginName' value='Eclipse Content Mechanism'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.core'/>
+        <property name='maven-artifactId' value='org.eclipse.core.contenttype'/>
+        <property name='maven-version' value='3.4.200-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.content' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.content' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='11'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.preferences' range='[3.2.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='[3.2.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.2.0,4.0.0)'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax.ext' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax.helpers' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.core.contenttype; singleton:=true&#xA;Bundle-Version: 3.4.200.v20130326-1255
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='components-graph' version='1.0.0'>
+      <update id='components-graph' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='components-graph'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='components-graph' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='components-graph' version='1.0.0'/>
+        <provided namespace='java.package' name='graph' version='0.0.0'/>
+        <provided namespace='java.package' name='graph.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='graph.view' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='inria.smarttools.core' range='0.0.0'/>
+        <required namespace='java.package' name='javax.swing' range='0.0.0'/>
+        <required namespace='java.package' name='javax.swing.border' range='0.0.0'/>
+        <required namespace='java.package' name='javax.swing.event' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='components-graph' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Export-Package: graph,graph.resources,graph.view&#xA;Require-Bundle: inria.smarttools.lib,inria.smarttools.core&#xA;Bundle-Activator: graph.Activator&#xA;Bundle-Name: components-graph&#xA;Bundle-Version: 1.0&#xA;Bundle-Vendor: INRIA SmartTools&#xA;Bundle-SymbolicName: components-graph;singleton:=true&#xA;Import-Package: javax.swing,javax.swing.border,javax.swing.event,org.osgi.framework;version=&quot;1.4.0&quot;&#xA;Bundle-ActivationPolicy: lazy&#xA;Bundle-ClassPath: koala-graphics.jar,.&#xA;Manifest-Version: 1.0
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.core' version='1.6.2.1'>
+      <update id='inria.smarttools.core' range='[0.0.0,1.6.2.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='inria.smarttools.core'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.core' version='1.6.2.1'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.core' version='1.6.2.1'/>
+        <provided namespace='java.package' name='inria.smarttools.core' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.component' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.component.resources' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.error' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.smarttools.core.util' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.dynamic' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.core' version='1.6.2.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: inria.smarttools.core&#xA;Bundle-Version: 1.6.2.1&#xA;Require-Bundle: inria.smarttools.lib&#xA;Export-Package: inria.smarttools.core;uses:=&quot;org.osgi.framework&quot;,inria.smarttools.core.component; uses:=&quot;inria.smarttools.core.util,  org.osgi.framework,  javax.swing&quot;,inria.smarttools.core.component.resources,inria.smarttools.core.error,inria.smarttools.core.util&#xA;Bundle-SymbolicName: inria.smarttools.core;singleton:=true&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: INRIA SmartTools&#xA;Import-Package: inria.smarttools.dynamic,org.eclipse.core.runtime,org.osgi.framework
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.lognet.virtpipes.keyvaluestore' version='1.0.1' singleton='false'>
+      <update id='inria.lognet.virtpipes.keyvaluestore' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='VirtPipes KeyValueStore Information Module'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA PON'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes.keyvaluestore' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='inria.lognet.virtpipes.keyvaluestore' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='inria.pon.keyvaluestore' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.3'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes.keyvaluestore' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.lognet.virtpipes.keyvaluestore&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.lognet.virtpipes' version='1.0.1' singleton='false'>
+      <update id='inria.lognet.virtpipes' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='Virtpipes'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='inria.lognet.virtpipes' version='1.0.1'/>
+        <provided namespace='java.package' name='inria.lognet.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.lognet.virtpipes' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='openchord' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.3'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.lognet.virtpipes&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.lognet.virtpipes' version='1.0.0' singleton='false'>
+      <update id='inria.lognet.virtpipes' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='Virtpipes'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.lognet.virtpipes' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='inria.lognet.virtpipes' version='1.0.0'/>
+        <provided namespace='java.package' name='inria.lognet.channels' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.lognet.virtpipes' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='openchord' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.3'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: Virtpipes&#xA;Bundle-Version: 1.0.0&#xA;Require-Bundle: openchord&#xA;Export-Package: inria.lognet.channels,inria.lognet.virtpipes&#xA;Bundle-SymbolicName: inria.lognet.virtpipes&#xA;Manifest-Version: 1.0&#xA;Import-Package: org.osgi.framework;version=&quot;1.4.0&quot;,org.osgi.util.tracker;version=&quot;1.3.3&quot;&#xA;Bundle-Activator: inria.lognet.virtpipes.Activator
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.pde.container.feature_root.win32.win32.x86' version='1.0.0'>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.container.feature_root.win32.win32.x86' version='1.0.0'/>
+      </provides>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='binary' id='org.eclipse.pde.container.feature_root.win32.win32.x86' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='uninstall'>
+            cleanupzip(source:@artifact, target:${installFolder});
+          </instruction>
+          <instruction key='install'>
+            unzip(source:@artifact, target:${installFolder});
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='tooling.source.default' version='1.0.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='source' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='tooling.source.default' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='tooling' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='source' range='0.0.0' optional='true' multiple='true' greedy='false'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='uninstall'>
+            removeSourceBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            addSourceBundle(bundle:${artifact})
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='toolingwin32.win32.x86openchord' version='1.0.0' singleton='false'>
+      <hostRequirements size='2'>
+        <required namespace='osgi.bundle' name='openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='toolingwin32.win32.x86openchord' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.flavor' name='toolingwin32.win32.x86' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='osgi.bundle' name='openchord' range='1.0.1'/>
+        <required namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' range='[1.0.0,2.0.0)' greedy='false'/>
+      </requires>
+      <filter>
+        (&amp;(osgi.arch=x86)(osgi.os=win32)(osgi.ws=win32))
+      </filter>
+      <touchpoint id='null' version='0.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='4'>
+          <instruction key='uninstall'>
+            uninstallBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='install'>
+            installBundle(bundle:${artifact})
+          </instruction>
+          <instruction key='configure'>
+            setStartLevel(startLevel:1);markStarted(started: true);
+          </instruction>
+          <instruction key='unconfigure'>
+            setStartLevel(startLevel:-1);markStarted(started: false);
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'>
+      <update id='org.eclipse.core.jobs' range='[0.0.0,3.5.300.v20130429-1813)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org'/>
+        <property name='df_LT.pluginName' value='Eclipse Jobs Mechanism'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.core'/>
+        <property name='maven-artifactId' value='org.eclipse.core.jobs'/>
+        <property name='maven-version' value='3.5.300-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.jobs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.jobs' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.2.0,4.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.core.jobs; singleton:=true&#xA;Bundle-Version: 3.5.300.v20130429-1813
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.dynamic' version='1.6.2'>
+      <update id='inria.smarttools.dynamic' range='[0.0.0,1.6.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='inria.smarttools.dynamic'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.dynamic' version='1.6.2'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.dynamic' version='1.6.2'/>
+        <provided namespace='java.package' name='inria.smarttools.dynamic' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.dynamic' version='1.6.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.smarttools.dynamic;singleton:=true&#xA;Bundle-Version: 1.6.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'>
+      <update id='org.eclipse.equinox.app' range='[0.0.0,1.3.100.v20130327-1442)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Equinox Application Container'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.app'/>
+        <property name='maven-version' value='1.3.100-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.app' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.internal.app' version='0.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.application' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='[3.4.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.2.0,4.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.console' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.log' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.datalocation' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.environment' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.runnable' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.storagemanager' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.condpermadmin' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.event' range='1.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='1.2.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.app; singleton:=true&#xA;Bundle-Version: 1.3.100.v20130327-1442
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.smarttools.ds.pon' version='1.0.19' singleton='false'>
+      <update id='inria.smarttools.ds.pon' range='[0.0.0,1.0.19)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='SmartTools DS PON Openchord Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA SmartTools'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.smarttools.ds.pon' version='1.0.19'/>
+        <provided namespace='osgi.bundle' name='inria.smarttools.ds.pon' version='1.0.19'/>
+        <provided namespace='java.package' name='inria.smarttools.ds.pon' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='osgi.bundle' name='inria.smarttools.lib' range='1.5.3'/>
+        <required namespace='osgi.bundle' name='inria.lognet.virtpipes' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='openchord' range='1.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.componentsmanager' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.component' range='0.0.0'/>
+        <required namespace='java.package' name='inria.smarttools.core.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.4.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.smarttools.ds.pon' version='1.0.19'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.smarttools.ds.pon&#xA;Bundle-Version: 1.0.19
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.osgi' version='3.9.1.v20130814-1242'>
+      <update id='org.eclipse.osgi' range='[0.0.0,3.9.1.v20130814-1242)' severity='0'/>
+      <properties size='10'>
+        <property name='df_LT.systemBundle' value='OSGi System Bundle'/>
+        <property name='df_LT.eclipse.org' value='Eclipse.org - Equinox'/>
+        <property name='org.eclipse.equinox.p2.name' value='%systemBundle'/>
+        <property name='org.eclipse.equinox.p2.description' value='%systemBundle'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='systembundle'/>
+        <property name='maven-groupId' value='org.eclipse.osgi'/>
+        <property name='maven-artifactId' value='org.eclipse.osgi'/>
+        <property name='maven-version' value='3.9.1-SNAPSHOT'/>
+      </properties>
+      <provides size='72'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' version='3.9.1.v20130814-1242'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.osgi' version='3.9.1.v20130814-1242'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.event' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.console' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.eventmgr' version='1.2.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.log' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.launch' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.datalocation' version='1.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.debug' version='1.2.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.environment' version='1.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.localization' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.pluginconversion' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.resolver' version='1.6.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.resolver.extras' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.runnable' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.security' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.urlconversion' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.signedcontent' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.storagemanager' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.util' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.log' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework' version='1.7.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.launch' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.bundle' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.resolver' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.service' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.weaving' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.namespace' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.startlevel' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.wiring' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.resource' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.condpermadmin' version='1.1.1'/>
+        <provided namespace='java.package' name='org.osgi.service.framework' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.packageadmin' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.permissionadmin' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.startlevel' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.url' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.util.tracker' version='1.5.1'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.adaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.internal.adaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.internal.stats' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.baseadaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.baseadaptor.bundlefile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.baseadaptor.hooks' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.baseadaptor.loader' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.adaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.core' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.protocol' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.protocol.bundleentry' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.protocol.bundleresource' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.protocol.reference' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.reliablefile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.baseadaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.composite' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader.buddy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.module' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.profile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.resolver' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.serviceregistry' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.permadmin' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.provisional.service.security' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.provisional.verifier' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.service.security' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.signedcontent' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.internal.composite' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.log.internal' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.9.1.v20130814-1242'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.osgi; singleton:=true&#xA;Bundle-Version: 3.9.1.v20130814-1242
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.pon.keyvaluestore' version='1.0.1' singleton='false'>
+      <update id='inria.pon.keyvaluestore' range='[0.0.0,1.0.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Key-Value Store'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA PON'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore' version='1.0.1'/>
+        <provided namespace='osgi.bundle' name='inria.pon.keyvaluestore' version='1.0.1'/>
+        <provided namespace='java.package' name='inria.pon.keyvaluestore.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.pon.keyvaluestore.store' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore' version='1.0.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: inria.pon.keyvaluestore&#xA;Bundle-Version: 1.0.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='inria.pon.keyvaluestore' version='1.0.0' singleton='false'>
+      <update id='inria.pon.keyvaluestore' range='[0.0.0,1.0.0)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Key-Value Store'/>
+        <property name='org.eclipse.equinox.p2.provider' value='INRIA PON'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='inria.pon.keyvaluestore' version='1.0.0'/>
+        <provided namespace='osgi.bundle' name='inria.pon.keyvaluestore' version='1.0.0'/>
+        <provided namespace='java.package' name='inria.pon.keyvaluestore.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='inria.pon.keyvaluestore.store' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore' version='1.0.0'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-ManifestVersion: 2&#xA;Bundle-Name: Key-Value Store&#xA;Bundle-Version: 1.0.0&#xA;Export-Package: inria.pon.keyvaluestore.framework,inria.pon.keyvaluestore.store&#xA;Bundle-SymbolicName: inria.pon.keyvaluestore&#xA;Manifest-Version: 1.0&#xA;Bundle-Vendor: INRIA PON&#xA;Import-Package: org.osgi.framework;version=&quot;1.3.0&quot;&#xA;Bundle-Activator: inria.pon.keyvaluestore.Activator
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'>
+      <update id='org.eclipse.equinox.common' range='[0.0.0,3.6.200.v20130402-1505)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Common Eclipse Runtime'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.common'/>
+        <property name='maven-version' value='3.6.200-SNAPSHOT'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.boot' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime' version='3.4.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.events' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='java.package' name='org.eclipse.equinox.log' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.log' range='[1.1.0,2.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.datalocation' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.localization' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.urlconversion' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='[1.3.0,2.0.0)'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.url' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.common; singleton:=true&#xA;Bundle-Version: 3.6.200.v20130402-1505
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

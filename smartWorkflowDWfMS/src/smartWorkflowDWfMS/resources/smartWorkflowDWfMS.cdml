@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<component name="smartWorkflowDWfMS" type="smartWorkflowDWfMS" extends="inria.communicationprotocol" ns="smartWorkflowDWfMS">
+
+	<containerclass name="SmartWorkflowDWfMSContainer"/>
+	<facadeclass name="SmartWorkflowDWfMSFacade" userclassname="SmartWorkflowDWfMS"/>
+
+	<input name="forwardTo" method="inForwardTo">
+		<attribute name="repliquePartielle" javatype="java.lang.String"/>
+	</input>
+	
+	<input name="returnTo" method="inReturnTo">
+		<attribute name="repliquePartielle" javatype="java.lang.String"/>
+	</input>
+	
+	<output name="forwardTo" method="outForwardTo">
+		<attribute name="repliquePartielle" javatype="java.lang.String"/>
+	</output>
+	
+	<output name="returnTo" method="outReturnTo">
+		<attribute name="repliquePartielle" javatype="java.lang.String"/>
+	</output>
+
+</component>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Open Chord KVS Module Plug-in
+Bundle-SymbolicName: inria.pon.keyvaluestore.openchord
+Bundle-Version: 1.0.1
+Bundle-Activator: inria.pon.keyvaluestore.openchord.Activator
+Bundle-Vendor: INRIA PON
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: openchord,
+ inria.pon.keyvaluestore

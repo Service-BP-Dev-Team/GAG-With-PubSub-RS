@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/F:/Workspace/Projets%20SON/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1520867701660'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='38'>
+    <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes.openchord' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='12673'/>
+      </properties>
+    </artifact>
+    <artifact classifier='binary' id='org.eclipse.pde.container.feature_root.win32.win32.x86' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='114273'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.dynamic' version='1.6.2'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4251'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.core' version='1.6.2.1'>
+      <properties size='1'>
+        <property name='download.size' value='148632'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='componentsManager' version='1.6.3'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='208417'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='componentsManager' version='1.6.2'>
+      <properties size='1'>
+        <property name='download.size' value='208317'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='javax.xml' version='1.3.4.v201005080400'>
+      <properties size='1'>
+        <property name='download.size' value='237996'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.3.100.v20130513-1956'>
+      <properties size='1'>
+        <property name='download.size' value='82934'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='SmartWorkflow-libs' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4272644'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.core' version='1.6.16'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='152259'/>
+      </properties>
+    </artifact>
+    <artifact classifier='binary' id='ExportClient_root.win32.win32.x86' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='114273'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'>
+      <properties size='1'>
+        <property name='download.size' value='80249'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.lib' version='1.6.2'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='5206267'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.ds.pon' version='1.0.19'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='23358'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.smarttools.ds.local' version='1.6.6'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='14087'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.contenttype' version='3.4.200.v20130326-1255'>
+      <properties size='1'>
+        <property name='download.size' value='93013'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.5.300.v20130429-1813'>
+      <properties size='1'>
+        <property name='download.size' value='92479'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore.openchord' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='6776'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.app' version='1.3.100.v20130327-1442'>
+      <properties size='1'>
+        <property name='download.size' value='86244'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher.win32.win32.x86' version='1.1.200.v20130807-1835'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='27231'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.command' version='0.10.0.v201209301215'>
+      <properties size='1'>
+        <property name='download.size' value='57646'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='14189'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.pon.keyvaluestore' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='14203'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='components-graph' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='689645'/>
+        <property name='download.size' value='689645'/>
+        <property name='download.md5' value='adcc70d63128a0ccd5de3d091f18ecf4'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.registry' version='3.5.301.v20130717-1549'>
+      <properties size='1'>
+        <property name='download.size' value='184147'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.6.200.v20130402-1505'>
+      <properties size='1'>
+        <property name='download.size' value='106701'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes.keyvaluestore' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='7120'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='p2pEditor' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='32358'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.core.runtime' version='3.9.0.v20130326-1255'>
+      <properties size='1'>
+        <property name='download.size' value='73635'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.launcher' version='1.3.0.v20130327-1440'>
+      <properties size='3'>
+        <property name='artifact.size' value='49968'/>
+        <property name='download.size' value='49968'/>
+        <property name='download.md5' value='b2b850cbe59dad53519c12a4698b24a1'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.preferences' version='3.5.100.v20130422-1538'>
+      <properties size='1'>
+        <property name='download.size' value='127170'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='39815'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.lognet.virtpipes' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='39787'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='openchord' version='1.0.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='122866'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='startereditor' version='1.0.0.201803121614'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='3154'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='inria.communicationprotocol' version='0.3.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='28173'/>
+        <property name='download.size' value='28173'/>
+        <property name='download.md5' value='a39e364e75a3b78a911d570144304477'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='openchord' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='123527'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.9.1.v20130814-1242'>
+      <properties size='3'>
+        <property name='artifact.size' value='1392230'/>
+        <property name='download.size' value='1392230'/>
+        <property name='download.md5' value='35ea55fea2471af5153c266df6e415bc'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

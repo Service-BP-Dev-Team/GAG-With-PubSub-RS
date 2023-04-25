@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="com.google.gwt.eclipse.core.GWTCodeFormatterApplication"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<booleanAttribute key="clearws" value="false"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/ExportHost.product"/>
+<booleanAttribute key="default" value="false"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-ExportHost.product"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog --launcher.secondThread -console -clean"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.requiredJavaVersion=1.6 -Xms40m -Xmx512m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -debug -Dorg.eclipse.equinox.http.jetty.http.port=8081 -Dinria.smarttools.dht.port=1501"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="startereditor.product3"/>
+<stringAttribute key="productFile" value="\startereditor\ExportHost.product"/>
+<stringAttribute key="selected_target_plugins" value="inria.communicationprotocol@default:default,org.eclipse.osgi@-1:true,inria.smarttools.lib@default:default,components-graph@default:default,"/>
+<stringAttribute key="selected_workspace_plugins" value="inria.smarttools.ds.local@4:false,inria.lognet.virtpipes@2:true,inria.smarttools.core@default:default,componentsManager@default:default,inria.smarttools.dynamic@default:default,openchord@1:true,p2pEditor@default:default,inria.lognet.virtpipes.keyvaluestore@2:true,inria.smarttools.ds.pon@4:true,inria.lognet.virtpipes.openchord@2:true,SmartWorkflow-libs@default:default,inria.pon.keyvaluestore@3:true,inria.pon.keyvaluestore.openchord@3:true,startereditor@4:true,"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useProduct" value="true"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

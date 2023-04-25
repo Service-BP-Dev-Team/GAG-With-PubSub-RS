@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<world repository="file:plugins/" library="file:lib/" debug="OFF">
+
+	<!--                        -->
+	<!-- Components declaration -->
+	<!--                        -->
+	<load_component jar="glayout.jar" url="file:plugins/glayout.jar"
+		name="glayout" />
+	<load_component jar="gview.jar" url="file:plugins/gview.jar"
+		name="glayout" />
+	<load_component jar="lml.jar" url="file:plugins/lml.jar" name="lml" />
+	<load_component jar="geditorpan.jar"
+		url="file:plugins/geditorpan.jar" name="geditorpan" />
+	<load_component jar="worldStateGraph.jar" url="file:plugins/worldStateGraph.jar"
+		name="worldStateGraph" />
+	<load_component jar="dialogbox.jar" url="file:plugins/dialogbox.jar"
+		name="dialogbox" />
+
+	<!--                                           -->
+	<!-- connect ComponentsManager with GUI        -->
+	<!--                                           -->
+	<connectTo id_src="ComponentsManager" type_dest="glayout">
+		<attribute name="docRef" value="[filename]" />
+		<attribute name="xslTransform"
+			value="resources:lml/resources/xsl/lml2bml.xsl" />
+		<attribute name="behaviors"
+			value="resources:fr/smarttools/core/view/resources/behaviors/bootbehav.xml" />
+		<message name="initData">
+			<attribute name="inits">
+				<collection>
+					<item name="behavior"
+						value="resources:cm/resources/cmbehaviors.xml" />
+				</collection>
+			</attribute>
+		</message>
+	</connectTo>
+
+</world>

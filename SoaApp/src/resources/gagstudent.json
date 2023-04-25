@@ -1,0 +1,78 @@
+{
+   "rules":[
+      {
+         "name":"File submission",
+         "leftSide":{
+            "name":"",
+            "in":[
+
+            ],
+            "out":[
+
+            ],
+            "location":"student"
+         },
+         "rightSide":[
+            {
+               "name":"Department service",
+               "in":[
+                  {
+                     "name":"file"
+                  }
+               ],
+               "out":[
+                  {
+                     "name":"processing"
+                  }
+               ],
+               "location":"department"
+            }
+         ],
+         "parameters":[
+            {
+               "name":"file"
+            }
+         ]
+      },
+      {
+         "name":"Request submission",
+         "leftSide":{
+            "name":"",
+            "in":[
+
+            ],
+            "out":[
+
+            ],
+            "location":"student"
+         },
+         "rightSide":[
+            {
+               "name":"Department Request",
+               "in":[
+                  {
+                     "name":"file number"
+                  },
+                  {
+                     "name":"supporting documents"
+                  }
+               ],
+               "out":[
+                  {
+                     "name":"processing"
+                  }
+               ],
+               "location":"department"
+            }
+         ],
+         "parameters":[
+            {
+               "name":"file number"
+            },
+            {
+               "name":"supporting documents"
+            }
+         ]
+      }
+   ]
+}

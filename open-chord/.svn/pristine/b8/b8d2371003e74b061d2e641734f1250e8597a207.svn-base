@@ -1,0 +1,223 @@
+package de.uniba.wiai.lspi.chord;
+
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.util.Hashtable;
+import java.util.Properties;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceEvent;
+import org.osgi.framework.ServiceListener;
+import org.osgi.framework.ServiceReference;
+import org.osgi.framework.ServiceRegistration;
+
+import de.uniba.wiai.lspi.chord.data.URL;
+import de.uniba.wiai.lspi.chord.service.Chord;
+import de.uniba.wiai.lspi.chord.service.impl.ChordImpl;
+
+public class Activator implements BundleActivator, Runnable {
+
+	public static final Logger LOGGER = Logger.getLogger("OpenChord");
+
+	private Chord chord;
+
+	private Thread thread;
+
+	private BundleContext context;
+
+	private ServiceRegistration registration;
+
+	public void run() {
+		while (!Thread.interrupted()) {
+			try {
+				String port = context.getProperty("inria.smarttools.dht.port");
+				String address = context
+						.getProperty("inria.smarttools.dht.host");
+				if (port == null) {
+					port = "0";
+					final ServerSocket ss = new ServerSocket(0);
+					port = String.valueOf(ss.getLocalPort());
+					ss.close();
+				}
+				if (address == null) {
+					address = InetAddress.getLocalHost().getHostAddress();
+				}
+				Activator.LOGGER.info("Address = " + address);
+				chord = new ChordImpl();
+				if (context.getProperty("inria.smarttools.dht.boot") != null) {
+					if (context.getProperty("inria.smarttools.dht.boot")
+							.contains(":")) {
+						Activator.LOGGER
+								.info("join "
+										+ context
+												.getProperty("inria.smarttools.dht.boot"));
+						chord
+								.join(
+										new URL(URL.KNOWN_PROTOCOLS
+												.get(URL.SOCKET_PROTOCOL)
+												+ "://"
+												+ address
+												+ ":"
+												+ port
+												+ "/"),
+										new URL(
+												URL.KNOWN_PROTOCOLS
+														.get(URL.SOCKET_PROTOCOL)
+														+ "://"
+														+ context
+																.getProperty("inria.smarttools.dht.boot")
+														+ "/"));
+					} else {
+						Activator.LOGGER
+								.info("join localhost:"
+										+ context
+												.getProperty("inria.smarttools.dht.boot"));
+						chord
+								.join(
+										new URL(URL.KNOWN_PROTOCOLS
+												.get(URL.SOCKET_PROTOCOL)
+												+ "://"
+												+ address
+												+ ":"
+												+ port
+												+ "/"),
+										new URL(
+												URL.KNOWN_PROTOCOLS
+														.get(URL.SOCKET_PROTOCOL)
+														+ "://"
+														+ address
+														+ ":"
+														+ context
+																.getProperty("inria.smarttools.dht.boot")
+														+ "/"));
+					}
+				} else {
+					Activator.LOGGER.info("create " + port);
+					chord.create(new URL(URL.KNOWN_PROTOCOLS
+							.get(URL.SOCKET_PROTOCOL)
+							+ "://" + address + ":" + port + "/"));
+				}
+				registration = context.registerService(Chord.class.getName(),
+						chord, new Hashtable<String, Object>());
+				break;
+			} catch (final Exception e) {
+				e.printStackTrace();
+			}
+			synchronized (this) {
+				try {
+					wait(2000);
+				} catch (final InterruptedException e) {
+					break;
+				}
+			}
+		}
+		thread = null;
+	}
+
+	public void start(final BundleContext context) throws Exception {
+		Activator.LOGGER.setUseParentHandlers(false);
+		{ // Add LoggerViewer Handler
+			final ServiceReference ref = context
+					.getServiceReference("loggerviewer.LoggerViewerHandler");
+			if (ref != null) {
+				final Object o = context.getService(ref);
+				if (o != null) {
+					Activator.LOGGER.addHandler((Handler) o);
+				}
+			} else {
+				context.addServiceListener(new ServiceListener() {
+
+					public void serviceChanged(final ServiceEvent event) {
+						if (event.getType() == ServiceEvent.REGISTERED) {
+							final Object o = context.getService(event
+									.getServiceReference());
+							if (o.getClass().getName().equals(
+									"loggerviewer.LoggerViewerHandler")) {
+								Activator.LOGGER.addHandler((Handler) o);
+							}
+						}
+					}
+
+				}, "(objectclass=loggerviewer.LoggerViewerHandler)");
+			}
+		} // End add LoggerViewer Handler
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.AsyncThread.no",
+						"10");
+		System.getProperties().put(
+				"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.successors",
+				"2");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.StabilizeTask.start",
+						"12");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.StabilizeTask.interval",
+						"12");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.FixFingerTask.start",
+						"0");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.FixFingerTask.interval",
+						"12");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.CheckPredecessorTask.start",
+						"6");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.service.impl.ChordImpl.CheckPredecessorTask.interval",
+						"12");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.com.socket.InvocationThread.corepoolsize",
+						"10");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.com.socket.InvocationThread.maxpoolsize",
+						"50");
+		System
+				.getProperties()
+				.put(
+						"de.uniba.wiai.lspi.chord.com.socket.InvocationThread.keepalivetime",
+						"3600");
+
+		this.context = context;
+		(thread = new Thread(this, "Open-Chord Starter")).start();
+	}
+
+	public void stop(final BundleContext context) throws Exception {
+		if (thread != null) {
+			thread.interrupt();
+		}
+		if (chord != null) {
+			chord.leave();
+			chord = null;
+		}
+		this.context = null;
+		if (registration != null) {
+			registration.unregister();
+			registration = null;
+		}
+		if (Activator.LOGGER.getHandlers().length > 0) {
+			Activator.LOGGER.removeHandler(Activator.LOGGER.getHandlers()[0]);
+		}
+	}
+
+}

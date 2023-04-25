@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="com.google.gwt.eclipse.core.GWTCodeFormatterApplication"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="clearws" value="false"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<booleanAttribute key="default" value="false"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-ExportClient.product(1)"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog --launcher.secondThread -console -clean"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dosgi.requiredJavaVersion=1.6 -Xms40m -Xmx512m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.eclipse.equinox.http.jetty.http.port=8080 -Dinria.smarttools.dht.boot=1501 -Dinria.smarttools.dht.host=127.0.0.1"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="aStarter.product4"/>
+<stringAttribute key="productFile" value="\aStarter\ExportClient.product"/>
+<stringAttribute key="selected_target_plugins" value="inria.communicationprotocol@default:default,org.eclipse.osgi@-1:true,inria.smarttools.lib@default:default,components-graph@default:default,,org.eclipse.core.contenttype,org.eclipse.core.jobs,org.eclipse.equinox.common,org.eclipse.equinox.preferences,org.eclipse.equinox.registry,org.eclipse.core.runtime.compatibility.registry,org.eclipse.equinox.app"/>
+<stringAttribute key="selected_workspace_plugins" value="inria.smarttools.ds.local@4:false,inria.lognet.virtpipes@2:true,inria.smarttools.core@default:default,componentsManager@default:default,inria.smarttools.dynamic@default:default,openchord@1:true,p2pEditor@default:default,inria.lognet.virtpipes.keyvaluestore@2:true,inria.smarttools.ds.pon@4:true,inria.lognet.virtpipes.openchord@2:true,SmartWorkflow-libs@default:default,inria.pon.keyvaluestore@3:true,inria.pon.keyvaluestore.openchord@3:true,startereditor@4:true,"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useProduct" value="true"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

@@ -1,0 +1,83 @@
+{  
+   "rules":[  
+      {  
+         "name":"Approbation dossier",
+         "leftSide":{  
+            "name":"Service du département",
+            "in":[  
+               {  
+                  "name":"dossier"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"traitement département"
+                     },
+                     {  
+                        "name":"suite"
+                     }
+                  ]
+               }
+            ],
+            "location":"département"
+         },
+         "rightSide":[  
+            {  
+               "name":"Service de la dschangSchool",
+               "in":[  
+                  {  
+                     "name":"dossier"
+                  },
+                  {  
+                     "name":"traitement département"
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"suite"
+                  }
+               ],
+               "location":"dschangSchool"
+            }
+         ],
+         "parameters":[  
+            {  
+               "name":"traitement département"
+            }
+         ]
+      },
+      {  
+         "name":"Rejet Dossier",
+         "leftSide":{  
+            "name":"Service du departement",
+            "in":[  
+               {  
+                  "name":"dossier"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"raison rejet"
+                     }
+                  ]
+               }
+            ],
+            "location":"département"
+         },
+         "rightSide":[  
+            
+         ],
+         "parameters":[  
+            {  
+               "name":"raison rejet"
+            }
+         ]
+      }
+   ]
+}

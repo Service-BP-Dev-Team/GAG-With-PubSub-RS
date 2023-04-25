@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<!--
+
+  @(#)package.html	1.60 98/01/27
+
+  Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road, 
+  Palo Alto, California, 94303, U.S.A.  All Rights Reserved.
+
+  This software is the confidential and proprietary information of Sun
+  Microsystems, Inc. ("Confidential Information").  You shall not
+  disclose such Confidential Information and shall use it only in
+  accordance with the terms of the license agreement you entered into
+  with Sun.
+
+  CopyrightVersion 1.2
+
+-->
+</head>
+<body bgcolor="white">
+
+<h2>Architecture</h2>
+<table border="1" align="center">
+<tr><td colspan="2" width="50%" align="center"><a href="../../../../../inria/lognet/ds/pon/package-summary.html">inria.lognet.ds.pon</a></td><td align="center"><a href="../../../../../inria/smarttools/ds/local/package-summary.html">inria.smarttools.ds.local</a></td><td></td></tr>
+<tr><td width="25%" align="center" rowspan="2"><a href="../../../../../inria/lognet/virtpipes/package-summary.html">inria.lognet.virtpipes</a></td><td colspan="2" align="center"><a href="../../../../../inria/smarttools/componentsmanager/package-summary.html">inria.smarttools.componentsmanager</a></td><td align="center">Other components</td></tr>
+<tr><td colspan="3" align="center"><a href="../../../../../inria/smarttools/core/package-summary.html">inria.smarttools.core</a></td></tr>
+<tr><td rowspan="2" align="center"><a href="../../../../../inria/pon/keyvaluestore/package-summary.html">inria.pon.keyvaluestore</a></td><td colspan="3" align="center"><a href="../../../../../inria/smarttools/dynamic/package-summary.html">inria.smarttools.dynamic</a></td></tr>
+<tr><td colspan="3" align="center">inria.smarttools.lib</td></tr>
+<tr><td colspan="4" align="center">org.osgi.framework</td></tr>
+</table>
+
+<h2>Open-Chord</h2>
+
+This package and sub-packages represent the Open-Chord Distributed Hash Table (DHT).
+<p>
+Starting the Open-Chord bundle needs some system properties:
+<ul>
+	<li>inria.smarttools.dht.port for setting the port of your Peer</li>
+	<li>inria.smarttools.dht.boot if you know other Peer you can connect to</li>
+	<li>inria.smarttools.dht.host if you want to specify which IP address identifies your Peer</li>
+</ul>
+<p>
+Now, if inria.smarttools.dht.port is not specified, the port 0 will be used, and so a free port will be automatically allocated.
+<p>
+If inria.smarttools.dht.boot is not specified, Open-Chord will create a new Chord.
+It is preferable to set inria.smarttools.dht.port, so you can boot other Peer to this new Chord.
+<p>
+And, if inria.smarttools.dht.host is not specified, the IP address found will be used, except 127.0.0.1 because this is not an identity.
+<p>
+Be careful with these settings, because it is hashed. For example, if you use the port 0, the port IP:0 is actually the identity of the Peer.
+So you can't run multiple Chords with port 0 with the same machine.
+It is a bug we need to resolve at this point.
+You can specify both inria.smarttools.dht.port & inria.smarttools.dht.boot for resolving this issue.
+<p>
+<p>
+The Chord is registered into OSGi as a Service.
+So, any of your Bundle can retrieve the Chord object with this:<p>
+<pre>
+final ServiceReference ref = context.getServiceReference(Chord.class.getName());
+Chord chord = (Chord) context.getService(ref);
+</pre>
+<h2>Related Documentation</h2>
+
+For overviews, tutorials, examples, guides, and tool documentation, please see:
+<ul>
+  <!--<li><a href="">##### REFER TO NON-SPEC DOCUMENTATION HERE #####</a>-->
+</ul>
+
+<!-- Put @see and @since tags down here. -->
+
+</body>
+</html>

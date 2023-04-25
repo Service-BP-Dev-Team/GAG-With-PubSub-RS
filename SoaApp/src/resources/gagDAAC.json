@@ -1,0 +1,89 @@
+{  
+   "rules":[  
+      {  
+         "name":"File approval",
+         "leftSide":{  
+            "name":"DAAC service",
+            "in":[  
+               {  
+                  "name":"file"
+               },
+               {  
+                   "name":"dschangSchool processing"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"DAAC processing"
+                     },
+                     {  
+                        "name":"next"
+                     }
+                  ]
+               }
+            ],
+            "location":"DAAC"
+         },
+         "rightSide":[  
+            {  
+               "name":"Rectorate service",
+               "in":[  
+                  {  
+                     "name":"file"
+                  },
+                  {  
+                     "name":"DAAC processing"
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"next"
+                  }
+               ],
+               "location":"rectorate"
+            }
+         ],
+         "parameters":[  
+            {  
+               "name":"DAAC processing"
+            }
+         ]
+      },
+      {  
+         "name":"File rejection",
+         "leftSide":{  
+            "name":"DAAC service",
+            "in":[  
+               {  
+                  "name":"file"
+               },
+               {  
+                   "name":"dschangSchool processing"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"reasons for rejection"
+                     }
+                  ]
+               }
+            ],
+            "location":"DAAC"
+         },
+         "rightSide":[  
+            
+         ],
+         "parameters":[  
+            {  
+               "name":"reasons for rejection"
+            }
+         ]
+      }
+   ]
+}

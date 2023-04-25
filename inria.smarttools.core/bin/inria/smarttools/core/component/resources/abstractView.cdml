@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--                              -->
+<!-- View Component Declaration -->
+<!--                              -->
+<!-- -->
+<component name="abstractView"
+           type="view"
+           extends="abstractContainer"
+           ns="inria.smarttools.view">
+
+   <dependance name="batik-css"
+                jar="batik-css.jar"/>
+   <dependance name="batik-util"
+                jar="batik-util.jar"/>
+   <dependance name="sac"
+                jar="sac.jar"/>
+
+   <!--            -->
+   <!-- Attributes -->
+   <!--            -->
+
+      <attribute name="docRef" 
+              ns="inria.smarttools.view"
+	      doc="docRef"
+	      javatype="java.lang.String"/>
+      <attribute name="xslTransform" 
+              ns="inria.smarttools.view"
+	      doc="xslTransform"
+	      javatype="java.lang.String"/>
+      <attribute name="behaviors" 
+              ns="inria.smarttools.view"
+	      doc="behaviors"
+	      javatype="java.lang.String"/>
+
+   <!--       -->
+   <!-- INPUT -->
+   <!--       -->
+
+   <input name="buildContent"
+          doc="buildContent"
+          method="buildContent">
+   </input>
+ 
+   <input name="init" 
+          doc="init" 
+          method="doInit">
+      <attribute name="docRef" 
+              ns="inria.smarttools.view"
+	      doc="docRef"
+	      javatype="java.lang.String"/>
+      <attribute name="xslTransform" 
+              ns="inria.smarttools.view"
+	      doc="xslTransform"
+	      javatype="java.lang.String"/>
+      <attribute name="behaviors" 
+              ns="inria.smarttools.view"
+	      doc="behaviors"
+	      javatype="java.lang.String"/>
+   </input> 
+
+   <input name="modification" 
+          doc="modification" 
+          method="modification">
+      <attribute name="modif" 
+              ns="inria.smarttools.view"
+	      doc="Modification"
+              javatype="inria.smarttools.core.util.modification.ModificationsManager"/>
+   </input>
+
+   <input name="initData" 
+          doc="modification" 
+          method="initData">
+     <attribute name="inits" 
+              ns=""
+	      doc="inits"
+	      javatype="inria.smarttools.core.component.PropertyMap"/>
+   </input>
+
+   <input name="selection" 
+          doc="selection" 
+          method="selection">
+      <attribute name="selection" 
+              ns="inria.smarttools.core.util.selection"
+	      doc="selection"
+	      javatype="inria.smarttools.core.util.selection.Selection"/>
+   </input> 
+
+   <input name="addBehaviors"
+          doc="adds actions, menus, and other behaviors in the user interface"
+          method="addBehaviors">
+      <attribute name="xmlBehaviors" 
+              ns="inria.smarttools.view"
+	      doc="behaviors"
+	      javatype="java.lang.String"/>
+   </input>
+
+   <!--        -->
+   <!-- OUTPUT -->
+   <!--        -->
+
+   <!-- peut etre a mettre dans glayout.cdml -->
+   <output name="update" 
+           doc="">
+      <attribute name="transformationName" doc="" javatype="java.lang.String"/>
+      <attribute name="orientation" doc="" javatype="java.lang.String"/>
+   </output>
+
+   <output name="select" 
+           doc="">
+      <attribute name="selection" doc="" 
+           javatype="inria.smarttools.core.util.selection.Selection"/>
+   </output>
+
+   <output name="newComponent" 
+           method="newComponent"
+           doc="">
+      <attribute name="component" doc="" javatype="inria.smarttools.core.component.ContainerProxy"/>
+      <attribute name="name"      doc="" javatype="java.lang.String"/>
+   </output>
+
+   <output name="addComponent">
+      <attribute name="jarName" doc="" javatype="java.lang.String"/>
+      <attribute name="urlToJar" doc="" javatype="java.lang.String"/>
+      <attribute name="dependenceForComponent" doc="" javatype="java.lang.String"/>
+      <attribute name="componentName" doc="" javatype="java.lang.String"/>
+   </output>
+
+   <output name="requestFile">
+      <attribute name="requestedFilename" doc="" javatype="java.lang.String"/>
+   </output>
+
+   <!--output name="launchVisitor"-->
+      <!--arg name="visitor" 
+           doc="Visitor class name to launch" 
+           javatype="java.lang.String"/-->
+      <!--arg name="aspect" 
+           doc="Aspect class name to connect on visitor" 
+           javatype="java.lang.String"/-->
+   <!--/output-->
+
+   <output name="requestInitData" 
+           method="requestInitData"
+           doc=""/>
+
+   <output name="OpenDir" 
+           method="OpenDir"
+           doc="">
+	<attribute name="directoryName" doc="" javatype="java.lang.String"/>
+   </output>
+
+</component>

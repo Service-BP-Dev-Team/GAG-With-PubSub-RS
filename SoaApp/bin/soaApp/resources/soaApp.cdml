@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<component name="soaApp" type="soaApp" extends="inria.communicationprotocol" ns="soaApp">
+
+	<containerclass name="SoaAppContainer"/>
+	<facadeclass name="SoaAppFacade" userclassname="SoaApp"/>
+
+<input name="invokeTo" method="inInvokeTo">
+		<attribute name="service" javatype="gag.ServiceNode"/>
+		<attribute name="subscriptions" javatype="gag.behaviour.SubscriptionTable"/>
+	</input>
+	
+	<input name="returnTo" method="inReturnTo">
+		<attribute name="term" javatype="gag.Term"/>
+	</input>
+	
+	
+    <output name="returnTo" method="outReturnTo">
+		<attribute name="term" javatype="gag.Term"/>
+	</output>
+	
+	<output name="invokeTo" method="outInvokeTo">
+		<attribute name="service" javatype="gag.ServiceNode"/>
+		<attribute name="subscriptions" javatype="gag.behaviour.SubscriptionTable"/>
+	</output>
+	
+
+    <output name="banane" method="outBanane">
+		<attribute name="repliquePartielle" javatype="java.lang.String"/>
+	</output>
+</component>

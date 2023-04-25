@@ -1,0 +1,30 @@
+//
+// $Id: cm.absynt 1753 2007-02-18 20:50:34Z dparigot $
+//
+Formalism of cm is
+ 
+Root is Top;
+
+Operator and type definitions {
+  World = world(Command [] command);
+  
+  Command = load_component (), 
+            connectTo (Attribute [] attr, Message message),
+	    addSpy(Attribute [] attr),
+            %Message;  	
+  Attribute = attribute(Collection [] collection);
+  Message = message(Attribute [] attr);
+  Collection = collection (Item [] item);
+}
+
+Attribute definitions {
+REQUIRED name as java.lang.String in attribute,message,load_component;
+REQUIRED value as java.lang.String in attribute;
+REQUIRED jar as java.lang.String in load_component;
+REQUIRED id_src as java.lang.String in connectTo;
+REQUIRED type_dest as java.lang.String in connectTo;
+REQUIRED repository as java.lang.String in world;
+REQUIRED library as java.lang.String in world;
+REQUIRED debug as java.lang.String in world;
+REQUIRED ref as java.lang.String in addSpy;
+}

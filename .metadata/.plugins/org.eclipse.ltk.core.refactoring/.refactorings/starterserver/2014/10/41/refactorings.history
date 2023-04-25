@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Serveur.launch&apos; to &apos;startereditor&apos;&#x0D;&#x0A;- Original project: &apos;starterserver&apos;&#x0D;&#x0A;- Destination element: &apos;startereditor&apos;&#x0D;&#x0A;- Original element: &apos;Serveur.launch&apos;" description="Copy file" destination="=startereditor" element1="Serveur.launch" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1412759038204" units="0" version="1.0"/>
+</session>

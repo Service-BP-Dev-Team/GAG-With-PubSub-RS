@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $Id: cm.cdml 2256 2007-11-16 14:11:37Z bboussema $                           -->
+<!--  Component ManagerDeclaration -->
+<!--                              -->
+<!-- -->
+<component name="componentsManager"
+           type="manager"
+           extends="abstractContainer"
+           ns="inria.smarttools.componentsmanager"
+	   doc=" Components Manager of SmartTools component plugin ">
+                    
+   <containerclass name="ComponentsManager"/>
+   <facadeclass name="ComponentsManager"/>
+   <behavior file="resources:cm/resources/cmbehaviors.xml"/>
+
+	<!--            -->
+	<!-- Attributes -->
+	<!--            -->
+
+	<!--       -->
+	<!-- INPUT -->
+	<!--       -->
+
+	<input doc="newComponent" 
+               method="newComponent" 
+               name="newComponent">
+             <attribute doc="" 
+                   javatype= "inria.smarttools.core.component.ContainerProxy" 
+                   name="component" 
+                   ns="inria.smarttools.core.component"/>
+	     <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="name" 
+                   ns="inria.smarttools.core.component"/>
+        </input>
+	<input doc="availableComponent" 
+               method="availableComponent" 
+               name="availableComponent"/>
+	<!--<input doc="Reload a Component" 
+               method="reloadComponent" 
+               name="reloadComponent">
+             <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentName" 
+                   ns="inria.smarttools.core.component"/>
+        </input>-->
+	<input doc="Exit" 
+               method="exit" 
+               name="exit"/>
+	<input doc="connectTo" method="connectTo" 
+               name="connectTo">
+  	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="id_src" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="type_dest" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="id_dest" 
+                   ns="inria.smarttools.core.component"/>
+           <attribute doc="" 
+                   javatype="inria.smarttools.core.component.PropertyMap" 
+                   name="actions" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="connectToRemote" method="connectToRemote" 
+               name="connectToRemote">
+  	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="id_src" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="type_dest" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="id_dest" 
+                   ns="inria.smarttools.core.component"/>
+       <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="dc" 
+                   ns="inria.smarttools.core.component"/>       
+       <attribute doc="" 
+                   javatype="inria.smarttools.core.component.PropertyMap" 
+                   name="actions" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<!--<input doc="Add a new Jar file" method="addJar" name="addJar">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="jarName" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="urlToJar" 
+                   ns="inria.smarttools.core.component"/>
+	</input>-->
+	<input doc="Add a new component" method="addComponent" name="addComponent">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="jarName" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="urlToJar" 
+                   ns="inria.smarttools.core.component"/>
+   	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="dependenceForComponent" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentName" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="Sleep component" method="sleepComponent"
+               name="sleepComponent">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentId" 
+                   ns="inria.smarttools.core.component"/>
+	</input> 
+	<input doc="Start component" method="startComponent"
+               name="startComponent">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentId" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentType" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="" 
+                   javatype="inria.smarttools.core.component.PropertyMap" 
+                   name="actions" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="WakeUp component" method="wakeupComponent"
+               name="wakeupComponent">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentId" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="Stop component" method="stopComponent"
+               name="stopComponent">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentId" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="Serialize" method="serialize"
+               name="serialize">
+            <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="path" 
+                   ns="inria.smarttools.core.component"/>
+            <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="basename" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="Add a Spy" method="addSpy" name="addSpy">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="componentId" 
+                   ns="inria.smarttools.core.component"/>
+            <attribute doc="" 
+                   javatype="inria.smarttools.core.component.PropertyMap" 
+                   name="actions" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+       <input doc="" method="OpenDir" name="OpenDir">
+        <attribute doc=""
+               javatype="java.lang.String"
+               name="directoryName"
+               ns="ls"/>
+        </input>
+    <input doc="" method="availableDocument" name="availableDocument">
+    </input>
+    <!-- UGLY -->
+	<input doc="Request a file" method="requestFile" name="requestFile">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="requestedFilename" 
+                   ns="inria.smarttools.core.component"/>
+	</input>
+	<input doc="Request a view" method="requestView" name="requestView">
+	   <attribute doc="" 
+                   javatype="java.lang.String" 
+                   name="requestedView" 
+                   ns="inria.smarttools.core.component"/>
+	   <attribute doc="arguments for skeleton" 
+                   javatype="inria.smarttools.core.component.PropertyMap" 
+                   name="arguments" 
+                   ns="inria.smarttools.core.component"/>
+
+	</input>
+
+	<!--        -->
+	<!-- OUTPUT -->
+	<!--        -->
+		
+	<output name="startComponent" method="startComponent" doc="Start component" >
+  	   <attribute name="componentId" doc="" javatype="java.lang.String"/>
+	   <attribute name="componentType" doc="" javatype="java.lang.String"/>
+	   <attribute name="actions" doc="" javatype="inria.smarttools.core.component.PropertyMap"/>      
+	</output>	
+	<output name="connectToRemote" method="connectToRemote" doc="connectToRemote" >
+  	   <attribute name="id_src" doc="" javatype="java.lang.String"/>
+	   <attribute name="type_dest" doc="" javatype="java.lang.String"/>
+	   <attribute name="id_dest" doc="" javatype="java.lang.String"/>
+	   <attribute name="dc" doc="" javatype="java.lang.String"/>
+	   <attribute name="actions" doc="" javatype="inria.smarttools.core.component.PropertyMap"/>      
+	</output>	
+	<output name="newObjectAvailable" method="newObjectAvailable" doc="newComponentAvailable">
+		<attribute name="nodeName" doc="" javatype="java.lang.String"/>
+		<attribute name="nodeType" doc="" javatype="java.lang.String"/>
+		<attribute name="nodeColor" doc="" javatype="java.lang.String"/>
+	</output>
+	<output name="newComponentAvailable" method="newComponentAvailable" doc="newComponentAvailable">
+		<attribute name="nodeName" doc="" javatype="java.lang.String"/>
+	</output>
+	<output name="removeComponent" method="removeComponent" doc="removeComponent">
+		<attribute name="nodeName" doc="" javatype="java.lang.String"/>
+	</output>
+	<output name="newComponentInstanceAvailable" method="newComponentInstanceAvailable" doc="newComponentAvailable">
+		<attribute name="nodeName" doc="" javatype="java.lang.String"/>
+	</output>
+
+	<output name="newConnexion" method="newConnexion" doc="newConnexion">
+		<attribute name="srcNodeName" doc="" javatype="java.lang.String"/>
+		<attribute name="destNodeName" doc="" javatype="java.lang.String"/>
+	</output>
+	<output name="removeConnexion" method="removeConnexion" doc="removeConnexion">
+		<attribute name="srcNodeName" doc="" javatype="java.lang.String"/>
+		<attribute name="destNodeName" doc="" javatype="java.lang.String"/>
+	</output>
+	<output name="processLmlSkeleton" method="processLmlSkeleton" doc="Open File">
+		<attribute name="skeleton" doc="" javatype="java.lang.String"/>
+		<attribute name="argument" doc="" javatype="inria.smarttools.core.component.PropertyMap"/>
+	</output>
+	<output name="quit" method="quit" doc="Quit">
+	</output>
+	<output name="log" method="log" doc="Log">
+		<attribute name="info" doc="" javatype="java.lang.String"/>
+	</output>
+</component>

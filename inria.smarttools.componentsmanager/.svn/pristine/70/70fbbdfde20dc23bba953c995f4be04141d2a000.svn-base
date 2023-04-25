@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<world
+	repository=""
+	debug="ON">
+
+	<!--                        -->
+	<!-- Components declaration -->
+	<!--                        -->
+	<load_component jar="cdml.jar" url="file:plugins/cdml_1.0.0.jar"
+		name="cdml" />	
+	<load_component jar="worldStateGraph.jar" url="file:plugins/worldStateGraph_1.0.0.jar" 
+		name="worldStateGraph" />
+	<load_component jar="glayout.jar" url="file:plugins/glayout_1.0.0.jar"
+		name="glayout" />
+	<load_component jar="gview.jar" url="file:plugins/gview_1.0.0.jar"
+		name="gview" />
+	<load_component jar="goutline.jar" url="file:plugins/goutline_1.0.0.jar"
+		name="goutline" />		
+	<load_component jar="lml.jar" url="file:plugins/lml_1.0.0.jar"
+		name="lml" />		
+	<load_component jar="absynt.jar" url="file:plugins/absynt_1.0.0.jar"
+		name="absynt" />							
+	<load_component jar="st_editor.jar" url="file:plugins/st_editor_1.0.0.jar"
+		name="st_editor" />		
+	<load_component jar="xml.jar" url="file:plugins/xml_1.0.0.jar"
+		name="xml" />	
+	<load_component jar="cosynt.jar" url="file:plugins/cosynt_1.0.0.jar" 
+		name="cosynt" />
+	<load_component jar="world.jar" url="file:plugins/world_1.0.0.jar" 
+		name="world" />		
+
+	<load_component jar="gdialogview.jar" url="file:plugins/gdialogview_1.0.0.jar" 
+		name="gdialogview" />							
+	<load_component jar="stusersdb.jar" url="file:plugins/stusersdb_1.0.0.jar"
+		name="stusersdb" />
+   <!-- load_component jar="log.jar" url="file:plugins/log_1.0.0.jar" 
+   		name="log"/ -->		
+		
+	<!--         -->
+	<!-- connect -->
+	<!--         -->
+	<connectTo id_src="ComponentsManager" type_dest="worldStateGraph"
+		id_dest="graphContainer" />
+	
+   <connectTo id_src="ComponentsManager" 
+	      type_dest="glayout" id_dest="glayout">
+	   <attribute name="docRef" 
+		      value="resources:cm/resources/lml/test.lml"/>
+	   <attribute name="xslTransform" 
+		      value="resources:lml/resources/xsl/lml2bml.xsl"/>
+	   <attribute name="behaviors" 
+		      value="resources:fr/smarttools/core/view/resources/behaviors/bootbehav.xml"/>
+	   <message name="initData">
+		   <attribute name="inits">
+			   <collection>
+				   <item name="behavior" value="resources:cm/resources/cmbehaviors.xml"/>
+			   </collection>
+		   </attribute>
+	   </message>
+   </connectTo>   
+   
+   <!-- addSpy ref="log"> 
+      <attribute name="output" value="OFF"/>
+      <attribute name="filename" value="St4.log"/>
+   </addSpy -->  
+
+</world>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<component name="graph" type="graph" extends="abstractContainer" ns="inria.ocelet.graph">
+
+	<!--       -->
+	<!-- Graph -->
+	<!--       -->
+
+
+
+
+</component>

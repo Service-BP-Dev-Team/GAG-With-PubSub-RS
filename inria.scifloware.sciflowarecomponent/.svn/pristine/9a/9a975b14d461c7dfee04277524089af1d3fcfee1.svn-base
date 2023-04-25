@@ -1,0 +1,193 @@
+package inria.scifloware.sciflowarecomponent;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
+import inria.smarttools.core.component.AbstractContainer;
+import inria.smarttools.core.component.Container;
+import inria.smarttools.core.component.ContainerProxy;
+import inria.smarttools.core.component.InOut;
+import inria.smarttools.core.component.Input;
+import inria.smarttools.core.component.MessageImpl;
+import inria.smarttools.core.component.Output;
+
+public class SciflowareComponentContainer extends AbstractContainer implements
+		inria.smarttools.core.component.Container,
+		inria.scifloware.sciflowarecomponent.SendListener, inria.scifloware.sciflowarecomponent.UndoListener,
+		inria.scifloware.sciflowarecomponent.DisconnectListener,
+		inria.scifloware.sciflowarecomponent.InitDataListener,
+		inria.scifloware.sciflowarecomponent.LogUndoListener,
+		inria.scifloware.sciflowarecomponent.LogListener, inria.scifloware.sciflowarecomponent.ExitListener,
+		inria.scifloware.sciflowarecomponent.ConnectToListener  {
+
+	public SciflowareComponentFacade facade;
+	
+	private boolean started = false;
+
+	public SciflowareComponentContainer(final String name,
+			final String componentDescriptionResource) {
+		super(name, componentDescriptionResource);
+	}
+
+	protected void initFacadeListeners() {
+		facade.addSendListener(this);
+		facade.addUndoListener(this);
+		facade.addDisconnectListener(this);
+		facade.addInitDataListener(this);
+		facade.addLogUndoListener(this);
+		facade.addLogListener(this);
+		facade.addExitListener(this);
+		facade.addConnectToListener(this);
+	}
+		
+	@Override
+	public void connect(final ContainerProxy other) {
+		super.connect(other);
+		//CheckNeighbors(other);
+	}
+	
+	@Override
+	public void CheckNeighbors(AbstractContainer other) {
+		
+		final Map<String, Input> otherInputs = other.getContainerDescription().getInputs();
+		if (otherInputs != null) {
+			final Iterator<String> iterOtherInputs = otherInputs.keySet().iterator();
+			final Collection<String> iterOuputs = getContainerDescription().getOutputs().keySet();
+			while (iterOtherInputs.hasNext()) {
+				final String inputName = iterOtherInputs.next();
+				if (iterOuputs.contains(inputName)) {
+					(facade).addNeighbour(other.getIdName(), inputName);
+				}
+			}
+		}
+		
+		final Map<String, Output> otherOutputs = other.getContainerDescription().getOutputs();
+		if (otherOutputs != null) {
+			final Iterator<String> iterOtherOutputs = otherOutputs.keySet().iterator();
+			final Collection<String> iterInputs = getContainerDescription().getInputs().keySet();
+			while (iterOtherOutputs.hasNext()) {
+				final String OutputName = iterOtherOutputs.next();
+				if (iterInputs.contains(OutputName)) {
+						(facade).addNeighbour(other.getIdName(), OutputName);
+					}
+				}
+			}
+		
+		}
+	
+	@Override
+	public void CheckNeighbors(ContainerProxy other) {
+		
+		final Map<String, Input> otherInputs = other.getContainerDescription().getInputs();
+		if (otherInputs != null) {
+			final Iterator<String> iterOtherInputs = otherInputs.keySet().iterator();
+			final Collection<String> iterOuputs = getContainerDescription().getOutputs().keySet();
+			while (iterOtherInputs.hasNext()) {
+				final String inputName = iterOtherInputs.next();
+				if (iterOuputs.contains(inputName)) {
+					(facade).addNeighbour(other.getIdName(), inputName);
+				}
+			}
+		}
+		
+		final Map<String, Output> otherOutputs = other.getContainerDescription().getOutputs();
+		if (otherOutputs != null) {
+			final Iterator<String> iterOtherOutputs = otherOutputs.keySet().iterator();
+			final Collection<String> iterInputs = getContainerDescription().getInputs().keySet();
+			while (iterOtherOutputs.hasNext()) {
+				final String OutputName = iterOtherOutputs.next();
+				if (iterInputs.contains(OutputName)) {
+						(facade).addNeighbour(other.getIdName(), OutputName);
+					}
+				}
+			}
+		
+		}
+
+	@Override
+	public void switchOn(){
+		super.switchOn();
+		if (!started) {
+			(facade).setContainer(this);
+			(facade).InitOn(this);
+			started=true;
+		}
+
+	}
+	
+	/**
+	 * ConnectToListener
+	 * 
+	 * @throws IllegalStateException
+	 *             to absolutely care in business methods
+	 **/
+	public void connectTo(final ConnectToEvent e) {
+		sendWhenAvailable(new MessageImpl("connectTo", e.getAttributes(), null,
+				e.getAdressee()));
+	}
+
+	@Override
+	protected void createFacade() {
+		facade = new SciflowareComponentFacade(getIdName());
+		initFacadeListeners();
+
+	}
+
+	/**
+	 * DisconnectListener
+	 * 
+	 * @throws IllegalStateException
+	 *             to absolutely care in business methods
+	 **/
+	public void disconnectOut(final DisconnectEvent e) {
+		send(new MessageImpl("disconnect", e.getAttributes(), null,
+				e.getAdressee()));
+	}
+
+	//
+	// Constructors
+	//
+
+	/**
+	 * ExitListener
+	 * 
+	 * @throws IllegalStateException
+	 *             to absolutely care in business methods
+	 **/
+	
+	public void exit(final ExitEvent e) {
+		send(new MessageImpl("exit", e.getAttributes(), null, e.getAdressee()));
+	}
+
+	public void log(final LogEvent e) {
+		send(new MessageImpl("log", e.getAttributes(), null, e.getAdressee()));
+	}
+
+	public void logUndo(final LogUndoEvent e) {
+		send(new MessageImpl("logUndo", e.getAttributes(), null,
+				e.getAdressee()));
+	}
+
+	public void initData(final InitDataEvent e) {
+		send(new MessageImpl("initData", e.getAttributes(), null,
+				e.getAdressee()));
+	}
+
+	public void undo(final UndoEvent e) {
+		send(new MessageImpl("undo", e.getAttributes(), null, e.getAdressee()));
+	}
+
+	public void send(final SendEvent e) {
+		send(new MessageImpl("send", e.getAttributes(), null, e.getAdressee()));
+
+	}
+	
+	public void sendWhenAvailable(MessageImpl msg) {
+		super.sendWhenAvailable(msg);
+	}
+
+}

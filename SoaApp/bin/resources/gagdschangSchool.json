@@ -1,0 +1,89 @@
+{  
+   "rules":[  
+      {  
+         "name":"File approval",
+         "leftSide":{  
+            "name":"DschangSchool service",
+            "in":[  
+               {  
+                  "name":"file"
+               },
+               {  
+                   "name":"department processing"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"dschangSchool processing"
+                     },
+                     {  
+                        "name":"next"
+                     }
+                  ]
+               }
+            ],
+            "location":"DschangSchool"
+         },
+         "rightSide":[  
+            {  
+               "name":"DAAC service",
+               "in":[  
+                  {  
+                     "name":"file"
+                  },
+                  {  
+                     "name":"dschangSchool processing"
+                  }
+               ],
+               "out":[  
+                  {  
+                     "name":"next"
+                  }
+               ],
+               "location":"DAAC"
+            }
+         ],
+         "parameters":[  
+            {  
+               "name":"dschangSchool processing"
+            }
+         ]
+      },
+      {  
+         "name":"File rejection",
+         "leftSide":{  
+            "name":"DschangSchool service",
+            "in":[  
+               {  
+                  "name":"file"
+               },
+               {  
+                   "name":"department processing"
+               }
+            ],
+            "out":[  
+               {  
+                  "label":"Cons",
+                  "terms":[  
+                     {  
+                        "name":"reasons for rejection"
+                     }
+                  ]
+               }
+            ],
+            "location":"DschangSchool"
+         },
+         "rightSide":[  
+            
+         ],
+         "parameters":[  
+            {  
+               "name":"reason for rejection"
+            }
+         ]
+      }
+   ]
+}

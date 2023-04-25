@@ -1,0 +1,6 @@
+{"name":"Traitement Departement",
+"leftSide":
+{"name":"Service du departement",
+"in":[{"name":"dossier"}],"out":[{"label":"Cons","terms":[{"name":"traitementDepartement"},{"name":"l"}]}],"location":"departement"},
+"rightSide":[{"name":"Service de la dschangSchool","in":[{"name":"dossier"},{"name":"traitementDepartement"}],"out":[{"name":"l"}],"location":"dschangSchool"}],
+"parameters":[{"name":"traitementDepartement"}]}

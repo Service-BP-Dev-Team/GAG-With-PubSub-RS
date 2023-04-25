@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plugin>
+<extension point="smarttools.component">
+<cdml cdmlName="smartWorkflowGUI" componentName="smartWorkflowGUI" containerName="smartWorkflowGUI.SmartWorkflowGUIContainer" facadeName="smartWorkflowGUI.SmartWorkflowGUIFacade"/>
+</extension>
+</plugin>

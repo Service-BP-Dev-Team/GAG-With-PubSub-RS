@@ -1,0 +1,957 @@
+/*******************************************************************************
+ * Copyright (c) 2000, 2008 INRIA.
+ * 
+ *    This file is part of SmartTools project
+ *    <a href="http://www-sop.inria.fr/smartool/">SmartTools</a>
+ * 
+ *     SmartTools is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU Lesser General Public License as published
+ *     by the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ * 
+ *     SmartTools is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU Lesser General Public License for more details.
+ * 
+ *     You should have received a copy of the GNU Lesser General Public License
+ *     along with SmartTools; if not, write to the Free Software
+ *     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ *     INRIA
+ * 
+ *******************************************************************************/
+// $Id: AbstractContainer.java 3070 2010-11-17 10:37:55Z gverger $
+package inria.smarttools.core.component;
+
+import inria.smarttools.core.Activator;
+import inria.smarttools.core.util.AutoKeyHashMap;
+import inria.smarttools.core.util.DisconnectEvent;
+import inria.smarttools.core.util.DisconnectListener;
+import inria.smarttools.core.util.KeyAccessor;
+import inria.smarttools.core.util.MulticastProvider;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import javax.swing.JPanel;
+
+import org.osgi.framework.ServiceRegistration;
+
+/**
+ * AbstractContainer.java
+ * <p>
+ * This class provide common behavior for all components :
+ * <ul>
+ * <li>- initialization
+ * <li>- life cycle management
+ * <li>- thread mangement
+ * <li>- communication [connection, discover services, flow management,
+ * disconnection]
+ * </ul>
+ * Outputs :
+ * <uL>
+ * <li>- connectTo [ref_src : java.lang.String, type_dest: java.lang.String,
+ * id_dest : java.lang.String, ref_id : java.lang.String]
+ * <li>- log [info : java.lang.String]
+ * </ul>
+ * Inputs : - quit []
+ * 
+ * @author <a href="mailto:Didier.Parigot@sophia.inria.fr">Didier Parigot</a>
+ * @version $Revision: 3070 $
+ */
+public abstract class AbstractContainer implements Container,
+		DisconnectListener {
+
+	private int stateInOut = 0;
+
+	/**
+	 * The list of the listeners between the Container and the Component's View
+	 */
+	private final List<UpdateViewListener> updateViewListeners = new ArrayList<UpdateViewListener>();
+
+	/**
+	 * Name for this particular instance.
+	 */
+	private final String name;
+
+	/**
+	 * Status of this component
+	 */
+	private volatile short state = Container.OFF;
+
+	/**
+	 * Description of the component.
+	 */
+	private final ComponentDescription componentDescription;
+
+	/**
+	 * Modèle de sortie : multicast local register components that wait an
+	 * output from this component
+	 */
+	protected final Map<String, Set<ContainerProxy>> outputer = new HashMap<String, Set<ContainerProxy>>();
+
+	/**
+	 * Modèle de sortie : unicast Connection with other component Permet de
+	 * connaitre tous les composants actuellement connectes.
+	 */
+	protected final AutoKeyHashMap<String, ContainerProxy> connectedTo = new AutoKeyHashMap<String, ContainerProxy>(
+			new KeyAccessor<String, ContainerProxy>() {
+
+				@Override
+				public String getKey(final ContainerProxy o) {
+					return o.getIdName();
+				}
+			});
+
+	/**
+	 * Modèle de sortie : multicast réparti
+	 */
+	private final Set<MulticastProvider> mProviders = new HashSet<MulticastProvider>();
+
+	private final List<Message> messages = new LinkedList<Message>();
+
+	protected final Map<String, List<MethodCall>> calls = new HashMap<String, List<MethodCall>>();
+
+	protected final Map<String, SetterCall> setters = new HashMap<String, SetterCall>();
+
+	private final List<Message> waitForSending = new LinkedList<Message>();
+
+	private ServiceRegistration registration;
+
+	private Thread thread;
+
+	private final List<String> cps = new LinkedList<String>();
+
+	{
+		List<MethodCall> methodCalls;
+		methodCalls = calls.get("disconnect");
+		if (methodCalls == null) {
+			methodCalls = new ArrayList<MethodCall>();
+			calls.put("disconnect", methodCalls);
+		}
+		methodCalls.add(new MethodCall() {
+
+			@Override
+			public Object call(final ContainerProxy expeditor,
+					final String expeditorId, final String expeditorType,
+					final PropertyMap parameters) {
+				disconnect(expeditorId);
+				return null;
+			}
+		});
+		methodCalls = calls.get("quit");
+		if (methodCalls == null) {
+			methodCalls = new ArrayList<MethodCall>();
+			calls.put("quit", methodCalls);
+		}
+		methodCalls.add(new MethodCall() {
+
+			@Override
+			public Object call(final ContainerProxy expeditor,
+					final String expeditorId, final String expeditorType,
+					final PropertyMap parameters) {
+				quit();
+				return null;
+			}
+		});
+		methodCalls = calls.get("shutdown");
+		if (methodCalls == null) {
+			methodCalls = new ArrayList<MethodCall>();
+			calls.put("shutdown", methodCalls);
+		}
+		methodCalls.add(new MethodCall() {
+
+			@Override
+			public Object call(final ContainerProxy expeditor,
+					final String expeditorId, final String expeditorType,
+					final PropertyMap parameters) {
+				shutdown();
+				return null;
+			}
+		});
+	}
+
+	public AbstractContainer(final String name,
+			final String componentDescriptionResource) {
+		this.name = name;
+		componentDescription = new ComponentDescriptionImpl(
+				componentDescriptionResource);
+		createFacade();
+	}
+
+	@Override
+	public void addMulticastProvider(final MulticastProvider mProvider) {
+		synchronized (mProviders) {
+			mProviders.add(mProvider);
+		}
+	}
+
+	public void addUpdateViewListener(final UpdateViewListener data) {
+		updateViewListeners.add(data);
+	}
+	
+	public void CheckNeighbors(AbstractContainer other){}
+	
+	public void CheckNeighbors(ContainerProxy component_dest) {}
+
+	/**
+	 * Describe how to build the response to an InOut service.
+	 * 
+	 * @param expeditor
+	 *            a <code>Container</code> value : addressee (destinataire)
+	 * @param io
+	 *            an <code>InOut</code> value : InOut service description
+	 * @param res
+	 *            an <code>Object</code> value : result of the service call
+	 *            (data to send)
+	 */
+	protected void buildResponseForInOut(final ContainerProxy expeditor,
+			final String idName, final String type, final InOut io,
+			final Object res) {
+		final PropertyMap hm = new PropertyMap();
+
+		final String a_name = io.getArg();
+		hm.put(a_name, res);
+
+		if (io.getOutputName() != null) {
+			final Message m_resp = new MessageImpl(io.getOutputName(), hm, null);
+			m_resp.setExpeditor(this);
+			if (idName != null) {
+				if (expeditor != null) {
+					expeditor.receive(m_resp);
+				} else {
+					if (connectedTo.get(idName) != null) {
+						connectedTo.get(idName).receive(m_resp);
+					} else {
+						Activator.LOGGER.severe("Proxy for response is null "
+								+ this);
+					}
+				}
+			} else {
+				Activator.LOGGER.warning("No Send for buildResponseForInOut "
+						+ this);
+			}
+		} else {
+			Activator.LOGGER.severe("InOut message name is null" + this);
+		}
+	}
+
+	/**
+	 * Connect this component with other one. i.e. : - discover services -
+	 * connect compatible one - ... Vois si connexion existe deja ....
+	 * 
+	 * @param other
+	 *            a <code>Container</code> value : the other component
+	 */
+	@Override
+	public void connect(final ContainerProxy other) {
+		if (!connectedTo.containsKey(other.getIdName())) {
+			logINFO("enter in communication with <" + other + ">");
+
+			//
+			// Discover services.
+			//
+
+			if (other.getContainerDescription() == null) {
+				Activator.LOGGER.severe(other.getIdName()
+						+ "'s ContainerDescription is Null");
+			} else if (other instanceof AbstractContainer) {
+				final Map<String, Input> otherInputs = other
+						.getContainerDescription().getInputs();
+				if (otherInputs != null) {
+					final Iterator<String> iterOtherInputs = otherInputs
+							.keySet().iterator();
+					final Collection<String> iterOuputs = getContainerDescription()
+							.getOutputs().keySet();
+					while (iterOtherInputs.hasNext()) {
+						final String inputName = iterOtherInputs.next();
+						if (iterOuputs.contains(inputName)) {
+							logINFO("Connecting output : " + inputName + " to "
+									+ other);
+							Set<ContainerProxy> v = null;
+							if ((v = outputer.get(inputName)) == null) {
+								v = new HashSet<ContainerProxy>();
+								outputer.put(inputName, v);
+							}
+							v.add(other);
+						}
+					}
+				}
+				final Map<String, InOut> otherInOuts = other
+						.getContainerDescription().getInOuts();
+				if (otherInOuts != null) {
+					final Iterator<String> iterOtherInOuts = otherInOuts
+							.keySet().iterator();
+					final Collection<String> iterOuputs = getContainerDescription()
+							.getOutputs().keySet();
+					while (iterOtherInOuts.hasNext()) {
+						final String inOutName = iterOtherInOuts.next();
+						if (iterOuputs.contains(inOutName)) {
+							logINFO("Connecting inOut : " + inOutName + " to "
+									+ other);
+							Set<ContainerProxy> v = null;
+							if ((v = outputer.get(inOutName)) == null) {
+								v = new HashSet<ContainerProxy>();
+								outputer.put(inOutName, v);
+							}
+							v.add(other);
+						}
+					}
+				}
+			}
+			connectedTo.put(other);
+		} else {
+			updateConnect(other, false);
+		}
+		releaseWaitingMsg();
+	}
+
+	protected void createFacade() {}
+
+	@Override
+	public void disconnect(final DisconnectEvent e) {
+		// copy all values
+		final Collection<ContainerProxy> collection = new ArrayList<ContainerProxy>();
+		synchronized (this) {
+			final Iterator<ContainerProxy> it = connectedTo.values().iterator();
+			while (it.hasNext()) {
+				collection.add(it.next());
+			}
+		}
+		// disconnect all containers connected
+		ContainerProxy cm = null;
+		final Iterator<ContainerProxy> it = collection.iterator();
+		while (it.hasNext()) {
+			final ContainerProxy containerProxy = it.next();
+			// except the CM
+			if (!containerProxy.getIdName().equals("ComponentsManager")) {
+				disconnect(containerProxy.getIdName());
+				containerProxy.disconnect(getIdName());
+				if (containerProxy instanceof Container) {
+					final Container container = (Container) containerProxy;
+					if (container.isDisconnectable()) {
+						container.disconnect(new DisconnectEvent());
+					}
+				}
+			} else {
+				cm = containerProxy;
+			}
+		}
+		// the CM is disconnected at last
+		if (cm != null) {
+			disconnect(cm.getIdName());
+			cm.disconnect(getIdName());
+		}
+		shutdown();
+	}
+
+	/**
+	 * Disconnect communication with other component
+	 * 
+	 * @param other
+	 *            a <code>Container</code> value : other component
+	 * @param expeditorId
+	 */
+	@Override
+	public void disconnect(final String expeditorId) {
+		logINFO("terminate communication with " + expeditorId);
+		final ContainerProxy cp = connectedTo.remove(expeditorId);
+
+		if (cp != null) {
+
+			send(new MessageImpl("disconnect", new PropertyMap(),
+					new PropertyMap(), expeditorId));
+
+			// Remote
+			synchronized (mProviders) {
+				for (final MulticastProvider mProvider : mProviders) {
+					mProvider.notifyDisconnection(this, expeditorId);
+				}
+			}
+			// End Remote
+
+			Map<String, Input> otherInputs = null;
+			if (expeditorId.startsWith("ComponentsManager")
+					&& getIdName().equals("ComponentsManager")) {
+				otherInputs = getContainerDescription().getInputs();
+			} else {
+				otherInputs = cp.getContainerDescription().getInputs();
+			}
+			if (otherInputs != null) {
+				final Iterator<String> iterOtherInputs = otherInputs.keySet()
+						.iterator();
+				final Collection<String> iterOuputs = getContainerDescription()
+						.getOutputs().keySet();
+				while (iterOtherInputs.hasNext()) {
+					final String inputName = iterOtherInputs.next();
+					if (iterOuputs.contains(inputName)) {
+						logINFO("Disconnecting output : " + inputName + " to "
+								+ cp);
+						outputer.remove(inputName);
+					}
+				}
+			}
+
+			Map<String, InOut> otherInOuts = null;
+			if (expeditorId.startsWith("ComponentsManager")
+					&& getIdName().equals("ComponentsManager")) {
+				otherInOuts = getContainerDescription().getInOuts();
+			} else {
+				otherInOuts = cp.getContainerDescription().getInOuts();
+			}
+			if (otherInOuts != null) {
+				final Iterator<String> iterOtherInOuts = otherInOuts.keySet()
+						.iterator();
+				final Collection<String> iterOuputs = getContainerDescription()
+						.getOutputs().keySet();
+				while (iterOtherInOuts.hasNext()) {
+					final String inOutName = iterOtherInOuts.next();
+					if (iterOuputs.contains(inOutName)) {
+						logINFO("Disconnecting inOut : " + inOutName + " to "
+								+ cp);
+						outputer.remove(inOutName);
+					}
+				}
+			}
+
+			final PropertyMap attr = new PropertyMap();
+
+			attr.put("srcNodeName", expeditorId);
+			attr.put("destNodeName", getIdName());
+
+			final Message m = new MessageImpl("removeConnexion", attr, null);
+
+			sendWhenAvailable(m);
+		}
+	}
+
+	/**
+	 * Execute a call to an INPUT
+	 * 
+	 * @param message
+	 *            a <code>Message</code> value
+	 */
+	protected void execute(final Message message) {
+		final String msgName = message.getName();
+		logINFO(this + " serving " + message);
+		if (!calls.containsKey(msgName)) {
+			logERROR("Warning : " + msgName + " does not exist on " + this
+					+ " from " + message.getExpeditorId());
+		} else {
+			final Iterator<MethodCall> methodCalls = calls.get(msgName)
+					.iterator();
+			while (methodCalls.hasNext()) {
+				methodCalls.next().call(message.getExpeditor(),
+						message.getExpeditorId(), message.getExpeditorType(),
+						message.getAttributesForMessage());
+			}
+		}
+	}
+
+	/**
+	 * Get the value of containerDescription.
+	 * 
+	 * @return value of containerDescription.
+	 */
+	@Override
+	public ComponentDescription getContainerDescription() {
+		return componentDescription;
+	}
+
+	/**
+	 * Return name of this instance of component
+	 * 
+	 * @return a <code>String</code> value
+	 */
+	@Override
+	public String getIdName() {
+		return name;
+	}
+
+	/**
+	 * Set this component state SLEEP : hibernate, we can usr it but action are
+	 * logged and wait that it can be use.
+	 */
+	@Override
+	public void hibernate() {
+		// if (state != Container.SLEEP) {
+		// logINFO("Hibernate");
+		// setState(Container.SLEEP);
+		// }
+
+		logINFO("Hibernate");
+		setState(Container.SLEEP);
+
+	}
+
+	@Override
+	public boolean isDisconnectable() {
+		if (connectedTo.size() == 1) {
+			final ContainerProxy cm = connectedTo.values().iterator().next();
+			if (cm.getIdName().equals("ComponentsManager")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void lockUntilReceivingMessage(final String messageName,
+			final String fromExpeditor) {
+		synchronized (cps) {
+			cps.add(messageName + ":" + fromExpeditor);
+		}
+		hibernate();
+	}
+
+	public void logERROR(final String message) {
+		logERROR(message, "[" + toString() + "]");
+	}
+
+	public void logERROR(final String message, final String pre) {
+		if (Activator.LOGGER != null) {
+			Activator.LOGGER.severe(pre + " " + message);
+		} else {
+			System.err.println(pre + " " + message);
+		}
+	}
+
+	public void logINFO(final String message) {
+		logINFO(message, "[" + toString() + "]");
+	}
+
+	public void logINFO(final String message, final String pre) {
+		if (Activator.LOGGER != null) {
+			Activator.LOGGER.info(pre + " " + message);
+		} else {
+			System.out.println(pre + " " + message);
+		}
+	}
+
+	/**
+	 * Quit Send a disconnect order to all connected component
+	 */
+	public void quit() {
+		logINFO("Receiving a <QUIT> event");
+		disconnect(new DisconnectEvent());
+	}
+
+	/**
+	 * Behavior on a message reception - store message
+	 * 
+	 * @param msg
+	 *            a <code>Message</code> value
+	 */
+	public void receive(final Message msg) {
+		synchronized (cps) {
+			if (cps.contains(msg.getName() + ":" + msg.getExpeditorId())) {
+				new Thread(new Runnable() {
+
+					public void run() {
+						synchronized (cps) {
+							cps.remove(msg.getName() + ":"
+									+ msg.getExpeditorId());
+							execute(msg);
+							logINFO("Lock " + msg.getName() + " from "
+									+ msg.getExpeditorId() + " done");
+							if (cps.size() == 0) {
+								switchOn();
+							}
+							stateInOut = 1;
+						}
+					}
+				}).start();
+				return;
+			}
+		}
+		synchronized (messages) {
+			logINFO("Receive and Store a new message " + msg.getName()
+					+ " from " + msg.getExpeditorId());
+			messages.add(msg);
+			messages.notify();
+		}
+	}
+
+	public void releaseWaitingMsg() {
+		final Collection<Message> remove = new ArrayList<Message>();
+		synchronized (waitForSending) {
+			for (final Message msg : waitForSending) {
+				if (send(msg)) {
+					remove.add(msg);
+				}
+			}
+			waitForSending.removeAll(remove);
+		}
+	}
+
+	public void removeMulticastProvider(final MulticastProvider mProvider) {
+		synchronized (mProviders) {
+			mProviders.remove(mProvider);
+
+		}
+	}
+
+	public void removeUpdateViewListener(final UpdateViewListener data) {
+		updateViewListeners.remove(data);
+	}
+
+	public void run() {
+		while (state != Container.OFF) {
+			waitForMessages();
+		}
+	}
+
+	/**
+	 * Send a message to component. To found the destination of the message, we
+	 * search if some listener are registered for this kind of event.
+	 * 
+	 * @param msg
+	 *            a <code>Message</code> value
+	 */
+	public boolean send(final Message msg) {
+		msg.setExpeditor(this);
+		if ((msg.getAdresseeId() != null) && !msg.getAdresseeId().equals("")) {
+			// Unicast
+			final ContainerProxy cp = connectedTo.get(msg.getAdresseeId());
+			if (cp != null) {
+				if (cp.getContainerDescription().getInOuts().get(msg.getName()) != null) {
+					lockUntilReceivingMessage(cp.getContainerDescription()
+							.getInOuts().get(msg.getName()).getOutputName(),
+							cp.getIdName());
+				}
+
+				cp.receive(msg);
+				msg.setSended(true);
+
+				if (cp.getContainerDescription().getInOuts().get(msg.getName()) != null) {
+					synchronized (thread) {
+						if (stateInOut < 1) {
+							try {
+								thread.wait();
+								// System.out.println(thread.getName() +
+								// "libre");
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+						}
+						stateInOut = 0;
+					}
+				}
+			} else {
+				Activator.LOGGER.finest("error sending " + msg.getName()
+						+ " from " + msg.getExpeditorId() + " to "
+						+ msg.getAdresseeId() + " : " + msg);
+				msg.setSended(false);
+				// System.out.println("f");
+			}
+		} else {
+			// Multicast
+			final String event = msg.getName();
+
+			// Remote
+			synchronized (mProviders) {
+				for (final MulticastProvider mProvider : mProviders) {
+					mProvider.send(this, msg);
+				}
+			}
+			// End Remote
+
+			if (event.equals("updateComponent")) {
+				updateView((JPanel) msg.getAttributesForMessage()
+						.get("message"), msg.getAttributesForMessage()
+						.getString("info"), (StyleViewInterface) msg
+						.getAttributesForMessage().get("view"));
+				return true;
+			}
+			if (!event.equals("log")) {
+				final Message send = new MessageImpl("send", new PropertyMap() {
+
+					private static final long serialVersionUID = 1L;
+
+					{
+						put("messageName", event);
+						put("messageExpeditor", getIdName());
+					}
+				}, null);
+				final Set<ContainerProxy> v1 = outputer.get("send");
+				if (v1 != null) {
+					for (final ContainerProxy containerProxy : v1) {
+						containerProxy.receive(send);
+					}
+				}
+			}
+			final Set<ContainerProxy> v = outputer.get(event);
+			if (v != null) {
+				for (final ContainerProxy proxy : v) {
+					Activator.LOGGER.finest("sending message " + msg + " to "
+							+ proxy);
+					if (proxy.getContainerDescription().getInOuts()
+							.get(msg.getName()) != null) {
+						lockUntilReceivingMessage(
+								proxy.getContainerDescription().getInOuts()
+										.get(msg.getName()).getOutputName(),
+								proxy.getIdName());
+					}
+
+					proxy.receive(msg);
+
+					if (proxy.getContainerDescription().getInOuts()
+							.get(msg.getName()) != null) {
+						synchronized (thread) {
+							if (stateInOut < 1) {
+								try {
+									thread.wait();
+									// System.out.println(thread.getName() +
+									// "libre");
+								} catch (InterruptedException e) {
+									e.printStackTrace();
+								}
+							}
+							stateInOut = 0;
+						}
+					}
+				}
+				msg.setSended(true);
+			} else {
+				Activator.LOGGER.finest("error sending " + msg.getName()
+						+ " from " + msg.getExpeditorId() + " : " + msg);
+			}
+		}
+		if (msg.getName().equals("disconnect") && (msg.getAdresseeId() != null)) {
+			disconnect(msg.getAdresseeId());
+		}
+
+		return msg.isSended();
+	}
+
+	public void sendWhenAvailable(final Message msg) {
+		if (!send(msg)) {
+			synchronized (waitForSending) {
+				waitForSending.add(msg);
+			}
+		}
+	}
+
+	protected void setAttribute(final Attribute call) {
+		setAttribute(call.getName(), call.getValue(), call.getType());
+	}
+
+	public void setAttribute(final String name, final Object value,
+			final String type) {
+		if (setters.get(name) == null) {
+			logERROR(" Attribute " + name + " doesn't exists");
+		} else {
+			setters.get(name).call(value);
+		}
+	}
+
+	public void setServiceRegistration(final ServiceRegistration registration) {
+		this.registration = registration;
+	}
+
+	public void setState(final short v) {
+		state = v;
+	}
+
+	public void shutdown() {
+		logINFO("Receiving a <SHUTDOWN> event");
+		switchOff();
+		if (calls != null) {
+			calls.clear();
+		}
+		if (connectedTo != null) {
+			connectedTo.clear();
+		}
+		synchronized (messages) {
+			messages.clear();
+		}
+		if (outputer != null) {
+			outputer.clear();
+		}
+		if (setters != null) {
+			setters.clear();
+		}
+		if (waitForSending != null) {
+			waitForSending.clear();
+		}
+		if (updateViewListeners != null) {
+			updateViewListeners.clear();
+		}
+		if (registration != null) {
+			registration.unregister();
+		}
+		registration = null;
+	}
+
+	/**
+	 * Set this component state OFF : not usable
+	 */
+	public void switchOff() {
+		logINFO("is Switch OFF");
+		setState(Container.OFF);
+		synchronized (messages) {
+			messages.notify();
+		}
+		thread = null;
+	}
+
+	/**
+	 * Set this component state ON : ready to use
+	 */
+	public void switchOn() {
+		if (state != Container.ON) {
+			logINFO("is Switch ON");
+			setState(Container.ON);
+
+		}
+		if (thread == null) {
+			(thread = new Thread(this, toString())).start();
+		} else {
+			// System.out.println(thread.getName());
+			logINFO("-- " + thread.getName() + "-- ");
+			synchronized (thread) {
+				thread.notifyAll();
+			}
+			synchronized (messages) {
+				messages.notify();
+			}
+		}
+	}
+
+	/**
+	 * Return a short description of the AbstractContainer object.
+	 * 
+	 * @return a value of the type 'String' : a string representation of this
+	 *         AbstractContainer
+	 */
+	@Override
+	public String toString() {
+		return getIdName() + "(" + getContainerDescription().getComponentName()
+				+ ")";
+	}
+
+	/**
+	 * Rescane declared Input/Output to update connections.
+	 * 
+	 * @param other
+	 *            a <code>Container</code> value
+	 */
+	public void updateConnect(final ContainerProxy other, final boolean dual) {
+		if (connectedTo.get(other.getIdName()) != null) {
+			logINFO("Updating connection with <" + other + ">");
+
+			//
+			// Discover services.
+			//
+
+			final Iterator<String> iterOtherInputs = other
+					.getContainerDescription().getInputs().keySet().iterator();
+			Collection<String> iterOuputs = getContainerDescription()
+					.getOutputs().keySet();
+			while (iterOtherInputs.hasNext()) {
+				final String inputName = iterOtherInputs.next();
+				if (iterOuputs.contains(inputName)) {
+					logINFO("UpdateConnect : Connecting output : " + inputName);
+					Set<ContainerProxy> v = null;
+					if ((v = outputer.get(inputName)) == null) {
+						v = new HashSet<ContainerProxy>();
+						outputer.put(inputName, v);
+					}
+					if (!v.contains(other)) {
+						v.add(other);
+					}
+				}
+			}
+
+			final Iterator<String> iterOtherInOuts = other
+					.getContainerDescription().getInOuts().keySet().iterator();
+			iterOuputs = getContainerDescription().getOutputs().keySet();
+			while (iterOtherInOuts.hasNext()) {
+				final String inOutName = iterOtherInOuts.next();
+				if (iterOuputs.contains(inOutName)) {
+					logINFO("UpdateConnect : Connecting inOut : " + inOutName);
+					Set<ContainerProxy> v = null;
+					if ((v = outputer.get(inOutName)) == null) {
+						v = new HashSet<ContainerProxy>();
+					}
+					if (!v.contains(other)) {
+						v.add(other);
+					}
+					outputer.put(inOutName, v);
+				}
+			}
+
+			if (dual && (other instanceof Container)) {
+				((Container) other).updateConnect(this, false);
+			}
+		}
+	}
+
+	public void updateView(final JPanel panel, final String info,
+			final StyleViewInterface view) {
+
+		final UpdateViewEvent ev = new UpdateViewEvent(panel, this, info, view);
+		for (int i = 0; i < updateViewListeners.size(); i++) {
+			updateViewListeners.get(i).updateView(ev);
+		}
+	}
+
+	private void waitForMessages() {
+
+		try {
+			final Message msg;
+			synchronized (messages) {
+				while ((state == Container.SLEEP)
+						|| ((messages.size() == 0) && (Container.OFF != state))) {
+					messages.wait();
+				}
+				if ((state == Container.OFF) || (messages.size() == 0)) {
+					return;
+				}
+				msg = messages.get(0);
+				messages.remove(0);
+			}
+
+			final PropertyMap attrs = msg.getAttributesForRecipient();
+			if (attrs != null) {
+				final Iterator<Map.Entry<String, String>> it = attrs
+						.stringsEntrySet().iterator();
+				while (it.hasNext()) {
+					final Entry<String, String> entry = it.next();
+					final String key = entry.getKey();
+					final String value = entry.getValue();
+					final String type = null;
+					setAttribute(key, value, type);
+				}
+			}
+
+			execute(msg);
+		} catch (final Throwable t) {
+			if (Activator.LOGGER != null) {
+				Activator.LOGGER.throwing(getClass().getName(),
+						"void waitForMessages()", t);
+			} else {
+				t.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * Wakeup a component : Set is state to ON and eventually execute waiting
+	 * call.
+	 */
+	public void wakeup() {
+		logINFO("Wakeup");
+		setState(Container.ON);
+	}
+
+	
+}

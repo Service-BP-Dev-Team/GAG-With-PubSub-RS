@@ -1,0 +1,71 @@
+!SESSION 2018-03-12 15:41:14.349 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_20
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product startereditor.product4 --launcher.secondThread
+Command-line arguments:  -product startereditor.product4 -data F:\Workspace\Projets SON/../runtime-ExportClient.product -dev file:F:/Workspace/Projets SON/.metadata/.plugins/org.eclipse.pde.core/ExportClient.product/dev.properties -os win32 -ws win32 -arch x86 -consoleLog --launcher.secondThread -console -clean
+
+!ENTRY org.eclipse.osgi 4 0 2018-03-12 15:41:16.209
+!MESSAGE Could not find bundle: org.eclipse.equinox.console
+!STACK 0
+org.osgi.framework.BundleException: Could not find bundle: org.eclipse.equinox.console
+	at org.eclipse.osgi.framework.internal.core.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:211)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:298)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.osgi 4 0 2018-03-12 15:41:16.358
+!MESSAGE An unexpected runtime error has occurred.
+!STACK 0
+java.lang.NullPointerException
+	at inria.lognet.virtpipes.openchord.VirtPipesOpenChord.isUuidIsUnique(VirtPipesOpenChord.java:209)
+	at inria.lognet.virtpipes.VirtPipesService.isUuidUnique(VirtPipesService.java:403)
+	at inria.lognet.virtpipes.VirtPipesService.generateUniqueId(VirtPipesService.java:315)
+	at inria.smarttools.ds.pon.PonContainerProxyReader.<init>(PonContainerProxyReader.java:53)
+	at inria.smarttools.ds.pon.PonDsLogic.registerContainerProxy(PonDsLogic.java:133)
+	at inria.smarttools.ds.pon.Activator.start(Activator.java:193)
+	at inria.smarttools.ds.pon.Activator.serviceChanged(Activator.java:129)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at de.uniba.wiai.lspi.chord.Activator.run(Activator.java:102)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY inria.smarttools.ds.pon 4 0 2018-03-12 15:41:16.368
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.lang.NullPointerException
+	at inria.lognet.virtpipes.openchord.VirtPipesOpenChord.isUuidIsUnique(VirtPipesOpenChord.java:209)
+	at inria.lognet.virtpipes.VirtPipesService.isUuidUnique(VirtPipesService.java:403)
+	at inria.lognet.virtpipes.VirtPipesService.generateUniqueId(VirtPipesService.java:315)
+	at inria.smarttools.ds.pon.PonContainerProxyReader.<init>(PonContainerProxyReader.java:53)
+	at inria.smarttools.ds.pon.PonDsLogic.registerContainerProxy(PonDsLogic.java:133)
+	at inria.smarttools.ds.pon.Activator.start(Activator.java:193)
+	at inria.smarttools.ds.pon.Activator.serviceChanged(Activator.java:129)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:107)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:861)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:819)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:771)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:130)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:214)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:433)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.registerService(BundleContextImpl.java:451)
+	at de.uniba.wiai.lspi.chord.Activator.run(Activator.java:102)
+	at java.lang.Thread.run(Thread.java:745)
